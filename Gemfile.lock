@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     diff-lcs (1.2.5)
-    excel_to_code (0.3.6)
+    excel_to_code (0.3.5)
       ffi (~> 1.0, >= 1.0.11)
       ox (~> 2.0, >= 2.0.12)
       rspec (~> 2.7, >= 2.7.0)

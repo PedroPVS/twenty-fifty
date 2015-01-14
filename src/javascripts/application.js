@@ -28,7 +28,7 @@
 //= require views/primary_energy
 //= require views/electricity
 //= require views/energy_security
-//= require views/map
+
 //= require views/sankey_display
 //= require views/air_quality
 //= require views/costs_in_context
