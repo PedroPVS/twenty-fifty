@@ -217,6 +217,25 @@ text.lightingappliances {
 
 .domesticheat {
   fill: #ff0000; }
+  
+.setorresidencial {
+  fill: #CC9999;
+  }
+
+.setorcomercialpublico {
+  fill: #FF0000;
+  }
+  
+  .setorindustrial {
+  fill: #ff00AA;
+  }
+  
+  .setorrenergetico {
+  fill: #A30BA2;
+  }
+  .setoragropecuario{
+  fill: #A30000;
+  }
 
 circle.target {
   fill: #000;

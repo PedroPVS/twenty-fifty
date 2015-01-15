@@ -92,7 +92,12 @@ window.timeSeriesStackedAreaChart = function() {
     'Transport': 'transport',
     'Waste': 'waste',
     'Wave': 'wave',
-    'Wind': 'wind'
+    'Wind': 'wind',
+    'Setor Residencial' : 'setorresidencial',
+    'Setor comercial/público' : 'setorcomercialpublico',
+    'Setor industrial' : 'setorindustrial',
+    'Setor energético' : 'setorenergetico',
+    'Setor agropecuário' : 'setoragropecuario'
   };
   extent = {
     xmin: min_year,

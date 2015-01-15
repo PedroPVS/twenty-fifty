@@ -5525,46 +5525,6 @@ class Model
     attach_function 'energy_k62', [], ExcelValue.by_value
     attach_function 'energy_l62', [], ExcelValue.by_value
     attach_function 'energy_m62', [], ExcelValue.by_value
-    attach_function 'energy_d63', [], ExcelValue.by_value
-    attach_function 'energy_e63', [], ExcelValue.by_value
-    attach_function 'energy_f63', [], ExcelValue.by_value
-    attach_function 'energy_g63', [], ExcelValue.by_value
-    attach_function 'energy_h63', [], ExcelValue.by_value
-    attach_function 'energy_i63', [], ExcelValue.by_value
-    attach_function 'energy_j63', [], ExcelValue.by_value
-    attach_function 'energy_k63', [], ExcelValue.by_value
-    attach_function 'energy_l63', [], ExcelValue.by_value
-    attach_function 'energy_m63', [], ExcelValue.by_value
-    attach_function 'energy_d64', [], ExcelValue.by_value
-    attach_function 'energy_e64', [], ExcelValue.by_value
-    attach_function 'energy_f64', [], ExcelValue.by_value
-    attach_function 'energy_g64', [], ExcelValue.by_value
-    attach_function 'energy_h64', [], ExcelValue.by_value
-    attach_function 'energy_i64', [], ExcelValue.by_value
-    attach_function 'energy_j64', [], ExcelValue.by_value
-    attach_function 'energy_k64', [], ExcelValue.by_value
-    attach_function 'energy_l64', [], ExcelValue.by_value
-    attach_function 'energy_m64', [], ExcelValue.by_value
-    attach_function 'energy_d65', [], ExcelValue.by_value
-    attach_function 'energy_e65', [], ExcelValue.by_value
-    attach_function 'energy_f65', [], ExcelValue.by_value
-    attach_function 'energy_g65', [], ExcelValue.by_value
-    attach_function 'energy_h65', [], ExcelValue.by_value
-    attach_function 'energy_i65', [], ExcelValue.by_value
-    attach_function 'energy_j65', [], ExcelValue.by_value
-    attach_function 'energy_k65', [], ExcelValue.by_value
-    attach_function 'energy_l65', [], ExcelValue.by_value
-    attach_function 'energy_m65', [], ExcelValue.by_value
-    attach_function 'energy_d66', [], ExcelValue.by_value
-    attach_function 'energy_e66', [], ExcelValue.by_value
-    attach_function 'energy_f66', [], ExcelValue.by_value
-    attach_function 'energy_g66', [], ExcelValue.by_value
-    attach_function 'energy_h66', [], ExcelValue.by_value
-    attach_function 'energy_i66', [], ExcelValue.by_value
-    attach_function 'energy_j66', [], ExcelValue.by_value
-    attach_function 'energy_k66', [], ExcelValue.by_value
-    attach_function 'energy_l66', [], ExcelValue.by_value
-    attach_function 'energy_m66', [], ExcelValue.by_value
     # end of Energy
     attach_function 'electricity_d55', [], ExcelValue.by_value
     attach_function 'electricity_e55', [], ExcelValue.by_value
@@ -5796,46 +5756,36 @@ class Model
     attach_function 'electricity_k25', [], ExcelValue.by_value
     attach_function 'electricity_l25', [], ExcelValue.by_value
     attach_function 'electricity_m25', [], ExcelValue.by_value
-    attach_function 'electricity_d103', [], ExcelValue.by_value
-    attach_function 'electricity_e103', [], ExcelValue.by_value
-    attach_function 'electricity_f103', [], ExcelValue.by_value
-    attach_function 'electricity_g103', [], ExcelValue.by_value
-    attach_function 'electricity_h103', [], ExcelValue.by_value
-    attach_function 'electricity_i103', [], ExcelValue.by_value
-    attach_function 'electricity_j103', [], ExcelValue.by_value
-    attach_function 'electricity_k103', [], ExcelValue.by_value
-    attach_function 'electricity_l103', [], ExcelValue.by_value
-    attach_function 'electricity_m103', [], ExcelValue.by_value
-    attach_function 'electricity_d104', [], ExcelValue.by_value
-    attach_function 'electricity_e104', [], ExcelValue.by_value
-    attach_function 'electricity_f104', [], ExcelValue.by_value
-    attach_function 'electricity_g104', [], ExcelValue.by_value
-    attach_function 'electricity_h104', [], ExcelValue.by_value
-    attach_function 'electricity_i104', [], ExcelValue.by_value
-    attach_function 'electricity_j104', [], ExcelValue.by_value
-    attach_function 'electricity_k104', [], ExcelValue.by_value
-    attach_function 'electricity_l104', [], ExcelValue.by_value
-    attach_function 'electricity_m104', [], ExcelValue.by_value
-    attach_function 'electricity_d105', [], ExcelValue.by_value
-    attach_function 'electricity_e105', [], ExcelValue.by_value
-    attach_function 'electricity_f105', [], ExcelValue.by_value
-    attach_function 'electricity_g105', [], ExcelValue.by_value
-    attach_function 'electricity_h105', [], ExcelValue.by_value
-    attach_function 'electricity_i105', [], ExcelValue.by_value
-    attach_function 'electricity_j105', [], ExcelValue.by_value
-    attach_function 'electricity_k105', [], ExcelValue.by_value
-    attach_function 'electricity_l105', [], ExcelValue.by_value
-    attach_function 'electricity_m105', [], ExcelValue.by_value
-    attach_function 'electricity_d106', [], ExcelValue.by_value
-    attach_function 'electricity_e106', [], ExcelValue.by_value
-    attach_function 'electricity_f106', [], ExcelValue.by_value
-    attach_function 'electricity_g106', [], ExcelValue.by_value
-    attach_function 'electricity_h106', [], ExcelValue.by_value
-    attach_function 'electricity_i106', [], ExcelValue.by_value
-    attach_function 'electricity_j106', [], ExcelValue.by_value
-    attach_function 'electricity_k106', [], ExcelValue.by_value
-    attach_function 'electricity_l106', [], ExcelValue.by_value
-    attach_function 'electricity_m106', [], ExcelValue.by_value
+    attach_function 'electricity_d96', [], ExcelValue.by_value
+    attach_function 'electricity_e96', [], ExcelValue.by_value
+    attach_function 'electricity_f96', [], ExcelValue.by_value
+    attach_function 'electricity_g96', [], ExcelValue.by_value
+    attach_function 'electricity_h96', [], ExcelValue.by_value
+    attach_function 'electricity_i96', [], ExcelValue.by_value
+    attach_function 'electricity_j96', [], ExcelValue.by_value
+    attach_function 'electricity_k96', [], ExcelValue.by_value
+    attach_function 'electricity_l96', [], ExcelValue.by_value
+    attach_function 'electricity_m96', [], ExcelValue.by_value
+    attach_function 'electricity_d97', [], ExcelValue.by_value
+    attach_function 'electricity_e97', [], ExcelValue.by_value
+    attach_function 'electricity_f97', [], ExcelValue.by_value
+    attach_function 'electricity_g97', [], ExcelValue.by_value
+    attach_function 'electricity_h97', [], ExcelValue.by_value
+    attach_function 'electricity_i97', [], ExcelValue.by_value
+    attach_function 'electricity_j97', [], ExcelValue.by_value
+    attach_function 'electricity_k97', [], ExcelValue.by_value
+    attach_function 'electricity_l97', [], ExcelValue.by_value
+    attach_function 'electricity_m97', [], ExcelValue.by_value
+    attach_function 'electricity_d98', [], ExcelValue.by_value
+    attach_function 'electricity_e98', [], ExcelValue.by_value
+    attach_function 'electricity_f98', [], ExcelValue.by_value
+    attach_function 'electricity_g98', [], ExcelValue.by_value
+    attach_function 'electricity_h98', [], ExcelValue.by_value
+    attach_function 'electricity_i98', [], ExcelValue.by_value
+    attach_function 'electricity_j98', [], ExcelValue.by_value
+    attach_function 'electricity_k98', [], ExcelValue.by_value
+    attach_function 'electricity_l98', [], ExcelValue.by_value
+    attach_function 'electricity_m98', [], ExcelValue.by_value
     attach_function 'electricity_d34', [], ExcelValue.by_value
     attach_function 'electricity_e34', [], ExcelValue.by_value
     attach_function 'electricity_f34', [], ExcelValue.by_value
@@ -6109,6 +6059,16 @@ class Model
     attach_function 'ghg_m24', [], ExcelValue.by_value
     attach_function 'ghg_e42', [], ExcelValue.by_value
     # end of GHG
+    attach_function 'security_d135', [], ExcelValue.by_value
+    attach_function 'security_e135', [], ExcelValue.by_value
+    attach_function 'security_f135', [], ExcelValue.by_value
+    attach_function 'security_g135', [], ExcelValue.by_value
+    attach_function 'security_h135', [], ExcelValue.by_value
+    attach_function 'security_i135', [], ExcelValue.by_value
+    attach_function 'security_j135', [], ExcelValue.by_value
+    attach_function 'security_k135', [], ExcelValue.by_value
+    attach_function 'security_l135', [], ExcelValue.by_value
+    attach_function 'security_m135', [], ExcelValue.by_value
     attach_function 'security_d136', [], ExcelValue.by_value
     attach_function 'security_e136', [], ExcelValue.by_value
     attach_function 'security_f136', [], ExcelValue.by_value
@@ -6129,16 +6089,16 @@ class Model
     attach_function 'security_k137', [], ExcelValue.by_value
     attach_function 'security_l137', [], ExcelValue.by_value
     attach_function 'security_m137', [], ExcelValue.by_value
-    attach_function 'security_d138', [], ExcelValue.by_value
-    attach_function 'security_e138', [], ExcelValue.by_value
-    attach_function 'security_f138', [], ExcelValue.by_value
-    attach_function 'security_g138', [], ExcelValue.by_value
-    attach_function 'security_h138', [], ExcelValue.by_value
-    attach_function 'security_i138', [], ExcelValue.by_value
-    attach_function 'security_j138', [], ExcelValue.by_value
-    attach_function 'security_k138', [], ExcelValue.by_value
-    attach_function 'security_l138', [], ExcelValue.by_value
-    attach_function 'security_m138', [], ExcelValue.by_value
+    attach_function 'security_d32', [], ExcelValue.by_value
+    attach_function 'security_e32', [], ExcelValue.by_value
+    attach_function 'security_f32', [], ExcelValue.by_value
+    attach_function 'security_g32', [], ExcelValue.by_value
+    attach_function 'security_h32', [], ExcelValue.by_value
+    attach_function 'security_i32', [], ExcelValue.by_value
+    attach_function 'security_j32', [], ExcelValue.by_value
+    attach_function 'security_k32', [], ExcelValue.by_value
+    attach_function 'security_l32', [], ExcelValue.by_value
+    attach_function 'security_m32', [], ExcelValue.by_value
     attach_function 'security_d33', [], ExcelValue.by_value
     attach_function 'security_e33', [], ExcelValue.by_value
     attach_function 'security_f33', [], ExcelValue.by_value
@@ -6319,16 +6279,16 @@ class Model
     attach_function 'security_k50', [], ExcelValue.by_value
     attach_function 'security_l50', [], ExcelValue.by_value
     attach_function 'security_m50', [], ExcelValue.by_value
-    attach_function 'security_d51', [], ExcelValue.by_value
-    attach_function 'security_e51', [], ExcelValue.by_value
-    attach_function 'security_f51', [], ExcelValue.by_value
-    attach_function 'security_g51', [], ExcelValue.by_value
-    attach_function 'security_h51', [], ExcelValue.by_value
-    attach_function 'security_i51', [], ExcelValue.by_value
-    attach_function 'security_j51', [], ExcelValue.by_value
-    attach_function 'security_k51', [], ExcelValue.by_value
-    attach_function 'security_l51', [], ExcelValue.by_value
-    attach_function 'security_m51', [], ExcelValue.by_value
+    attach_function 'security_d123', [], ExcelValue.by_value
+    attach_function 'security_e123', [], ExcelValue.by_value
+    attach_function 'security_f123', [], ExcelValue.by_value
+    attach_function 'security_g123', [], ExcelValue.by_value
+    attach_function 'security_h123', [], ExcelValue.by_value
+    attach_function 'security_i123', [], ExcelValue.by_value
+    attach_function 'security_j123', [], ExcelValue.by_value
+    attach_function 'security_k123', [], ExcelValue.by_value
+    attach_function 'security_l123', [], ExcelValue.by_value
+    attach_function 'security_m123', [], ExcelValue.by_value
     attach_function 'security_d124', [], ExcelValue.by_value
     attach_function 'security_e124', [], ExcelValue.by_value
     attach_function 'security_f124', [], ExcelValue.by_value
@@ -6379,16 +6339,16 @@ class Model
     attach_function 'security_k128', [], ExcelValue.by_value
     attach_function 'security_l128', [], ExcelValue.by_value
     attach_function 'security_m128', [], ExcelValue.by_value
-    attach_function 'security_d129', [], ExcelValue.by_value
-    attach_function 'security_e129', [], ExcelValue.by_value
-    attach_function 'security_f129', [], ExcelValue.by_value
-    attach_function 'security_g129', [], ExcelValue.by_value
-    attach_function 'security_h129', [], ExcelValue.by_value
-    attach_function 'security_i129', [], ExcelValue.by_value
-    attach_function 'security_j129', [], ExcelValue.by_value
-    attach_function 'security_k129', [], ExcelValue.by_value
-    attach_function 'security_l129', [], ExcelValue.by_value
-    attach_function 'security_m129', [], ExcelValue.by_value
+    attach_function 'security_d105', [], ExcelValue.by_value
+    attach_function 'security_e105', [], ExcelValue.by_value
+    attach_function 'security_f105', [], ExcelValue.by_value
+    attach_function 'security_g105', [], ExcelValue.by_value
+    attach_function 'security_h105', [], ExcelValue.by_value
+    attach_function 'security_i105', [], ExcelValue.by_value
+    attach_function 'security_j105', [], ExcelValue.by_value
+    attach_function 'security_k105', [], ExcelValue.by_value
+    attach_function 'security_l105', [], ExcelValue.by_value
+    attach_function 'security_m105', [], ExcelValue.by_value
     attach_function 'security_d106', [], ExcelValue.by_value
     attach_function 'security_e106', [], ExcelValue.by_value
     attach_function 'security_f106', [], ExcelValue.by_value
@@ -6439,26 +6399,16 @@ class Model
     attach_function 'security_k110', [], ExcelValue.by_value
     attach_function 'security_l110', [], ExcelValue.by_value
     attach_function 'security_m110', [], ExcelValue.by_value
-    attach_function 'security_d111', [], ExcelValue.by_value
-    attach_function 'security_e111', [], ExcelValue.by_value
-    attach_function 'security_f111', [], ExcelValue.by_value
-    attach_function 'security_g111', [], ExcelValue.by_value
-    attach_function 'security_h111', [], ExcelValue.by_value
-    attach_function 'security_i111', [], ExcelValue.by_value
-    attach_function 'security_j111', [], ExcelValue.by_value
-    attach_function 'security_k111', [], ExcelValue.by_value
-    attach_function 'security_l111', [], ExcelValue.by_value
-    attach_function 'security_m111', [], ExcelValue.by_value
-    attach_function 'security_d77', [], ExcelValue.by_value
-    attach_function 'security_e77', [], ExcelValue.by_value
-    attach_function 'security_f77', [], ExcelValue.by_value
-    attach_function 'security_g77', [], ExcelValue.by_value
-    attach_function 'security_h77', [], ExcelValue.by_value
-    attach_function 'security_i77', [], ExcelValue.by_value
-    attach_function 'security_j77', [], ExcelValue.by_value
-    attach_function 'security_k77', [], ExcelValue.by_value
-    attach_function 'security_l77', [], ExcelValue.by_value
-    attach_function 'security_m77', [], ExcelValue.by_value
+    attach_function 'security_d76', [], ExcelValue.by_value
+    attach_function 'security_e76', [], ExcelValue.by_value
+    attach_function 'security_f76', [], ExcelValue.by_value
+    attach_function 'security_g76', [], ExcelValue.by_value
+    attach_function 'security_h76', [], ExcelValue.by_value
+    attach_function 'security_i76', [], ExcelValue.by_value
+    attach_function 'security_j76', [], ExcelValue.by_value
+    attach_function 'security_k76', [], ExcelValue.by_value
+    attach_function 'security_l76', [], ExcelValue.by_value
+    attach_function 'security_m76', [], ExcelValue.by_value
     # end of Security
     # end of CostPerCapita
     # end of CostAbsolute
@@ -6482,15 +6432,19 @@ class Model
     # end of VI.a
     # end of VI.b
     # end of VI.c
+    # end of VI.d
     # end of VI.e
     # end of VII.a
     # end of VII.b
     # end of VIII.a
     # end of IX.a
     # end of X.a
+    # end of XI.a
     # end of XII.a
     # end of XIII.a
     # end of XIII.c
+    # end of XIII.c.1
+    # end of XIII.c.2
     # end of offshore (IV.b)_un
     # end of Geotermica (III.d)_unused
     # end of aqu solar (IV.g)_un
@@ -6506,8 +6460,8 @@ class Model
     # end of XIII.e
     # end of 2007 (Actual, frozen)
     # end of 2007 (Consistent)
-    # end of 2013
     # end of 2015
+    # end of 2013
     # end of 2020
     # end of 2025
     # end of 2030
