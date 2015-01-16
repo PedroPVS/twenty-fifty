@@ -16,7 +16,7 @@ window.timeSeriesStackedAreaChart = function() {
   data_year_interval = 5;
   min_value = 0;
   max_value = 4000;
-  min_year = 2010;
+  min_year = 2015;
   max_year = 2050;
   total_label = /^total*/i; //regular expression
   color_classes = {
@@ -109,7 +109,7 @@ window.timeSeriesStackedAreaChart = function() {
   };
   xScale = d3.scale.linear();
   yScale = d3.scale.linear();
-  xAxis = d3.svg.axis().scale(xScale).orient("bottom").ticks(5).tickFormat(d3.format(".0f"));
+  xAxis = d3.svg.axis().scale(xScale).orient("bottom").tickValues([2015,2020,2030,2040,2050]).tickFormat(d3.format(".0f"));
   yAxis = d3.svg.axis().scale(yScale).orient("left").ticks(5).tickFormat(d3.format(".0f"));
   stack = d3.layout.stack().values(function(d) {
     return d.value;
@@ -196,7 +196,8 @@ window.timeSeriesStackedAreaChart = function() {
               //Helio Formiga
               //alert("value at the year " + (data_first_year + 3 + (i * data_year_interval)) + " is " + p);
               return {
-                x: data_first_year + 3 + (i * data_year_interval),
+                //x: data_first_year + 3 + (i * data_year_interval),
+                x: data_first_year + (i * data_year_interval),
                 y: p
               };
             });

@@ -159,7 +159,6 @@ class Model
     attach_function 'set_control_e47', [ExcelValue.by_value], :void
     attach_function 'set_control_e48', [ExcelValue.by_value], :void
     attach_function 'set_control_e49', [ExcelValue.by_value], :void
-    attach_function 'set_control_e50', [ExcelValue.by_value], :void
     attach_function 'control_e5', [], ExcelValue.by_value
     attach_function 'control_e6', [], ExcelValue.by_value
     attach_function 'control_e7', [], ExcelValue.by_value
@@ -205,7 +204,6 @@ class Model
     attach_function 'control_e47', [], ExcelValue.by_value
     attach_function 'control_e48', [], ExcelValue.by_value
     attach_function 'control_e49', [], ExcelValue.by_value
-    attach_function 'control_e50', [], ExcelValue.by_value
     attach_function 'control_i5', [], ExcelValue.by_value
     attach_function 'control_j5', [], ExcelValue.by_value
     attach_function 'control_k5', [], ExcelValue.by_value
@@ -386,10 +384,6 @@ class Model
     attach_function 'control_j49', [], ExcelValue.by_value
     attach_function 'control_k49', [], ExcelValue.by_value
     attach_function 'control_l49', [], ExcelValue.by_value
-    attach_function 'control_i50', [], ExcelValue.by_value
-    attach_function 'control_j50', [], ExcelValue.by_value
-    attach_function 'control_k50', [], ExcelValue.by_value
-    attach_function 'control_l50', [], ExcelValue.by_value
     attach_function 'control_n5', [], ExcelValue.by_value
     attach_function 'control_o5', [], ExcelValue.by_value
     attach_function 'control_p5', [], ExcelValue.by_value
@@ -1155,23 +1149,6 @@ class Model
     attach_function 'control_ab49', [], ExcelValue.by_value
     attach_function 'control_ac49', [], ExcelValue.by_value
     attach_function 'control_ad49', [], ExcelValue.by_value
-    attach_function 'control_n50', [], ExcelValue.by_value
-    attach_function 'control_o50', [], ExcelValue.by_value
-    attach_function 'control_p50', [], ExcelValue.by_value
-    attach_function 'control_q50', [], ExcelValue.by_value
-    attach_function 'control_r50', [], ExcelValue.by_value
-    attach_function 'control_s50', [], ExcelValue.by_value
-    attach_function 'control_t50', [], ExcelValue.by_value
-    attach_function 'control_u50', [], ExcelValue.by_value
-    attach_function 'control_v50', [], ExcelValue.by_value
-    attach_function 'control_w50', [], ExcelValue.by_value
-    attach_function 'control_x50', [], ExcelValue.by_value
-    attach_function 'control_y50', [], ExcelValue.by_value
-    attach_function 'control_z50', [], ExcelValue.by_value
-    attach_function 'control_aa50', [], ExcelValue.by_value
-    attach_function 'control_ab50', [], ExcelValue.by_value
-    attach_function 'control_ac50', [], ExcelValue.by_value
-    attach_function 'control_ad50', [], ExcelValue.by_value
     attach_function 'control_bq5', [], ExcelValue.by_value
     attach_function 'control_br5', [], ExcelValue.by_value
     attach_function 'control_bs5', [], ExcelValue.by_value
@@ -1352,10 +1329,6 @@ class Model
     attach_function 'control_br49', [], ExcelValue.by_value
     attach_function 'control_bs49', [], ExcelValue.by_value
     attach_function 'control_bt49', [], ExcelValue.by_value
-    attach_function 'control_bq50', [], ExcelValue.by_value
-    attach_function 'control_br50', [], ExcelValue.by_value
-    attach_function 'control_bs50', [], ExcelValue.by_value
-    attach_function 'control_bt50', [], ExcelValue.by_value
     attach_function 'control_d5', [], ExcelValue.by_value
     attach_function 'control_d6', [], ExcelValue.by_value
     attach_function 'control_d7', [], ExcelValue.by_value
@@ -1401,7 +1374,6 @@ class Model
     attach_function 'control_d47', [], ExcelValue.by_value
     attach_function 'control_d48', [], ExcelValue.by_value
     attach_function 'control_d49', [], ExcelValue.by_value
-    attach_function 'control_d50', [], ExcelValue.by_value
     attach_function 'control_g5', [], ExcelValue.by_value
     attach_function 'control_g6', [], ExcelValue.by_value
     attach_function 'control_g7', [], ExcelValue.by_value
@@ -1447,7 +1419,6 @@ class Model
     attach_function 'control_g47', [], ExcelValue.by_value
     attach_function 'control_g48', [], ExcelValue.by_value
     attach_function 'control_g49', [], ExcelValue.by_value
-    attach_function 'control_g50', [], ExcelValue.by_value
     attach_function 'control_f5', [], ExcelValue.by_value
     attach_function 'control_f6', [], ExcelValue.by_value
     attach_function 'control_f7', [], ExcelValue.by_value
@@ -1493,7 +1464,6 @@ class Model
     attach_function 'control_f47', [], ExcelValue.by_value
     attach_function 'control_f48', [], ExcelValue.by_value
     attach_function 'control_f49', [], ExcelValue.by_value
-    attach_function 'control_f50', [], ExcelValue.by_value
     attach_function 'control_n1', [], ExcelValue.by_value
     # end of Control
     # end of Preferences
@@ -5304,8 +5274,634 @@ class Model
     attach_function 'intermediate_output_h550', [], ExcelValue.by_value
     attach_function 'intermediate_output_h551', [], ExcelValue.by_value
     # end of Intermediate output
+    attach_function 'flows_o5', [], ExcelValue.by_value
+    attach_function 'flows_p5', [], ExcelValue.by_value
+    attach_function 'flows_q5', [], ExcelValue.by_value
+    attach_function 'flows_r5', [], ExcelValue.by_value
+    attach_function 'flows_s5', [], ExcelValue.by_value
+    attach_function 'flows_t5', [], ExcelValue.by_value
+    attach_function 'flows_u5', [], ExcelValue.by_value
+    attach_function 'flows_v5', [], ExcelValue.by_value
+    attach_function 'flows_w5', [], ExcelValue.by_value
+    attach_function 'flows_x5', [], ExcelValue.by_value
+    attach_function 'flows_y5', [], ExcelValue.by_value
+    attach_function 'flows_o6', [], ExcelValue.by_value
+    attach_function 'flows_p6', [], ExcelValue.by_value
+    attach_function 'flows_q6', [], ExcelValue.by_value
+    attach_function 'flows_r6', [], ExcelValue.by_value
+    attach_function 'flows_s6', [], ExcelValue.by_value
+    attach_function 'flows_t6', [], ExcelValue.by_value
+    attach_function 'flows_u6', [], ExcelValue.by_value
+    attach_function 'flows_v6', [], ExcelValue.by_value
+    attach_function 'flows_w6', [], ExcelValue.by_value
+    attach_function 'flows_x6', [], ExcelValue.by_value
+    attach_function 'flows_y6', [], ExcelValue.by_value
+    attach_function 'flows_o7', [], ExcelValue.by_value
+    attach_function 'flows_p7', [], ExcelValue.by_value
+    attach_function 'flows_q7', [], ExcelValue.by_value
+    attach_function 'flows_r7', [], ExcelValue.by_value
+    attach_function 'flows_s7', [], ExcelValue.by_value
+    attach_function 'flows_t7', [], ExcelValue.by_value
+    attach_function 'flows_u7', [], ExcelValue.by_value
+    attach_function 'flows_v7', [], ExcelValue.by_value
+    attach_function 'flows_w7', [], ExcelValue.by_value
+    attach_function 'flows_x7', [], ExcelValue.by_value
+    attach_function 'flows_y7', [], ExcelValue.by_value
+    attach_function 'flows_o8', [], ExcelValue.by_value
+    attach_function 'flows_p8', [], ExcelValue.by_value
+    attach_function 'flows_q8', [], ExcelValue.by_value
+    attach_function 'flows_r8', [], ExcelValue.by_value
+    attach_function 'flows_s8', [], ExcelValue.by_value
+    attach_function 'flows_t8', [], ExcelValue.by_value
+    attach_function 'flows_u8', [], ExcelValue.by_value
+    attach_function 'flows_v8', [], ExcelValue.by_value
+    attach_function 'flows_w8', [], ExcelValue.by_value
+    attach_function 'flows_x8', [], ExcelValue.by_value
+    attach_function 'flows_y8', [], ExcelValue.by_value
+    attach_function 'flows_o9', [], ExcelValue.by_value
+    attach_function 'flows_p9', [], ExcelValue.by_value
+    attach_function 'flows_q9', [], ExcelValue.by_value
+    attach_function 'flows_r9', [], ExcelValue.by_value
+    attach_function 'flows_s9', [], ExcelValue.by_value
+    attach_function 'flows_t9', [], ExcelValue.by_value
+    attach_function 'flows_u9', [], ExcelValue.by_value
+    attach_function 'flows_v9', [], ExcelValue.by_value
+    attach_function 'flows_w9', [], ExcelValue.by_value
+    attach_function 'flows_x9', [], ExcelValue.by_value
+    attach_function 'flows_y9', [], ExcelValue.by_value
+    attach_function 'flows_o10', [], ExcelValue.by_value
+    attach_function 'flows_p10', [], ExcelValue.by_value
+    attach_function 'flows_q10', [], ExcelValue.by_value
+    attach_function 'flows_r10', [], ExcelValue.by_value
+    attach_function 'flows_s10', [], ExcelValue.by_value
+    attach_function 'flows_t10', [], ExcelValue.by_value
+    attach_function 'flows_u10', [], ExcelValue.by_value
+    attach_function 'flows_v10', [], ExcelValue.by_value
+    attach_function 'flows_w10', [], ExcelValue.by_value
+    attach_function 'flows_x10', [], ExcelValue.by_value
+    attach_function 'flows_y10', [], ExcelValue.by_value
+    attach_function 'flows_o11', [], ExcelValue.by_value
+    attach_function 'flows_p11', [], ExcelValue.by_value
+    attach_function 'flows_q11', [], ExcelValue.by_value
+    attach_function 'flows_r11', [], ExcelValue.by_value
+    attach_function 'flows_s11', [], ExcelValue.by_value
+    attach_function 'flows_t11', [], ExcelValue.by_value
+    attach_function 'flows_u11', [], ExcelValue.by_value
+    attach_function 'flows_v11', [], ExcelValue.by_value
+    attach_function 'flows_w11', [], ExcelValue.by_value
+    attach_function 'flows_x11', [], ExcelValue.by_value
+    attach_function 'flows_y11', [], ExcelValue.by_value
+    attach_function 'flows_o12', [], ExcelValue.by_value
+    attach_function 'flows_p12', [], ExcelValue.by_value
+    attach_function 'flows_q12', [], ExcelValue.by_value
+    attach_function 'flows_r12', [], ExcelValue.by_value
+    attach_function 'flows_s12', [], ExcelValue.by_value
+    attach_function 'flows_t12', [], ExcelValue.by_value
+    attach_function 'flows_u12', [], ExcelValue.by_value
+    attach_function 'flows_v12', [], ExcelValue.by_value
+    attach_function 'flows_w12', [], ExcelValue.by_value
+    attach_function 'flows_x12', [], ExcelValue.by_value
+    attach_function 'flows_y12', [], ExcelValue.by_value
+    attach_function 'flows_o13', [], ExcelValue.by_value
+    attach_function 'flows_p13', [], ExcelValue.by_value
+    attach_function 'flows_q13', [], ExcelValue.by_value
+    attach_function 'flows_r13', [], ExcelValue.by_value
+    attach_function 'flows_s13', [], ExcelValue.by_value
+    attach_function 'flows_t13', [], ExcelValue.by_value
+    attach_function 'flows_u13', [], ExcelValue.by_value
+    attach_function 'flows_v13', [], ExcelValue.by_value
+    attach_function 'flows_w13', [], ExcelValue.by_value
+    attach_function 'flows_x13', [], ExcelValue.by_value
+    attach_function 'flows_y13', [], ExcelValue.by_value
+    attach_function 'flows_o14', [], ExcelValue.by_value
+    attach_function 'flows_p14', [], ExcelValue.by_value
+    attach_function 'flows_q14', [], ExcelValue.by_value
+    attach_function 'flows_r14', [], ExcelValue.by_value
+    attach_function 'flows_s14', [], ExcelValue.by_value
+    attach_function 'flows_t14', [], ExcelValue.by_value
+    attach_function 'flows_u14', [], ExcelValue.by_value
+    attach_function 'flows_v14', [], ExcelValue.by_value
+    attach_function 'flows_w14', [], ExcelValue.by_value
+    attach_function 'flows_x14', [], ExcelValue.by_value
+    attach_function 'flows_y14', [], ExcelValue.by_value
+    attach_function 'flows_o15', [], ExcelValue.by_value
+    attach_function 'flows_p15', [], ExcelValue.by_value
+    attach_function 'flows_q15', [], ExcelValue.by_value
+    attach_function 'flows_r15', [], ExcelValue.by_value
+    attach_function 'flows_s15', [], ExcelValue.by_value
+    attach_function 'flows_t15', [], ExcelValue.by_value
+    attach_function 'flows_u15', [], ExcelValue.by_value
+    attach_function 'flows_v15', [], ExcelValue.by_value
+    attach_function 'flows_w15', [], ExcelValue.by_value
+    attach_function 'flows_x15', [], ExcelValue.by_value
+    attach_function 'flows_y15', [], ExcelValue.by_value
+    attach_function 'flows_o16', [], ExcelValue.by_value
+    attach_function 'flows_p16', [], ExcelValue.by_value
+    attach_function 'flows_q16', [], ExcelValue.by_value
+    attach_function 'flows_r16', [], ExcelValue.by_value
+    attach_function 'flows_s16', [], ExcelValue.by_value
+    attach_function 'flows_t16', [], ExcelValue.by_value
+    attach_function 'flows_u16', [], ExcelValue.by_value
+    attach_function 'flows_v16', [], ExcelValue.by_value
+    attach_function 'flows_w16', [], ExcelValue.by_value
+    attach_function 'flows_x16', [], ExcelValue.by_value
+    attach_function 'flows_y16', [], ExcelValue.by_value
+    attach_function 'flows_o17', [], ExcelValue.by_value
+    attach_function 'flows_p17', [], ExcelValue.by_value
+    attach_function 'flows_q17', [], ExcelValue.by_value
+    attach_function 'flows_r17', [], ExcelValue.by_value
+    attach_function 'flows_s17', [], ExcelValue.by_value
+    attach_function 'flows_t17', [], ExcelValue.by_value
+    attach_function 'flows_u17', [], ExcelValue.by_value
+    attach_function 'flows_v17', [], ExcelValue.by_value
+    attach_function 'flows_w17', [], ExcelValue.by_value
+    attach_function 'flows_x17', [], ExcelValue.by_value
+    attach_function 'flows_y17', [], ExcelValue.by_value
+    attach_function 'flows_o18', [], ExcelValue.by_value
+    attach_function 'flows_p18', [], ExcelValue.by_value
+    attach_function 'flows_q18', [], ExcelValue.by_value
+    attach_function 'flows_r18', [], ExcelValue.by_value
+    attach_function 'flows_s18', [], ExcelValue.by_value
+    attach_function 'flows_t18', [], ExcelValue.by_value
+    attach_function 'flows_u18', [], ExcelValue.by_value
+    attach_function 'flows_v18', [], ExcelValue.by_value
+    attach_function 'flows_w18', [], ExcelValue.by_value
+    attach_function 'flows_x18', [], ExcelValue.by_value
+    attach_function 'flows_y18', [], ExcelValue.by_value
+    attach_function 'flows_o19', [], ExcelValue.by_value
+    attach_function 'flows_p19', [], ExcelValue.by_value
+    attach_function 'flows_q19', [], ExcelValue.by_value
+    attach_function 'flows_r19', [], ExcelValue.by_value
+    attach_function 'flows_s19', [], ExcelValue.by_value
+    attach_function 'flows_t19', [], ExcelValue.by_value
+    attach_function 'flows_u19', [], ExcelValue.by_value
+    attach_function 'flows_v19', [], ExcelValue.by_value
+    attach_function 'flows_w19', [], ExcelValue.by_value
+    attach_function 'flows_x19', [], ExcelValue.by_value
+    attach_function 'flows_y19', [], ExcelValue.by_value
+    attach_function 'flows_o20', [], ExcelValue.by_value
+    attach_function 'flows_p20', [], ExcelValue.by_value
+    attach_function 'flows_q20', [], ExcelValue.by_value
+    attach_function 'flows_r20', [], ExcelValue.by_value
+    attach_function 'flows_s20', [], ExcelValue.by_value
+    attach_function 'flows_t20', [], ExcelValue.by_value
+    attach_function 'flows_u20', [], ExcelValue.by_value
+    attach_function 'flows_v20', [], ExcelValue.by_value
+    attach_function 'flows_w20', [], ExcelValue.by_value
+    attach_function 'flows_x20', [], ExcelValue.by_value
+    attach_function 'flows_y20', [], ExcelValue.by_value
+    attach_function 'flows_o21', [], ExcelValue.by_value
+    attach_function 'flows_p21', [], ExcelValue.by_value
+    attach_function 'flows_q21', [], ExcelValue.by_value
+    attach_function 'flows_r21', [], ExcelValue.by_value
+    attach_function 'flows_s21', [], ExcelValue.by_value
+    attach_function 'flows_t21', [], ExcelValue.by_value
+    attach_function 'flows_u21', [], ExcelValue.by_value
+    attach_function 'flows_v21', [], ExcelValue.by_value
+    attach_function 'flows_w21', [], ExcelValue.by_value
+    attach_function 'flows_x21', [], ExcelValue.by_value
+    attach_function 'flows_y21', [], ExcelValue.by_value
+    attach_function 'flows_o22', [], ExcelValue.by_value
+    attach_function 'flows_p22', [], ExcelValue.by_value
+    attach_function 'flows_q22', [], ExcelValue.by_value
+    attach_function 'flows_r22', [], ExcelValue.by_value
+    attach_function 'flows_s22', [], ExcelValue.by_value
+    attach_function 'flows_t22', [], ExcelValue.by_value
+    attach_function 'flows_u22', [], ExcelValue.by_value
+    attach_function 'flows_v22', [], ExcelValue.by_value
+    attach_function 'flows_w22', [], ExcelValue.by_value
+    attach_function 'flows_x22', [], ExcelValue.by_value
+    attach_function 'flows_y22', [], ExcelValue.by_value
+    attach_function 'flows_o23', [], ExcelValue.by_value
+    attach_function 'flows_p23', [], ExcelValue.by_value
+    attach_function 'flows_q23', [], ExcelValue.by_value
+    attach_function 'flows_r23', [], ExcelValue.by_value
+    attach_function 'flows_s23', [], ExcelValue.by_value
+    attach_function 'flows_t23', [], ExcelValue.by_value
+    attach_function 'flows_u23', [], ExcelValue.by_value
+    attach_function 'flows_v23', [], ExcelValue.by_value
+    attach_function 'flows_w23', [], ExcelValue.by_value
+    attach_function 'flows_x23', [], ExcelValue.by_value
+    attach_function 'flows_y23', [], ExcelValue.by_value
+    attach_function 'flows_o24', [], ExcelValue.by_value
+    attach_function 'flows_p24', [], ExcelValue.by_value
+    attach_function 'flows_q24', [], ExcelValue.by_value
+    attach_function 'flows_r24', [], ExcelValue.by_value
+    attach_function 'flows_s24', [], ExcelValue.by_value
+    attach_function 'flows_t24', [], ExcelValue.by_value
+    attach_function 'flows_u24', [], ExcelValue.by_value
+    attach_function 'flows_v24', [], ExcelValue.by_value
+    attach_function 'flows_w24', [], ExcelValue.by_value
+    attach_function 'flows_x24', [], ExcelValue.by_value
+    attach_function 'flows_y24', [], ExcelValue.by_value
+    attach_function 'flows_o25', [], ExcelValue.by_value
+    attach_function 'flows_p25', [], ExcelValue.by_value
+    attach_function 'flows_q25', [], ExcelValue.by_value
+    attach_function 'flows_r25', [], ExcelValue.by_value
+    attach_function 'flows_s25', [], ExcelValue.by_value
+    attach_function 'flows_t25', [], ExcelValue.by_value
+    attach_function 'flows_u25', [], ExcelValue.by_value
+    attach_function 'flows_v25', [], ExcelValue.by_value
+    attach_function 'flows_w25', [], ExcelValue.by_value
+    attach_function 'flows_x25', [], ExcelValue.by_value
+    attach_function 'flows_y25', [], ExcelValue.by_value
+    attach_function 'flows_o26', [], ExcelValue.by_value
+    attach_function 'flows_p26', [], ExcelValue.by_value
+    attach_function 'flows_q26', [], ExcelValue.by_value
+    attach_function 'flows_r26', [], ExcelValue.by_value
+    attach_function 'flows_s26', [], ExcelValue.by_value
+    attach_function 'flows_t26', [], ExcelValue.by_value
+    attach_function 'flows_u26', [], ExcelValue.by_value
+    attach_function 'flows_v26', [], ExcelValue.by_value
+    attach_function 'flows_w26', [], ExcelValue.by_value
+    attach_function 'flows_x26', [], ExcelValue.by_value
+    attach_function 'flows_y26', [], ExcelValue.by_value
+    attach_function 'flows_o27', [], ExcelValue.by_value
+    attach_function 'flows_p27', [], ExcelValue.by_value
+    attach_function 'flows_q27', [], ExcelValue.by_value
+    attach_function 'flows_r27', [], ExcelValue.by_value
+    attach_function 'flows_s27', [], ExcelValue.by_value
+    attach_function 'flows_t27', [], ExcelValue.by_value
+    attach_function 'flows_u27', [], ExcelValue.by_value
+    attach_function 'flows_v27', [], ExcelValue.by_value
+    attach_function 'flows_w27', [], ExcelValue.by_value
+    attach_function 'flows_x27', [], ExcelValue.by_value
+    attach_function 'flows_y27', [], ExcelValue.by_value
+    attach_function 'flows_o28', [], ExcelValue.by_value
+    attach_function 'flows_p28', [], ExcelValue.by_value
+    attach_function 'flows_q28', [], ExcelValue.by_value
+    attach_function 'flows_r28', [], ExcelValue.by_value
+    attach_function 'flows_s28', [], ExcelValue.by_value
+    attach_function 'flows_t28', [], ExcelValue.by_value
+    attach_function 'flows_u28', [], ExcelValue.by_value
+    attach_function 'flows_v28', [], ExcelValue.by_value
+    attach_function 'flows_w28', [], ExcelValue.by_value
+    attach_function 'flows_x28', [], ExcelValue.by_value
+    attach_function 'flows_y28', [], ExcelValue.by_value
+    attach_function 'flows_o29', [], ExcelValue.by_value
+    attach_function 'flows_p29', [], ExcelValue.by_value
+    attach_function 'flows_q29', [], ExcelValue.by_value
+    attach_function 'flows_r29', [], ExcelValue.by_value
+    attach_function 'flows_s29', [], ExcelValue.by_value
+    attach_function 'flows_t29', [], ExcelValue.by_value
+    attach_function 'flows_u29', [], ExcelValue.by_value
+    attach_function 'flows_v29', [], ExcelValue.by_value
+    attach_function 'flows_w29', [], ExcelValue.by_value
+    attach_function 'flows_x29', [], ExcelValue.by_value
+    attach_function 'flows_y29', [], ExcelValue.by_value
+    attach_function 'flows_o30', [], ExcelValue.by_value
+    attach_function 'flows_p30', [], ExcelValue.by_value
+    attach_function 'flows_q30', [], ExcelValue.by_value
+    attach_function 'flows_r30', [], ExcelValue.by_value
+    attach_function 'flows_s30', [], ExcelValue.by_value
+    attach_function 'flows_t30', [], ExcelValue.by_value
+    attach_function 'flows_u30', [], ExcelValue.by_value
+    attach_function 'flows_v30', [], ExcelValue.by_value
+    attach_function 'flows_w30', [], ExcelValue.by_value
+    attach_function 'flows_x30', [], ExcelValue.by_value
+    attach_function 'flows_y30', [], ExcelValue.by_value
+    attach_function 'flows_o31', [], ExcelValue.by_value
+    attach_function 'flows_p31', [], ExcelValue.by_value
+    attach_function 'flows_q31', [], ExcelValue.by_value
+    attach_function 'flows_r31', [], ExcelValue.by_value
+    attach_function 'flows_s31', [], ExcelValue.by_value
+    attach_function 'flows_t31', [], ExcelValue.by_value
+    attach_function 'flows_u31', [], ExcelValue.by_value
+    attach_function 'flows_v31', [], ExcelValue.by_value
+    attach_function 'flows_w31', [], ExcelValue.by_value
+    attach_function 'flows_x31', [], ExcelValue.by_value
+    attach_function 'flows_y31', [], ExcelValue.by_value
+    attach_function 'flows_o32', [], ExcelValue.by_value
+    attach_function 'flows_p32', [], ExcelValue.by_value
+    attach_function 'flows_q32', [], ExcelValue.by_value
+    attach_function 'flows_r32', [], ExcelValue.by_value
+    attach_function 'flows_s32', [], ExcelValue.by_value
+    attach_function 'flows_t32', [], ExcelValue.by_value
+    attach_function 'flows_u32', [], ExcelValue.by_value
+    attach_function 'flows_v32', [], ExcelValue.by_value
+    attach_function 'flows_w32', [], ExcelValue.by_value
+    attach_function 'flows_x32', [], ExcelValue.by_value
+    attach_function 'flows_y32', [], ExcelValue.by_value
+    attach_function 'flows_o33', [], ExcelValue.by_value
+    attach_function 'flows_p33', [], ExcelValue.by_value
+    attach_function 'flows_q33', [], ExcelValue.by_value
+    attach_function 'flows_r33', [], ExcelValue.by_value
+    attach_function 'flows_s33', [], ExcelValue.by_value
+    attach_function 'flows_t33', [], ExcelValue.by_value
+    attach_function 'flows_u33', [], ExcelValue.by_value
+    attach_function 'flows_v33', [], ExcelValue.by_value
+    attach_function 'flows_w33', [], ExcelValue.by_value
+    attach_function 'flows_x33', [], ExcelValue.by_value
+    attach_function 'flows_y33', [], ExcelValue.by_value
+    attach_function 'flows_o34', [], ExcelValue.by_value
+    attach_function 'flows_p34', [], ExcelValue.by_value
+    attach_function 'flows_q34', [], ExcelValue.by_value
+    attach_function 'flows_r34', [], ExcelValue.by_value
+    attach_function 'flows_s34', [], ExcelValue.by_value
+    attach_function 'flows_t34', [], ExcelValue.by_value
+    attach_function 'flows_u34', [], ExcelValue.by_value
+    attach_function 'flows_v34', [], ExcelValue.by_value
+    attach_function 'flows_w34', [], ExcelValue.by_value
+    attach_function 'flows_x34', [], ExcelValue.by_value
+    attach_function 'flows_y34', [], ExcelValue.by_value
+    attach_function 'flows_o35', [], ExcelValue.by_value
+    attach_function 'flows_p35', [], ExcelValue.by_value
+    attach_function 'flows_q35', [], ExcelValue.by_value
+    attach_function 'flows_r35', [], ExcelValue.by_value
+    attach_function 'flows_s35', [], ExcelValue.by_value
+    attach_function 'flows_t35', [], ExcelValue.by_value
+    attach_function 'flows_u35', [], ExcelValue.by_value
+    attach_function 'flows_v35', [], ExcelValue.by_value
+    attach_function 'flows_w35', [], ExcelValue.by_value
+    attach_function 'flows_x35', [], ExcelValue.by_value
+    attach_function 'flows_y35', [], ExcelValue.by_value
+    attach_function 'flows_o36', [], ExcelValue.by_value
+    attach_function 'flows_p36', [], ExcelValue.by_value
+    attach_function 'flows_q36', [], ExcelValue.by_value
+    attach_function 'flows_r36', [], ExcelValue.by_value
+    attach_function 'flows_s36', [], ExcelValue.by_value
+    attach_function 'flows_t36', [], ExcelValue.by_value
+    attach_function 'flows_u36', [], ExcelValue.by_value
+    attach_function 'flows_v36', [], ExcelValue.by_value
+    attach_function 'flows_w36', [], ExcelValue.by_value
+    attach_function 'flows_x36', [], ExcelValue.by_value
+    attach_function 'flows_y36', [], ExcelValue.by_value
+    attach_function 'flows_o37', [], ExcelValue.by_value
+    attach_function 'flows_p37', [], ExcelValue.by_value
+    attach_function 'flows_q37', [], ExcelValue.by_value
+    attach_function 'flows_r37', [], ExcelValue.by_value
+    attach_function 'flows_s37', [], ExcelValue.by_value
+    attach_function 'flows_t37', [], ExcelValue.by_value
+    attach_function 'flows_u37', [], ExcelValue.by_value
+    attach_function 'flows_v37', [], ExcelValue.by_value
+    attach_function 'flows_w37', [], ExcelValue.by_value
+    attach_function 'flows_x37', [], ExcelValue.by_value
+    attach_function 'flows_y37', [], ExcelValue.by_value
+    attach_function 'flows_o38', [], ExcelValue.by_value
+    attach_function 'flows_p38', [], ExcelValue.by_value
+    attach_function 'flows_q38', [], ExcelValue.by_value
+    attach_function 'flows_r38', [], ExcelValue.by_value
+    attach_function 'flows_s38', [], ExcelValue.by_value
+    attach_function 'flows_t38', [], ExcelValue.by_value
+    attach_function 'flows_u38', [], ExcelValue.by_value
+    attach_function 'flows_v38', [], ExcelValue.by_value
+    attach_function 'flows_w38', [], ExcelValue.by_value
+    attach_function 'flows_x38', [], ExcelValue.by_value
+    attach_function 'flows_y38', [], ExcelValue.by_value
+    attach_function 'flows_o39', [], ExcelValue.by_value
+    attach_function 'flows_p39', [], ExcelValue.by_value
+    attach_function 'flows_q39', [], ExcelValue.by_value
+    attach_function 'flows_r39', [], ExcelValue.by_value
+    attach_function 'flows_s39', [], ExcelValue.by_value
+    attach_function 'flows_t39', [], ExcelValue.by_value
+    attach_function 'flows_u39', [], ExcelValue.by_value
+    attach_function 'flows_v39', [], ExcelValue.by_value
+    attach_function 'flows_w39', [], ExcelValue.by_value
+    attach_function 'flows_x39', [], ExcelValue.by_value
+    attach_function 'flows_y39', [], ExcelValue.by_value
+    attach_function 'flows_o40', [], ExcelValue.by_value
+    attach_function 'flows_p40', [], ExcelValue.by_value
+    attach_function 'flows_q40', [], ExcelValue.by_value
+    attach_function 'flows_r40', [], ExcelValue.by_value
+    attach_function 'flows_s40', [], ExcelValue.by_value
+    attach_function 'flows_t40', [], ExcelValue.by_value
+    attach_function 'flows_u40', [], ExcelValue.by_value
+    attach_function 'flows_v40', [], ExcelValue.by_value
+    attach_function 'flows_w40', [], ExcelValue.by_value
+    attach_function 'flows_x40', [], ExcelValue.by_value
+    attach_function 'flows_y40', [], ExcelValue.by_value
+    attach_function 'flows_o41', [], ExcelValue.by_value
+    attach_function 'flows_p41', [], ExcelValue.by_value
+    attach_function 'flows_q41', [], ExcelValue.by_value
+    attach_function 'flows_r41', [], ExcelValue.by_value
+    attach_function 'flows_s41', [], ExcelValue.by_value
+    attach_function 'flows_t41', [], ExcelValue.by_value
+    attach_function 'flows_u41', [], ExcelValue.by_value
+    attach_function 'flows_v41', [], ExcelValue.by_value
+    attach_function 'flows_w41', [], ExcelValue.by_value
+    attach_function 'flows_x41', [], ExcelValue.by_value
+    attach_function 'flows_y41', [], ExcelValue.by_value
+    attach_function 'flows_o42', [], ExcelValue.by_value
+    attach_function 'flows_p42', [], ExcelValue.by_value
+    attach_function 'flows_q42', [], ExcelValue.by_value
+    attach_function 'flows_r42', [], ExcelValue.by_value
+    attach_function 'flows_s42', [], ExcelValue.by_value
+    attach_function 'flows_t42', [], ExcelValue.by_value
+    attach_function 'flows_u42', [], ExcelValue.by_value
+    attach_function 'flows_v42', [], ExcelValue.by_value
+    attach_function 'flows_w42', [], ExcelValue.by_value
+    attach_function 'flows_x42', [], ExcelValue.by_value
+    attach_function 'flows_y42', [], ExcelValue.by_value
+    attach_function 'flows_o43', [], ExcelValue.by_value
+    attach_function 'flows_p43', [], ExcelValue.by_value
+    attach_function 'flows_q43', [], ExcelValue.by_value
+    attach_function 'flows_r43', [], ExcelValue.by_value
+    attach_function 'flows_s43', [], ExcelValue.by_value
+    attach_function 'flows_t43', [], ExcelValue.by_value
+    attach_function 'flows_u43', [], ExcelValue.by_value
+    attach_function 'flows_v43', [], ExcelValue.by_value
+    attach_function 'flows_w43', [], ExcelValue.by_value
+    attach_function 'flows_x43', [], ExcelValue.by_value
+    attach_function 'flows_y43', [], ExcelValue.by_value
+    attach_function 'flows_o44', [], ExcelValue.by_value
+    attach_function 'flows_p44', [], ExcelValue.by_value
+    attach_function 'flows_q44', [], ExcelValue.by_value
+    attach_function 'flows_r44', [], ExcelValue.by_value
+    attach_function 'flows_s44', [], ExcelValue.by_value
+    attach_function 'flows_t44', [], ExcelValue.by_value
+    attach_function 'flows_u44', [], ExcelValue.by_value
+    attach_function 'flows_v44', [], ExcelValue.by_value
+    attach_function 'flows_w44', [], ExcelValue.by_value
+    attach_function 'flows_x44', [], ExcelValue.by_value
+    attach_function 'flows_y44', [], ExcelValue.by_value
+    attach_function 'flows_o45', [], ExcelValue.by_value
+    attach_function 'flows_p45', [], ExcelValue.by_value
+    attach_function 'flows_q45', [], ExcelValue.by_value
+    attach_function 'flows_r45', [], ExcelValue.by_value
+    attach_function 'flows_s45', [], ExcelValue.by_value
+    attach_function 'flows_t45', [], ExcelValue.by_value
+    attach_function 'flows_u45', [], ExcelValue.by_value
+    attach_function 'flows_v45', [], ExcelValue.by_value
+    attach_function 'flows_w45', [], ExcelValue.by_value
+    attach_function 'flows_x45', [], ExcelValue.by_value
+    attach_function 'flows_y45', [], ExcelValue.by_value
+    attach_function 'flows_o46', [], ExcelValue.by_value
+    attach_function 'flows_p46', [], ExcelValue.by_value
+    attach_function 'flows_q46', [], ExcelValue.by_value
+    attach_function 'flows_r46', [], ExcelValue.by_value
+    attach_function 'flows_s46', [], ExcelValue.by_value
+    attach_function 'flows_t46', [], ExcelValue.by_value
+    attach_function 'flows_u46', [], ExcelValue.by_value
+    attach_function 'flows_v46', [], ExcelValue.by_value
+    attach_function 'flows_w46', [], ExcelValue.by_value
+    attach_function 'flows_x46', [], ExcelValue.by_value
+    attach_function 'flows_y46', [], ExcelValue.by_value
+    attach_function 'flows_o47', [], ExcelValue.by_value
+    attach_function 'flows_p47', [], ExcelValue.by_value
+    attach_function 'flows_q47', [], ExcelValue.by_value
+    attach_function 'flows_r47', [], ExcelValue.by_value
+    attach_function 'flows_s47', [], ExcelValue.by_value
+    attach_function 'flows_t47', [], ExcelValue.by_value
+    attach_function 'flows_u47', [], ExcelValue.by_value
+    attach_function 'flows_v47', [], ExcelValue.by_value
+    attach_function 'flows_w47', [], ExcelValue.by_value
+    attach_function 'flows_x47', [], ExcelValue.by_value
+    attach_function 'flows_y47', [], ExcelValue.by_value
+    attach_function 'flows_o48', [], ExcelValue.by_value
+    attach_function 'flows_p48', [], ExcelValue.by_value
+    attach_function 'flows_q48', [], ExcelValue.by_value
+    attach_function 'flows_r48', [], ExcelValue.by_value
+    attach_function 'flows_s48', [], ExcelValue.by_value
+    attach_function 'flows_t48', [], ExcelValue.by_value
+    attach_function 'flows_u48', [], ExcelValue.by_value
+    attach_function 'flows_v48', [], ExcelValue.by_value
+    attach_function 'flows_w48', [], ExcelValue.by_value
+    attach_function 'flows_x48', [], ExcelValue.by_value
+    attach_function 'flows_y48', [], ExcelValue.by_value
+    attach_function 'flows_o49', [], ExcelValue.by_value
+    attach_function 'flows_p49', [], ExcelValue.by_value
+    attach_function 'flows_q49', [], ExcelValue.by_value
+    attach_function 'flows_r49', [], ExcelValue.by_value
+    attach_function 'flows_s49', [], ExcelValue.by_value
+    attach_function 'flows_t49', [], ExcelValue.by_value
+    attach_function 'flows_u49', [], ExcelValue.by_value
+    attach_function 'flows_v49', [], ExcelValue.by_value
+    attach_function 'flows_w49', [], ExcelValue.by_value
+    attach_function 'flows_x49', [], ExcelValue.by_value
+    attach_function 'flows_y49', [], ExcelValue.by_value
+    attach_function 'flows_o50', [], ExcelValue.by_value
+    attach_function 'flows_p50', [], ExcelValue.by_value
+    attach_function 'flows_q50', [], ExcelValue.by_value
+    attach_function 'flows_r50', [], ExcelValue.by_value
+    attach_function 'flows_s50', [], ExcelValue.by_value
+    attach_function 'flows_t50', [], ExcelValue.by_value
+    attach_function 'flows_u50', [], ExcelValue.by_value
+    attach_function 'flows_v50', [], ExcelValue.by_value
+    attach_function 'flows_w50', [], ExcelValue.by_value
+    attach_function 'flows_x50', [], ExcelValue.by_value
+    attach_function 'flows_y50', [], ExcelValue.by_value
+    attach_function 'flows_o51', [], ExcelValue.by_value
+    attach_function 'flows_p51', [], ExcelValue.by_value
+    attach_function 'flows_q51', [], ExcelValue.by_value
+    attach_function 'flows_r51', [], ExcelValue.by_value
+    attach_function 'flows_s51', [], ExcelValue.by_value
+    attach_function 'flows_t51', [], ExcelValue.by_value
+    attach_function 'flows_u51', [], ExcelValue.by_value
+    attach_function 'flows_v51', [], ExcelValue.by_value
+    attach_function 'flows_w51', [], ExcelValue.by_value
+    attach_function 'flows_x51', [], ExcelValue.by_value
+    attach_function 'flows_y51', [], ExcelValue.by_value
+    attach_function 'flows_o52', [], ExcelValue.by_value
+    attach_function 'flows_p52', [], ExcelValue.by_value
+    attach_function 'flows_q52', [], ExcelValue.by_value
+    attach_function 'flows_r52', [], ExcelValue.by_value
+    attach_function 'flows_s52', [], ExcelValue.by_value
+    attach_function 'flows_t52', [], ExcelValue.by_value
+    attach_function 'flows_u52', [], ExcelValue.by_value
+    attach_function 'flows_v52', [], ExcelValue.by_value
+    attach_function 'flows_w52', [], ExcelValue.by_value
+    attach_function 'flows_x52', [], ExcelValue.by_value
+    attach_function 'flows_y52', [], ExcelValue.by_value
+    attach_function 'flows_o53', [], ExcelValue.by_value
+    attach_function 'flows_p53', [], ExcelValue.by_value
+    attach_function 'flows_q53', [], ExcelValue.by_value
+    attach_function 'flows_r53', [], ExcelValue.by_value
+    attach_function 'flows_s53', [], ExcelValue.by_value
+    attach_function 'flows_t53', [], ExcelValue.by_value
+    attach_function 'flows_u53', [], ExcelValue.by_value
+    attach_function 'flows_v53', [], ExcelValue.by_value
+    attach_function 'flows_w53', [], ExcelValue.by_value
+    attach_function 'flows_x53', [], ExcelValue.by_value
+    attach_function 'flows_y53', [], ExcelValue.by_value
+    attach_function 'flows_o54', [], ExcelValue.by_value
+    attach_function 'flows_p54', [], ExcelValue.by_value
+    attach_function 'flows_q54', [], ExcelValue.by_value
+    attach_function 'flows_r54', [], ExcelValue.by_value
+    attach_function 'flows_s54', [], ExcelValue.by_value
+    attach_function 'flows_t54', [], ExcelValue.by_value
+    attach_function 'flows_u54', [], ExcelValue.by_value
+    attach_function 'flows_v54', [], ExcelValue.by_value
+    attach_function 'flows_w54', [], ExcelValue.by_value
+    attach_function 'flows_x54', [], ExcelValue.by_value
+    attach_function 'flows_y54', [], ExcelValue.by_value
+    attach_function 'flows_o55', [], ExcelValue.by_value
+    attach_function 'flows_p55', [], ExcelValue.by_value
+    attach_function 'flows_q55', [], ExcelValue.by_value
+    attach_function 'flows_r55', [], ExcelValue.by_value
+    attach_function 'flows_s55', [], ExcelValue.by_value
+    attach_function 'flows_t55', [], ExcelValue.by_value
+    attach_function 'flows_u55', [], ExcelValue.by_value
+    attach_function 'flows_v55', [], ExcelValue.by_value
+    attach_function 'flows_w55', [], ExcelValue.by_value
+    attach_function 'flows_x55', [], ExcelValue.by_value
+    attach_function 'flows_y55', [], ExcelValue.by_value
+    attach_function 'flows_o56', [], ExcelValue.by_value
+    attach_function 'flows_p56', [], ExcelValue.by_value
+    attach_function 'flows_q56', [], ExcelValue.by_value
+    attach_function 'flows_r56', [], ExcelValue.by_value
+    attach_function 'flows_s56', [], ExcelValue.by_value
+    attach_function 'flows_t56', [], ExcelValue.by_value
+    attach_function 'flows_u56', [], ExcelValue.by_value
+    attach_function 'flows_v56', [], ExcelValue.by_value
+    attach_function 'flows_w56', [], ExcelValue.by_value
+    attach_function 'flows_x56', [], ExcelValue.by_value
+    attach_function 'flows_y56', [], ExcelValue.by_value
+    attach_function 'flows_o57', [], ExcelValue.by_value
+    attach_function 'flows_p57', [], ExcelValue.by_value
+    attach_function 'flows_q57', [], ExcelValue.by_value
+    attach_function 'flows_r57', [], ExcelValue.by_value
+    attach_function 'flows_s57', [], ExcelValue.by_value
+    attach_function 'flows_t57', [], ExcelValue.by_value
+    attach_function 'flows_u57', [], ExcelValue.by_value
+    attach_function 'flows_v57', [], ExcelValue.by_value
+    attach_function 'flows_w57', [], ExcelValue.by_value
+    attach_function 'flows_x57', [], ExcelValue.by_value
+    attach_function 'flows_y57', [], ExcelValue.by_value
+    attach_function 'flows_o58', [], ExcelValue.by_value
+    attach_function 'flows_p58', [], ExcelValue.by_value
+    attach_function 'flows_q58', [], ExcelValue.by_value
+    attach_function 'flows_r58', [], ExcelValue.by_value
+    attach_function 'flows_s58', [], ExcelValue.by_value
+    attach_function 'flows_t58', [], ExcelValue.by_value
+    attach_function 'flows_u58', [], ExcelValue.by_value
+    attach_function 'flows_v58', [], ExcelValue.by_value
+    attach_function 'flows_w58', [], ExcelValue.by_value
+    attach_function 'flows_x58', [], ExcelValue.by_value
+    attach_function 'flows_y58', [], ExcelValue.by_value
+    attach_function 'flows_o59', [], ExcelValue.by_value
+    attach_function 'flows_p59', [], ExcelValue.by_value
+    attach_function 'flows_q59', [], ExcelValue.by_value
+    attach_function 'flows_r59', [], ExcelValue.by_value
+    attach_function 'flows_s59', [], ExcelValue.by_value
+    attach_function 'flows_t59', [], ExcelValue.by_value
+    attach_function 'flows_u59', [], ExcelValue.by_value
+    attach_function 'flows_v59', [], ExcelValue.by_value
+    attach_function 'flows_w59', [], ExcelValue.by_value
+    attach_function 'flows_x59', [], ExcelValue.by_value
+    attach_function 'flows_y59', [], ExcelValue.by_value
+    attach_function 'flows_o60', [], ExcelValue.by_value
+    attach_function 'flows_p60', [], ExcelValue.by_value
+    attach_function 'flows_q60', [], ExcelValue.by_value
+    attach_function 'flows_r60', [], ExcelValue.by_value
+    attach_function 'flows_s60', [], ExcelValue.by_value
+    attach_function 'flows_t60', [], ExcelValue.by_value
+    attach_function 'flows_u60', [], ExcelValue.by_value
+    attach_function 'flows_v60', [], ExcelValue.by_value
+    attach_function 'flows_w60', [], ExcelValue.by_value
+    attach_function 'flows_x60', [], ExcelValue.by_value
+    attach_function 'flows_y60', [], ExcelValue.by_value
+    attach_function 'flows_o61', [], ExcelValue.by_value
+    attach_function 'flows_p61', [], ExcelValue.by_value
+    attach_function 'flows_q61', [], ExcelValue.by_value
+    attach_function 'flows_r61', [], ExcelValue.by_value
+    attach_function 'flows_s61', [], ExcelValue.by_value
+    attach_function 'flows_t61', [], ExcelValue.by_value
+    attach_function 'flows_u61', [], ExcelValue.by_value
+    attach_function 'flows_v61', [], ExcelValue.by_value
+    attach_function 'flows_w61', [], ExcelValue.by_value
+    attach_function 'flows_x61', [], ExcelValue.by_value
+    attach_function 'flows_y61', [], ExcelValue.by_value
     # end of Flows
-    # end of Flows_velho
     attach_function 'energy_d16', [], ExcelValue.by_value
     attach_function 'energy_e16', [], ExcelValue.by_value
     attach_function 'energy_f16', [], ExcelValue.by_value
@@ -6480,6 +7076,8 @@ class Model
     # end of DUKES 09 (A.1)
     # end of DECC Energy Cons. (1.14)
     # end of DECC Energy Cons. (4.1)
+    # end of Plan4
+    # end of Plan5
     # Start of named references
     attach_function 'input_choices', [], ExcelValue.by_value
     attach_function 'input_descriptions', [], ExcelValue.by_value
@@ -6496,6 +7094,7 @@ class Model
     attach_function 'output_electricity_supply', [], ExcelValue.by_value
     attach_function 'output_finalenergyde', [], ExcelValue.by_value
     attach_function 'output_finalenergydemand', [], ExcelValue.by_value
+    attach_function 'output_flows', [], ExcelValue.by_value
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
     attach_function 'output_ghg_percentage_reduction', [], ExcelValue.by_value
     attach_function 'output_imports_proportion', [], ExcelValue.by_value
@@ -6518,6 +7117,7 @@ class Model
     attach_function 'output_electricity_supply', [], ExcelValue.by_value
     attach_function 'output_finalenergyde', [], ExcelValue.by_value
     attach_function 'output_finalenergydemand', [], ExcelValue.by_value
+    attach_function 'output_flows', [], ExcelValue.by_value
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
     attach_function 'output_ghg_percentage_reduction', [], ExcelValue.by_value
     attach_function 'output_imports_proportion', [], ExcelValue.by_value
