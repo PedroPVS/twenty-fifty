@@ -60,8 +60,9 @@ window.twentyfifty.views.primary_energy_chart = function() {
   // it updates the charts
   this.updateResults = function(pathway) {
 
+    //alert("refreshing data " + pathway.primary_energy_supply.length);
     // Add some footnote references
-    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total used in UK") {
+    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0].indexOf("Total used in") > -1) {
       pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] =  pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] + "¹";
     }
 
@@ -74,8 +75,8 @@ window.twentyfifty.views.primary_energy_chart = function() {
     demand = convert_table_to_hash(pathway.final_energy_demand);
     supply = convert_table_to_hash(pathway.primary_energy_supply);
     ghg = convert_table_to_hash(pathway.ghg.slice(0,-1));
-    percent = pathway.ghg_reduction_from_1990;
-
+    //percent = pathway.ghg_reduction_from_1990;
+    percent = 0.0; 
     // Draw the charts
     d3.select('#demand_chart')
       .datum(demand)

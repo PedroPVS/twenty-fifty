@@ -18,8 +18,9 @@ window.timeSeriesStackedAreaChart = function() {
   max_value = 4000;
   min_year = 2010;
   max_year = 2050;
-  total_label = /^total*/i;
+  total_label = /^total*/i; //regular expression
   color_classes = {
+
     'Agriculture': 'agriculture',
     'Agriculture and land use': 'agriculture',
     'Agriculture, waste, and biomatter imports': 'bioenergy',
@@ -98,6 +99,7 @@ window.timeSeriesStackedAreaChart = function() {
     'Setor industrial' : 'setorindustrial',
     'Setor energético' : 'setorenergetico',
     'Setor agropecuário' : 'setoragropecuario'
+
   };
   extent = {
     xmin: min_year,
@@ -191,9 +193,11 @@ window.timeSeriesStackedAreaChart = function() {
           for (_i = 0, _len = _ref.length; _i < _len; _i++) {
             series = _ref[_i];
             series.value = series.value.map(function(p, i) {
+              //Helio Formiga
+              //alert("value at the year " + (data_first_year + 3 + (i * data_year_interval)) + " is " + p);
               return {
-                x: data_first_year + (i * data_year_interval),
-              y: p
+                x: data_first_year + 3 + (i * data_year_interval),
+                y: p
               };
             });
             total = 0;
@@ -270,12 +274,14 @@ window.timeSeriesStackedAreaChart = function() {
           areas.transition().attr("d", function(d) {
             return d.path(d.value);
           });
+          //alert("test outside checking position");
           if (context != null) {
             d = (function() {
               var _k, _len2, _results;
               _results = [];
               for (i = _k = 0, _len2 = context.length; _k < _len2; i = ++_k) {
                 p = context[i];
+                //alert("value at the year " + (2010 + (i * 5)) + " is " + p);
                 _results.push({
                   x: 2010 + (i * 5),
                   y: p,

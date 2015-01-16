@@ -172,7 +172,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_d35; assert_equal("Uso de etanol hidratado", worksheet.control_d35); end
   def test_control_d36; assert_equal("Transporte de carga", worksheet.control_d36); end
   def test_control_d37; assert_equal("Distribuição modal", worksheet.control_d37); end
-  def test_control_d38; assert_equal("Eficiência", worksheet.control_d38); end
+  def test_control_d38; assert_equal("Eficiência de transporte", worksheet.control_d38); end
   def test_control_d39; assert_equal("Transporte de passageiros e carga", worksheet.control_d39); end
   def test_control_d40; assert_equal("Conteúdo de biodiesel no diesel", worksheet.control_d40); end
   def test_control_d41; assert_equal("Residencial", worksheet.control_d41); end
@@ -182,9 +182,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_d45; assert_equal("Eficiência tecnologia, hábitos e melhorias nas edificações", worksheet.control_d45); end
   def test_control_d46; assert_equal("Industrial", worksheet.control_d46); end
   def test_control_d47; assert_equal("Composição da indústria", worksheet.control_d47); end
-  def test_control_d48; assert_equal("Eficiência", worksheet.control_d48); end
+  def test_control_d48; assert_equal("Eficiência industrial", worksheet.control_d48); end
   def test_control_d49; assert_equal("Agropecuária", worksheet.control_d49); end
-  def test_control_d50; assert_equal("Eficiência", worksheet.control_d50); end
+  def test_control_d50; assert_equal("Eficiência agricola", worksheet.control_d50); end
   def test_control_g6; assert_equal("0.pdf", worksheet.control_g6); end
   def test_control_g7; assert_equal("1.pdf", worksheet.control_g7); end
   def test_control_g9; assert_equal("2.pdf", worksheet.control_g9); end
@@ -265,15 +265,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_l135; assert_in_epsilon(2045.0, worksheet.security_l135, 0.002); end
   def test_security_m135; assert_in_epsilon(2050.0, worksheet.security_m135, 0.002); end
   def test_security_d136; assert_equal("Automatically built CCGT gas", worksheet.security_d136); end
-  def test_security_e136; assert_in_epsilon(1847.7557838814894, worksheet.security_e136, 0.002); end
-  def test_security_f136; assert_in_epsilon(1668.2595077330018, worksheet.security_f136, 0.002); end
-  def test_security_g136; assert_in_epsilon(1668.2595077330018, worksheet.security_g136, 0.002); end
-  def test_security_h136; assert_in_epsilon(1668.2595077330018, worksheet.security_h136, 0.002); end
-  def test_security_i136; assert_in_epsilon(1668.2595077330018, worksheet.security_i136, 0.002); end
-  def test_security_j136; assert_in_epsilon(1668.2595077330018, worksheet.security_j136, 0.002); end
-  def test_security_k136; assert_in_epsilon(1668.2595077330018, worksheet.security_k136, 0.002); end
-  def test_security_l136; assert_in_epsilon(1668.2595077330018, worksheet.security_l136, 0.002); end
-  def test_security_m136; assert_in_epsilon(1668.2595077330018, worksheet.security_m136, 0.002); end
+  def test_security_e136; assert_in_epsilon(337.0089163301858, worksheet.security_e136, 0.002); end
+  def test_security_f136; assert_in_epsilon(476.64248055751415, worksheet.security_f136, 0.002); end
+  def test_security_g136; assert_in_epsilon(625.5958280979869, worksheet.security_g136, 0.002); end
+  def test_security_h136; assert_in_epsilon(615.4726004918333, worksheet.security_h136, 0.002); end
+  def test_security_i136; assert_in_epsilon(552.9307022315975, worksheet.security_i136, 0.002); end
+  def test_security_j136; assert_in_epsilon(489.0186028200502, worksheet.security_j136, 0.002); end
+  def test_security_k136; assert_in_epsilon(341.2521323487912, worksheet.security_k136, 0.002); end
+  def test_security_l136; assert_in_epsilon(184.23000555407216, worksheet.security_l136, 0.002); end
+  def test_security_m136; assert_in_delta(0.0, (worksheet.security_m136||0), 0.002); end
   def test_security_d137; assert_equal("Automatically built peaking gas", worksheet.security_d137); end
   def test_security_e137; assert_in_delta(0.0, (worksheet.security_e137||0), 0.002); end
   def test_security_f137; assert_in_delta(0.0, (worksheet.security_f137||0), 0.002); end
@@ -295,45 +295,45 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_l32; assert_in_epsilon(2045.0, worksheet.security_l32, 0.002); end
   def test_security_m32; assert_in_epsilon(2050.0, worksheet.security_m32, 0.002); end
   def test_security_d33; assert_equal("Nuclear fission", worksheet.security_d33); end
-  def test_security_e33; assert_in_delta(0.0015701581210047178, worksheet.security_e33, 0.002); end
-  def test_security_f33; assert_in_delta(0.0015701581210047178, worksheet.security_f33, 0.002); end
-  def test_security_g33; assert_in_delta(0.0015701581210047178, worksheet.security_g33, 0.002); end
-  def test_security_h33; assert_in_delta(0.0015701581210047178, worksheet.security_h33, 0.002); end
-  def test_security_i33; assert_in_delta(0.0015701581210047178, worksheet.security_i33, 0.002); end
-  def test_security_j33; assert_in_delta(0.0015701581210047178, worksheet.security_j33, 0.002); end
-  def test_security_k33; assert_in_delta(0.0015701581210047178, worksheet.security_k33, 0.002); end
-  def test_security_l33; assert_in_delta(0.0015701581210047178, worksheet.security_l33, 0.002); end
-  def test_security_m33; assert_in_delta(0.0015701581210047178, worksheet.security_m33, 0.002); end
+  def test_security_e33; assert_in_delta(0.007737986884454552, worksheet.security_e33, 0.002); end
+  def test_security_f33; assert_in_delta(0.004887035000274055, worksheet.security_f33, 0.002); end
+  def test_security_g33; assert_in_delta(0.005858995731098897, worksheet.security_g33, 0.002); end
+  def test_security_h33; assert_in_delta(0.004936427626019494, worksheet.security_h33, 0.002); end
+  def test_security_i33; assert_in_delta(0.004129455418076846, worksheet.security_i33, 0.002); end
+  def test_security_j33; assert_in_delta(0.003529693797369142, worksheet.security_j33, 0.002); end
+  def test_security_k33; assert_in_delta(0.0030209060646410983, worksheet.security_k33, 0.002); end
+  def test_security_l33; assert_in_delta(0.002139345097790125, worksheet.security_l33, 0.002); end
+  def test_security_m33; assert_in_delta(0.0018993496074781514, worksheet.security_m33, 0.002); end
   def test_security_d34; assert_equal("Sol", worksheet.security_d34); end
-  def test_security_e34; assert_in_delta(2.4738231121542984e-06, worksheet.security_e34, 0.002); end
-  def test_security_f34; assert_in_delta(2.4738231121542984e-06, worksheet.security_f34, 0.002); end
-  def test_security_g34; assert_in_delta(2.4738231121542984e-06, worksheet.security_g34, 0.002); end
-  def test_security_h34; assert_in_delta(2.4738231121542984e-06, worksheet.security_h34, 0.002); end
-  def test_security_i34; assert_in_delta(2.4738231121542984e-06, worksheet.security_i34, 0.002); end
-  def test_security_j34; assert_in_delta(2.4738231121542984e-06, worksheet.security_j34, 0.002); end
-  def test_security_k34; assert_in_delta(2.4738231121542984e-06, worksheet.security_k34, 0.002); end
-  def test_security_l34; assert_in_delta(2.4738231121542984e-06, worksheet.security_l34, 0.002); end
-  def test_security_m34; assert_in_delta(2.4738231121542984e-06, worksheet.security_m34, 0.002); end
+  def test_security_e34; assert_in_delta(2.5396376674294365e-06, worksheet.security_e34, 0.002); end
+  def test_security_f34; assert_in_delta(7.699645005083292e-06, worksheet.security_f34, 0.002); end
+  def test_security_g34; assert_in_delta(2.4417333326958063e-05, worksheet.security_g34, 0.002); end
+  def test_security_h34; assert_in_delta(5.47553355935657e-05, worksheet.security_h34, 0.002); end
+  def test_security_i34; assert_in_delta(0.00012165972837988021, worksheet.security_i34, 0.002); end
+  def test_security_j34; assert_in_delta(0.00020259281898773652, worksheet.security_j34, 0.002); end
+  def test_security_k34; assert_in_delta(0.0003372116366654306, worksheet.security_k34, 0.002); end
+  def test_security_l34; assert_in_delta(0.0005730793153516745, worksheet.security_l34, 0.002); end
+  def test_security_m34; assert_in_delta(0.0009864583742100156, worksheet.security_m34, 0.002); end
   def test_security_d35; assert_equal("Wind", worksheet.security_d35); end
-  def test_security_e35; assert_in_delta(0.0003971910339587704, worksheet.security_e35, 0.002); end
-  def test_security_f35; assert_in_delta(0.0003971910339587704, worksheet.security_f35, 0.002); end
-  def test_security_g35; assert_in_delta(0.0003971910339587704, worksheet.security_g35, 0.002); end
-  def test_security_h35; assert_in_delta(0.0003971910339587704, worksheet.security_h35, 0.002); end
-  def test_security_i35; assert_in_delta(0.0003971910339587704, worksheet.security_i35, 0.002); end
-  def test_security_j35; assert_in_delta(0.0003971910339587704, worksheet.security_j35, 0.002); end
-  def test_security_k35; assert_in_delta(0.0003971910339587704, worksheet.security_k35, 0.002); end
-  def test_security_l35; assert_in_delta(0.0003971910339587704, worksheet.security_l35, 0.002); end
-  def test_security_m35; assert_in_delta(0.0003971910339587704, worksheet.security_m35, 0.002); end
+  def test_security_e35; assert_in_delta(0.0017392980111961217, worksheet.security_e35, 0.002); end
+  def test_security_f35; assert_in_delta(0.0012362363119897012, worksheet.security_f35, 0.002); end
+  def test_security_g35; assert_in_delta(0.002819636491073519, worksheet.security_g35, 0.002); end
+  def test_security_h35; assert_in_delta(0.002931907008583216, worksheet.security_h35, 0.002); end
+  def test_security_i35; assert_in_delta(0.0031154825992277414, worksheet.security_i35, 0.002); end
+  def test_security_j35; assert_in_delta(0.0032937362087853118, worksheet.security_j35, 0.002); end
+  def test_security_k35; assert_in_delta(0.0034136968229256832, worksheet.security_k35, 0.002); end
+  def test_security_l35; assert_in_delta(0.0035564171396965283, worksheet.security_l35, 0.002); end
+  def test_security_m35; assert_in_delta(0.003704931704588551, worksheet.security_m35, 0.002); end
   def test_security_d36; assert_equal("Ocean", worksheet.security_d36); end
   def test_security_e36; assert_in_delta(0.0, (worksheet.security_e36||0), 0.002); end
   def test_security_f36; assert_in_delta(0.0, (worksheet.security_f36||0), 0.002); end
-  def test_security_g36; assert_in_delta(0.0, (worksheet.security_g36||0), 0.002); end
-  def test_security_h36; assert_in_delta(0.0, (worksheet.security_h36||0), 0.002); end
-  def test_security_i36; assert_in_delta(0.0, (worksheet.security_i36||0), 0.002); end
-  def test_security_j36; assert_in_delta(0.0, (worksheet.security_j36||0), 0.002); end
-  def test_security_k36; assert_in_delta(0.0, (worksheet.security_k36||0), 0.002); end
-  def test_security_l36; assert_in_delta(0.0, (worksheet.security_l36||0), 0.002); end
-  def test_security_m36; assert_in_delta(0.0, (worksheet.security_m36||0), 0.002); end
+  def test_security_g36; assert_in_delta(1.1698355523707261e-05, worksheet.security_g36, 0.002); end
+  def test_security_h36; assert_in_delta(2.4640778060182653e-05, worksheet.security_h36, 0.002); end
+  def test_security_i36; assert_in_delta(4.12253565432294e-05, worksheet.security_i36, 0.002); end
+  def test_security_j36; assert_in_delta(0.00014095116237165808, worksheet.security_j36, 0.002); end
+  def test_security_k36; assert_in_delta(0.00027142595158658763, worksheet.security_k36, 0.002); end
+  def test_security_l36; assert_in_delta(0.000506803236940638, worksheet.security_l36, 0.002); end
+  def test_security_m36; assert_in_delta(0.0005624364496792663, worksheet.security_m36, 0.002); end
   def test_security_d37; assert_equal("Wave", worksheet.security_d37); end
   def test_security_e37; assert_in_delta(0.0, (worksheet.security_e37||0), 0.002); end
   def test_security_f37; assert_in_delta(0.0, (worksheet.security_f37||0), 0.002); end
@@ -345,35 +345,35 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_l37; assert_in_delta(0.0, (worksheet.security_l37||0), 0.002); end
   def test_security_m37; assert_in_delta(0.0, (worksheet.security_m37||0), 0.002); end
   def test_security_d38; assert_equal("Hydro", worksheet.security_d38); end
-  def test_security_e38; assert_in_delta(0.00018086055034960687, worksheet.security_e38, 0.002); end
-  def test_security_f38; assert_in_delta(0.00018086055034960687, worksheet.security_f38, 0.002); end
-  def test_security_g38; assert_in_delta(0.00018086055034960687, worksheet.security_g38, 0.002); end
-  def test_security_h38; assert_in_delta(0.00018086055034960687, worksheet.security_h38, 0.002); end
-  def test_security_i38; assert_in_delta(0.00018086055034960687, worksheet.security_i38, 0.002); end
-  def test_security_j38; assert_in_delta(0.00018086055034960687, worksheet.security_j38, 0.002); end
-  def test_security_k38; assert_in_delta(0.00018086055034960687, worksheet.security_k38, 0.002); end
-  def test_security_l38; assert_in_delta(0.00018086055034960687, worksheet.security_l38, 0.002); end
-  def test_security_m38; assert_in_delta(0.00018086055034960687, worksheet.security_m38, 0.002); end
+  def test_security_e38; assert_in_delta(0.000688065873264999, worksheet.security_e38, 0.002); end
+  def test_security_f38; assert_in_delta(0.0005629190002608029, worksheet.security_f38, 0.002); end
+  def test_security_g38; assert_in_delta(0.00044270320775475895, worksheet.security_g38, 0.002); end
+  def test_security_h38; assert_in_delta(0.000383355311273588, worksheet.security_h38, 0.002); end
+  def test_security_i38; assert_in_delta(0.00032935432046664467, worksheet.security_i38, 0.002); end
+  def test_security_j38; assert_in_delta(0.0002889273306759194, worksheet.security_j38, 0.002); end
+  def test_security_k38; assert_in_delta(0.00025362040916250767, worksheet.security_k38, 0.002); end
+  def test_security_l38; assert_in_delta(0.00022752931322449934, worksheet.security_l38, 0.002); end
+  def test_security_m38; assert_in_delta(0.0002069316185659958, worksheet.security_m38, 0.002); end
   def test_security_d39; assert_equal("Bioenergia", worksheet.security_d39); end
-  def test_security_e39; assert_in_delta(0.04053713670633335, worksheet.security_e39, 0.002); end
-  def test_security_f39; assert_in_delta(0.04053713670633335, worksheet.security_f39, 0.002); end
-  def test_security_g39; assert_in_delta(0.04053713670633335, worksheet.security_g39, 0.002); end
-  def test_security_h39; assert_in_delta(0.04053713670633335, worksheet.security_h39, 0.002); end
-  def test_security_i39; assert_in_delta(0.04053713670633335, worksheet.security_i39, 0.002); end
-  def test_security_j39; assert_in_delta(0.04053713670633335, worksheet.security_j39, 0.002); end
-  def test_security_k39; assert_in_delta(0.04053713670633335, worksheet.security_k39, 0.002); end
-  def test_security_l39; assert_in_delta(0.04053713670633335, worksheet.security_l39, 0.002); end
-  def test_security_m39; assert_in_delta(0.04053713670633335, worksheet.security_m39, 0.002); end
+  def test_security_e39; assert_in_delta(0.15835706135500008, worksheet.security_e39, 0.002); end
+  def test_security_f39; assert_in_delta(0.133245056805407, worksheet.security_f39, 0.002); end
+  def test_security_g39; assert_in_delta(0.11624629720206953, worksheet.security_g39, 0.002); end
+  def test_security_h39; assert_in_delta(0.11865881576315819, worksheet.security_h39, 0.002); end
+  def test_security_i39; assert_in_delta(0.11799798333023288, worksheet.security_i39, 0.002); end
+  def test_security_j39; assert_in_delta(0.11412027412355255, worksheet.security_j39, 0.002); end
+  def test_security_k39; assert_in_delta(0.10423704566954686, worksheet.security_k39, 0.002); end
+  def test_security_l39; assert_in_delta(0.09757830038630977, worksheet.security_l39, 0.002); end
+  def test_security_m39; assert_in_delta(0.09311084567584096, worksheet.security_m39, 0.002); end
   def test_security_d40; assert_equal("Eficiência energética", worksheet.security_d40); end
-  def test_security_e40; assert_in_delta(0.020011223295970267, worksheet.security_e40, 0.002); end
-  def test_security_f40; assert_in_delta(0.020011223295970267, worksheet.security_f40, 0.002); end
-  def test_security_g40; assert_in_delta(0.020011223295970267, worksheet.security_g40, 0.002); end
-  def test_security_h40; assert_in_delta(0.020011223295970267, worksheet.security_h40, 0.002); end
-  def test_security_i40; assert_in_delta(0.020011223295970267, worksheet.security_i40, 0.002); end
-  def test_security_j40; assert_in_delta(0.020011223295970267, worksheet.security_j40, 0.002); end
-  def test_security_k40; assert_in_delta(0.020011223295970267, worksheet.security_k40, 0.002); end
-  def test_security_l40; assert_in_delta(0.020011223295970267, worksheet.security_l40, 0.002); end
-  def test_security_m40; assert_in_delta(0.020011223295970267, worksheet.security_m40, 0.002); end
+  def test_security_e40; assert_in_delta(0.010970738106869896, worksheet.security_e40, 0.002); end
+  def test_security_f40; assert_in_delta(0.07019898405097563, worksheet.security_f40, 0.002); end
+  def test_security_g40; assert_in_delta(0.15074523032509252, worksheet.security_g40, 0.002); end
+  def test_security_h40; assert_in_delta(0.2367856727246639, worksheet.security_h40, 0.002); end
+  def test_security_i40; assert_in_delta(0.3040048345653748, worksheet.security_i40, 0.002); end
+  def test_security_j40; assert_in_delta(0.36070921038880555, worksheet.security_j40, 0.002); end
+  def test_security_k40; assert_in_delta(0.4017700949270097, worksheet.security_k40, 0.002); end
+  def test_security_l40; assert_in_delta(0.4353979086125407, worksheet.security_l40, 0.002); end
+  def test_security_m40; assert_in_delta(0.4605229022953047, worksheet.security_m40, 0.002); end
   def test_security_d41; assert_equal("Resíduos", worksheet.security_d41); end
   def test_security_e41; assert_in_delta(0.0, (worksheet.security_e41||0), 0.002); end
   def test_security_f41; assert_in_delta(0.0, (worksheet.security_f41||0), 0.002); end
@@ -385,35 +385,35 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_l41; assert_in_delta(0.0, (worksheet.security_l41||0), 0.002); end
   def test_security_m41; assert_in_delta(0.0, (worksheet.security_m41||0), 0.002); end
   def test_security_d42; assert_equal("Gas oversupply (imports)", worksheet.security_d42); end
-  def test_security_e42; assert_in_delta(0.8491509025346269, worksheet.security_e42, 0.002); end
-  def test_security_f42; assert_in_delta(0.8491509025346269, worksheet.security_f42, 0.002); end
-  def test_security_g42; assert_in_delta(0.8491509025346269, worksheet.security_g42, 0.002); end
-  def test_security_h42; assert_in_delta(0.8491509025346269, worksheet.security_h42, 0.002); end
-  def test_security_i42; assert_in_delta(0.8491509025346269, worksheet.security_i42, 0.002); end
-  def test_security_j42; assert_in_delta(0.8491509025346269, worksheet.security_j42, 0.002); end
-  def test_security_k42; assert_in_delta(0.8491509025346269, worksheet.security_k42, 0.002); end
-  def test_security_l42; assert_in_delta(0.8491509025346269, worksheet.security_l42, 0.002); end
-  def test_security_m42; assert_in_delta(0.8491509025346269, worksheet.security_m42, 0.002); end
+  def test_security_e42; assert_in_delta(0.48492577832616746, worksheet.security_e42, 0.002); end
+  def test_security_f42; assert_in_delta(0.5154996383635189, worksheet.security_f42, 0.002); end
+  def test_security_g42; assert_in_delta(0.5646091027881921, worksheet.security_g42, 0.002); end
+  def test_security_h42; assert_in_delta(0.49285324978751127, worksheet.security_h42, 0.002); end
+  def test_security_i42; assert_in_delta(0.3895596722234416, worksheet.security_i42, 0.002); end
+  def test_security_j42; assert_in_delta(0.32668916427041383, worksheet.security_j42, 0.002); end
+  def test_security_k42; assert_in_delta(0.25850348135118034, worksheet.security_k42, 0.002); end
+  def test_security_l42; assert_in_delta(0.20366369959456754, worksheet.security_l42, 0.002); end
+  def test_security_m42; assert_in_delta(0.15590469693650816, worksheet.security_m42, 0.002); end
   def test_security_d43; assert_equal("Coal oversupply (imports)", worksheet.security_d43); end
-  def test_security_e43; assert_in_delta(0.027220270095885197, worksheet.security_e43, 0.002); end
-  def test_security_f43; assert_in_delta(0.027220270095885197, worksheet.security_f43, 0.002); end
-  def test_security_g43; assert_in_delta(0.027220270095885197, worksheet.security_g43, 0.002); end
-  def test_security_h43; assert_in_delta(0.027220270095885197, worksheet.security_h43, 0.002); end
-  def test_security_i43; assert_in_delta(0.027220270095885197, worksheet.security_i43, 0.002); end
-  def test_security_j43; assert_in_delta(0.027220270095885197, worksheet.security_j43, 0.002); end
-  def test_security_k43; assert_in_delta(0.027220270095885197, worksheet.security_k43, 0.002); end
-  def test_security_l43; assert_in_delta(0.027220270095885197, worksheet.security_l43, 0.002); end
-  def test_security_m43; assert_in_delta(0.027220270095885197, worksheet.security_m43, 0.002); end
+  def test_security_e43; assert_in_delta(0.07876867570891989, worksheet.security_e43, 0.002); end
+  def test_security_f43; assert_in_delta(0.08472166649711863, worksheet.security_f43, 0.002); end
+  def test_security_g43; assert_in_delta(0.04173173960543114, worksheet.security_g43, 0.002); end
+  def test_security_h43; assert_in_delta(0.04102068147494195, worksheet.security_h43, 0.002); end
+  def test_security_i43; assert_in_delta(0.09412667256652378, worksheet.security_i43, 0.002); end
+  def test_security_j43; assert_in_delta(0.11020768515797326, worksheet.security_j43, 0.002); end
+  def test_security_k43; assert_in_delta(0.14673051864060344, worksheet.security_k43, 0.002); end
+  def test_security_l43; assert_in_delta(0.17429548454185675, worksheet.security_l43, 0.002); end
+  def test_security_m43; assert_in_delta(0.20080653540580928, worksheet.security_m43, 0.002); end
   def test_security_d44; assert_equal("Electricity oversupply (imports)", worksheet.security_d44); end
-  def test_security_e44; assert_in_delta(0.0013326566867865768, worksheet.security_e44, 0.002); end
-  def test_security_f44; assert_in_delta(0.0013326566867865768, worksheet.security_f44, 0.002); end
-  def test_security_g44; assert_in_delta(0.0013326566867865768, worksheet.security_g44, 0.002); end
-  def test_security_h44; assert_in_delta(0.0013326566867865768, worksheet.security_h44, 0.002); end
-  def test_security_i44; assert_in_delta(0.0013326566867865768, worksheet.security_i44, 0.002); end
-  def test_security_j44; assert_in_delta(0.0013326566867865768, worksheet.security_j44, 0.002); end
-  def test_security_k44; assert_in_delta(0.0013326566867865768, worksheet.security_k44, 0.002); end
-  def test_security_l44; assert_in_delta(0.0013326566867865768, worksheet.security_l44, 0.002); end
-  def test_security_m44; assert_in_delta(0.0013326566867865768, worksheet.security_m44, 0.002); end
+  def test_security_e44; assert_in_delta(0.00727120760738453, worksheet.security_e44, 0.002); end
+  def test_security_f44; assert_in_delta(0.0041478242124480215, worksheet.security_f44, 0.002); end
+  def test_security_g44; assert_in_delta(0.002570415450205159, worksheet.security_g44, 0.002); end
+  def test_security_h44; assert_in_delta(0.002195081138673344, worksheet.security_h44, 0.002); end
+  def test_security_i44; assert_in_delta(0.0015785905659683192, worksheet.security_i44, 0.002); end
+  def test_security_j44; assert_in_delta(0.0012314364686558496, worksheet.security_j44, 0.002); end
+  def test_security_k44; assert_in_delta(0.0008566839760620798, worksheet.security_k44, 0.002); end
+  def test_security_l44; assert_in_delta(0.0005771683889928275, worksheet.security_l44, 0.002); end
+  def test_security_m44; assert_in_delta(0.00035914823523045637, worksheet.security_m44, 0.002); end
   def test_security_d45; assert_equal("Oferta interna de óleo", worksheet.security_d45); end
   def test_security_e45; assert_in_delta(0.0, (worksheet.security_e45||0), 0.002); end
   def test_security_f45; assert_in_delta(0.0, (worksheet.security_f45||0), 0.002); end
@@ -425,34 +425,34 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_l45; assert_in_delta(0.0, (worksheet.security_l45||0), 0.002); end
   def test_security_m45; assert_in_delta(0.0, (worksheet.security_m45||0), 0.002); end
   def test_security_d46; assert_equal("Produção bruta de gás natural", worksheet.security_d46); end
-  def test_security_e46; assert_in_delta(0.052143419847403394, worksheet.security_e46, 0.002); end
-  def test_security_f46; assert_in_delta(0.052143419847403394, worksheet.security_f46, 0.002); end
-  def test_security_g46; assert_in_delta(0.052143419847403394, worksheet.security_g46, 0.002); end
-  def test_security_h46; assert_in_delta(0.052143419847403394, worksheet.security_h46, 0.002); end
-  def test_security_i46; assert_in_delta(0.052143419847403394, worksheet.security_i46, 0.002); end
-  def test_security_j46; assert_in_delta(0.052143419847403394, worksheet.security_j46, 0.002); end
-  def test_security_k46; assert_in_delta(0.052143419847403394, worksheet.security_k46, 0.002); end
-  def test_security_l46; assert_in_delta(0.052143419847403394, worksheet.security_l46, 0.002); end
-  def test_security_m46; assert_in_delta(0.052143419847403394, worksheet.security_m46, 0.002); end
+  def test_security_e46; assert_in_delta(0.2279694777411494, worksheet.security_e46, 0.002); end
+  def test_security_f46; assert_in_delta(0.16229366610872656, worksheet.security_f46, 0.002); end
+  def test_security_g46; assert_in_delta(0.10351239077536696, worksheet.security_g46, 0.002); end
+  def test_security_h46; assert_in_delta(0.08892274886152124, worksheet.security_h46, 0.002); end
+  def test_security_i46; assert_in_delta(0.059220429162662534, worksheet.security_i46, 0.002); end
+  def test_security_j46; assert_in_delta(0.049408235807198594, worksheet.security_j46, 0.002); end
+  def test_security_k46; assert_in_delta(0.04042620042933508, worksheet.security_k46, 0.002); end
+  def test_security_l46; assert_in_delta(0.03375705513833475, worksheet.security_l46, 0.002); end
+  def test_security_m46; assert_in_delta(0.026949052158395343, worksheet.security_m46, 0.002); end
   def test_security_d47; assert_equal("Produção bruta de carvão", worksheet.security_d47); end
-  def test_security_e47; assert_in_delta(0.00745370730456903, worksheet.security_e47, 0.002); end
-  def test_security_f47; assert_in_delta(0.00745370730456903, worksheet.security_f47, 0.002); end
-  def test_security_g47; assert_in_delta(0.00745370730456903, worksheet.security_g47, 0.002); end
-  def test_security_h47; assert_in_delta(0.00745370730456903, worksheet.security_h47, 0.002); end
-  def test_security_i47; assert_in_delta(0.00745370730456903, worksheet.security_i47, 0.002); end
-  def test_security_j47; assert_in_delta(0.00745370730456903, worksheet.security_j47, 0.002); end
-  def test_security_k47; assert_in_delta(0.00745370730456903, worksheet.security_k47, 0.002); end
-  def test_security_l47; assert_in_delta(0.00745370730456903, worksheet.security_l47, 0.002); end
-  def test_security_m47; assert_in_delta(0.00745370730456903, worksheet.security_m47, 0.002); end
+  def test_security_e47; assert_in_delta(0.021569170747925758, worksheet.security_e47, 0.002); end
+  def test_security_f47; assert_in_delta(0.023199274004275763, worksheet.security_f47, 0.002); end
+  def test_security_g47; assert_in_delta(0.011427372734864823, worksheet.security_g47, 0.002); end
+  def test_security_h47; assert_in_delta(0.011232664189999882, worksheet.security_h47, 0.002); end
+  def test_security_i47; assert_in_delta(0.025774640163101586, worksheet.security_i47, 0.002); end
+  def test_security_j47; assert_in_delta(0.03017809246521055, worksheet.security_j47, 0.002); end
+  def test_security_k47; assert_in_delta(0.04017911412128116, worksheet.security_k47, 0.002); end
+  def test_security_l47; assert_in_delta(0.04772720923439419, worksheet.security_l47, 0.002); end
+  def test_security_m47; assert_in_delta(0.05498671153838917, worksheet.security_m47, 0.002); end
   def test_security_d48; assert_equal("Total produced or used in Brazil", worksheet.security_d48); end
-  def test_security_e48; assert_in_delta(1.0, worksheet.security_e48, 0.002); end
+  def test_security_e48; assert_in_epsilon(1.0000000000000002, worksheet.security_e48, 0.002); end
   def test_security_f48; assert_in_delta(1.0, worksheet.security_f48, 0.002); end
   def test_security_g48; assert_in_delta(1.0, worksheet.security_g48, 0.002); end
-  def test_security_h48; assert_in_delta(1.0, worksheet.security_h48, 0.002); end
-  def test_security_i48; assert_in_delta(1.0, worksheet.security_i48, 0.002); end
+  def test_security_h48; assert_in_delta(0.9999999999999999, worksheet.security_h48, 0.002); end
+  def test_security_i48; assert_in_delta(0.9999999999999999, worksheet.security_i48, 0.002); end
   def test_security_j48; assert_in_delta(1.0, worksheet.security_j48, 0.002); end
-  def test_security_k48; assert_in_delta(1.0, worksheet.security_k48, 0.002); end
-  def test_security_l48; assert_in_delta(1.0, worksheet.security_l48, 0.002); end
+  def test_security_k48; assert_in_delta(0.9999999999999999, worksheet.security_k48, 0.002); end
+  def test_security_l48; assert_in_delta(0.9999999999999999, worksheet.security_l48, 0.002); end
   def test_security_m48; assert_in_delta(1.0, worksheet.security_m48, 0.002); end
   def test_security_d123; assert_equal("Vector", worksheet.security_d123); end
   def test_security_e123; assert_in_epsilon(2013.0, worksheet.security_e123, 0.002); end
@@ -475,15 +475,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_l124; assert_in_delta(0.0, (worksheet.security_l124||0), 0.002); end
   def test_security_m124; assert_in_delta(0.0, (worksheet.security_m124||0), 0.002); end
   def test_security_d125; assert_equal("Gas", worksheet.security_d125); end
-  def test_security_e125; assert_in_delta(0.94214606865647, worksheet.security_e125, 0.002); end
-  def test_security_f125; assert_in_delta(0.94214606865647, worksheet.security_f125, 0.002); end
-  def test_security_g125; assert_in_delta(0.94214606865647, worksheet.security_g125, 0.002); end
-  def test_security_h125; assert_in_delta(0.94214606865647, worksheet.security_h125, 0.002); end
-  def test_security_i125; assert_in_delta(0.94214606865647, worksheet.security_i125, 0.002); end
-  def test_security_j125; assert_in_delta(0.94214606865647, worksheet.security_j125, 0.002); end
-  def test_security_k125; assert_in_delta(0.94214606865647, worksheet.security_k125, 0.002); end
-  def test_security_l125; assert_in_delta(0.94214606865647, worksheet.security_l125, 0.002); end
-  def test_security_m125; assert_in_delta(0.94214606865647, worksheet.security_m125, 0.002); end
+  def test_security_e125; assert_in_delta(0.680220234598359, worksheet.security_e125, 0.002); end
+  def test_security_f125; assert_in_delta(0.7605558139363824, worksheet.security_f125, 0.002); end
+  def test_security_g125; assert_in_delta(0.8450695094042507, worksheet.security_g125, 0.002); end
+  def test_security_h125; assert_in_delta(0.8471529436277664, worksheet.security_h125, 0.002); end
+  def test_security_i125; assert_in_delta(0.8680413213960376, worksheet.security_i125, 0.002); end
+  def test_security_j125; assert_in_delta(0.8686291482020281, worksheet.security_j125, 0.002); end
+  def test_security_k125; assert_in_delta(0.8647635116441283, worksheet.security_k125, 0.002); end
+  def test_security_l125; assert_in_delta(0.857817589804601, worksheet.security_l125, 0.002); end
+  def test_security_m125; assert_in_delta(0.8526196356826765, worksheet.security_m125, 0.002); end
   def test_security_d126; assert_equal("Coal", worksheet.security_d126); end
   def test_security_e126; assert_in_delta(0.7850345456915656, worksheet.security_e126, 0.002); end
   def test_security_f126; assert_in_delta(0.7850345456915656, worksheet.security_f126, 0.002); end
@@ -491,29 +491,29 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_h126; assert_in_delta(0.7850345456915656, worksheet.security_h126, 0.002); end
   def test_security_i126; assert_in_delta(0.7850345456915656, worksheet.security_i126, 0.002); end
   def test_security_j126; assert_in_delta(0.7850345456915656, worksheet.security_j126, 0.002); end
-  def test_security_k126; assert_in_delta(0.7850345456915656, worksheet.security_k126, 0.002); end
+  def test_security_k126; assert_in_delta(0.7850345456915655, worksheet.security_k126, 0.002); end
   def test_security_l126; assert_in_delta(0.7850345456915656, worksheet.security_l126, 0.002); end
   def test_security_m126; assert_in_delta(0.7850345456915656, worksheet.security_m126, 0.002); end
   def test_security_d127; assert_equal("Electricity", worksheet.security_d127); end
-  def test_security_e127; assert_in_delta(0.0208124519926778, worksheet.security_e127, 0.002); end
-  def test_security_f127; assert_in_delta(0.0208124519926778, worksheet.security_f127, 0.002); end
-  def test_security_g127; assert_in_delta(0.0208124519926778, worksheet.security_g127, 0.002); end
-  def test_security_h127; assert_in_delta(0.0208124519926778, worksheet.security_h127, 0.002); end
-  def test_security_i127; assert_in_delta(0.0208124519926778, worksheet.security_i127, 0.002); end
-  def test_security_j127; assert_in_delta(0.0208124519926778, worksheet.security_j127, 0.002); end
-  def test_security_k127; assert_in_delta(0.0208124519926778, worksheet.security_k127, 0.002); end
-  def test_security_l127; assert_in_delta(0.0208124519926778, worksheet.security_l127, 0.002); end
-  def test_security_m127; assert_in_delta(0.0208124519926778, worksheet.security_m127, 0.002); end
+  def test_security_e127; assert_in_delta(0.0389319933331613, worksheet.security_e127, 0.002); end
+  def test_security_f127; assert_in_delta(0.019356509311306194, worksheet.security_f127, 0.002); end
+  def test_security_g127; assert_in_delta(0.009222233919317747, worksheet.security_g127, 0.002); end
+  def test_security_h127; assert_in_delta(0.005997970341525288, worksheet.security_h127, 0.002); end
+  def test_security_i127; assert_in_delta(0.003659917790771669, worksheet.security_i127, 0.002); end
+  def test_security_j127; assert_in_delta(0.0025468327302453765, worksheet.security_j127, 0.002); end
+  def test_security_k127; assert_in_delta(0.0016661794654712586, worksheet.security_k127, 0.002); end
+  def test_security_l127; assert_in_delta(0.0010677298932017492, worksheet.security_l127, 0.002); end
+  def test_security_m127; assert_in_delta(0.0006397903506284139, worksheet.security_m127, 0.002); end
   def test_security_d128; assert_equal("Total", worksheet.security_d128); end
-  def test_security_e128; assert_in_delta(0.3809186620919565, worksheet.security_e128, 0.002); end
-  def test_security_f128; assert_in_delta(0.3809186620919565, worksheet.security_f128, 0.002); end
-  def test_security_g128; assert_in_delta(0.3809186620919565, worksheet.security_g128, 0.002); end
-  def test_security_h128; assert_in_delta(0.3809186620919565, worksheet.security_h128, 0.002); end
-  def test_security_i128; assert_in_delta(0.3809186620919565, worksheet.security_i128, 0.002); end
-  def test_security_j128; assert_in_delta(0.3809186620919565, worksheet.security_j128, 0.002); end
-  def test_security_k128; assert_in_delta(0.3809186620919565, worksheet.security_k128, 0.002); end
-  def test_security_l128; assert_in_delta(0.3809186620919565, worksheet.security_l128, 0.002); end
-  def test_security_m128; assert_in_delta(0.3809186620919565, worksheet.security_m128, 0.002); end
+  def test_security_e128; assert_in_delta(0.12441481177127227, worksheet.security_e128, 0.002); end
+  def test_security_f128; assert_in_delta(0.18348637587542782, worksheet.security_f128, 0.002); end
+  def test_security_g128; assert_in_delta(0.2362781107241292, worksheet.security_g128, 0.002); end
+  def test_security_h128; assert_in_delta(0.22663518308702216, worksheet.security_h128, 0.002); end
+  def test_security_i128; assert_in_delta(0.2296072566096252, worksheet.security_i128, 0.002); end
+  def test_security_j128; assert_in_delta(0.22579239806602255, worksheet.security_j128, 0.002); end
+  def test_security_k128; assert_in_delta(0.22724121285485485, worksheet.security_k128, 0.002); end
+  def test_security_l128; assert_in_delta(0.22790247000484976, worksheet.security_l128, 0.002); end
+  def test_security_m128; assert_in_delta(0.23008221988388197, worksheet.security_m128, 0.002); end
   def test_security_d105; assert_equal("Vector", worksheet.security_d105); end
   def test_security_e105; assert_in_epsilon(2013.0, worksheet.security_e105, 0.002); end
   def test_security_f105; assert_in_epsilon(2015.0, worksheet.security_f105, 0.002); end
@@ -535,55 +535,55 @@ class TestModel < Minitest::Unit::TestCase
   def test_security_l106; assert_in_delta(0.0, (worksheet.security_l106||0), 0.002); end
   def test_security_m106; assert_in_delta(0.0, (worksheet.security_m106||0), 0.002); end
   def test_security_d107; assert_equal("Gas", worksheet.security_d107); end
-  def test_security_e107; assert_in_epsilon(25023.385877770055, worksheet.security_e107, 0.002); end
-  def test_security_f107; assert_in_epsilon(25023.385877770055, worksheet.security_f107, 0.002); end
-  def test_security_g107; assert_in_epsilon(25023.385877770055, worksheet.security_g107, 0.002); end
-  def test_security_h107; assert_in_epsilon(25023.385877770055, worksheet.security_h107, 0.002); end
-  def test_security_i107; assert_in_epsilon(25023.385877770055, worksheet.security_i107, 0.002); end
-  def test_security_j107; assert_in_epsilon(25023.385877770055, worksheet.security_j107, 0.002); end
-  def test_security_k107; assert_in_epsilon(25023.385877770055, worksheet.security_k107, 0.002); end
-  def test_security_l107; assert_in_epsilon(25023.385877770055, worksheet.security_l107, 0.002); end
-  def test_security_m107; assert_in_epsilon(25023.385877770055, worksheet.security_m107, 0.002); end
+  def test_security_e107; assert_in_epsilon(2899.691994450932, worksheet.security_e107, 0.002); end
+  def test_security_f107; assert_in_epsilon(4880.760562892715, worksheet.security_f107, 0.002); end
+  def test_security_g107; assert_in_epsilon(7647.02966436062, worksheet.security_g107, 0.002); end
+  def test_security_h107; assert_in_epsilon(7922.694891114956, worksheet.security_h107, 0.002); end
+  def test_security_i107; assert_in_epsilon(7485.990829304501, worksheet.security_i107, 0.002); end
+  def test_security_j107; assert_in_epsilon(7344.559930019617, worksheet.security_j107, 0.002); end
+  def test_security_k107; assert_in_epsilon(6790.4296779802235, worksheet.security_k107, 0.002); end
+  def test_security_l107; assert_in_epsilon(6112.44826876868, worksheet.security_l107, 0.002); end
+  def test_security_m107; assert_in_epsilon(5270.3165668316415, worksheet.security_m107, 0.002); end
   def test_security_d108; assert_equal("Coal", worksheet.security_d108); end
-  def test_security_e108; assert_in_epsilon(802.1463797227541, worksheet.security_e108, 0.002); end
+  def test_security_e108; assert_in_epsilon(471.0100155018537, worksheet.security_e108, 0.002); end
   def test_security_f108; assert_in_epsilon(802.1463797227541, worksheet.security_f108, 0.002); end
-  def test_security_g108; assert_in_epsilon(802.1463797227541, worksheet.security_g108, 0.002); end
-  def test_security_h108; assert_in_epsilon(802.1463797227541, worksheet.security_h108, 0.002); end
-  def test_security_i108; assert_in_epsilon(802.1463797227541, worksheet.security_i108, 0.002); end
-  def test_security_j108; assert_in_epsilon(802.1463797227541, worksheet.security_j108, 0.002); end
-  def test_security_k108; assert_in_epsilon(802.1463797227541, worksheet.security_k108, 0.002); end
-  def test_security_l108; assert_in_epsilon(802.1463797227541, worksheet.security_l108, 0.002); end
-  def test_security_m108; assert_in_epsilon(802.1463797227541, worksheet.security_m108, 0.002); end
+  def test_security_g108; assert_in_epsilon(565.2120186022244, worksheet.security_g108, 0.002); end
+  def test_security_h108; assert_in_epsilon(659.4140217025952, worksheet.security_h108, 0.002); end
+  def test_security_i108; assert_in_epsilon(1808.7894047251013, worksheet.security_i108, 0.002); end
+  def test_security_j108; assert_in_epsilon(2477.66695965916, worksheet.security_j108, 0.002); end
+  def test_security_k108; assert_in_epsilon(3854.3514510313753, worksheet.security_k108, 0.002); end
+  def test_security_l108; assert_in_epsilon(5231.0359424035905, worksheet.security_l108, 0.002); end
+  def test_security_m108; assert_in_epsilon(6788.211202567536, worksheet.security_m108, 0.002); end
   def test_security_d109; assert_equal("Electricity", worksheet.security_d109); end
-  def test_security_e109; assert_in_epsilon(39.27168, worksheet.security_e109, 0.002); end
+  def test_security_e109; assert_in_epsilon(43.47936000000001, worksheet.security_e109, 0.002); end
   def test_security_f109; assert_in_epsilon(39.27168, worksheet.security_f109, 0.002); end
-  def test_security_g109; assert_in_epsilon(39.27168, worksheet.security_g109, 0.002); end
-  def test_security_h109; assert_in_epsilon(39.27168, worksheet.security_h109, 0.002); end
-  def test_security_i109; assert_in_epsilon(39.27168, worksheet.security_i109, 0.002); end
-  def test_security_j109; assert_in_epsilon(39.27168, worksheet.security_j109, 0.002); end
-  def test_security_k109; assert_in_epsilon(39.27168, worksheet.security_k109, 0.002); end
-  def test_security_l109; assert_in_epsilon(39.27168, worksheet.security_l109, 0.002); end
-  def test_security_m109; assert_in_epsilon(39.27168, worksheet.security_m109, 0.002); end
+  def test_security_g109; assert_in_epsilon(34.81354285714287, worksheet.security_g109, 0.002); end
+  def test_security_h109; assert_in_epsilon(35.286280714285716, worksheet.security_h109, 0.002); end
+  def test_security_i109; assert_in_epsilon(30.335056071428575, worksheet.security_i109, 0.002); end
+  def test_security_j109; assert_in_epsilon(27.68490642857144, worksheet.security_j109, 0.002); end
+  def test_security_k109; assert_in_epsilon(22.503574285714294, worksheet.security_k109, 0.002); end
+  def test_security_l109; assert_in_epsilon(17.32224214285715, worksheet.security_l109, 0.002); end
+  def test_security_m109; assert_in_epsilon(12.140910000000002, worksheet.security_m109, 0.002); end
   def test_security_d110; assert_equal("Total", worksheet.security_d110); end
-  def test_security_e110; assert_in_epsilon(25864.803937492812, worksheet.security_e110, 0.002); end
-  def test_security_f110; assert_in_epsilon(25864.803937492812, worksheet.security_f110, 0.002); end
-  def test_security_g110; assert_in_epsilon(25864.803937492812, worksheet.security_g110, 0.002); end
-  def test_security_h110; assert_in_epsilon(25864.803937492812, worksheet.security_h110, 0.002); end
-  def test_security_i110; assert_in_epsilon(25864.803937492812, worksheet.security_i110, 0.002); end
-  def test_security_j110; assert_in_epsilon(25864.803937492812, worksheet.security_j110, 0.002); end
-  def test_security_k110; assert_in_epsilon(25864.803937492812, worksheet.security_k110, 0.002); end
-  def test_security_l110; assert_in_epsilon(25864.803937492812, worksheet.security_l110, 0.002); end
-  def test_security_m110; assert_in_epsilon(25864.803937492812, worksheet.security_m110, 0.002); end
+  def test_security_e110; assert_in_epsilon(3414.181369952785, worksheet.security_e110, 0.002); end
+  def test_security_f110; assert_in_epsilon(5722.178622615469, worksheet.security_f110, 0.002); end
+  def test_security_g110; assert_in_epsilon(8247.055225819986, worksheet.security_g110, 0.002); end
+  def test_security_h110; assert_in_epsilon(8617.395193531838, worksheet.security_h110, 0.002); end
+  def test_security_i110; assert_in_epsilon(9325.11529010103, worksheet.security_i110, 0.002); end
+  def test_security_j110; assert_in_epsilon(9849.911796107348, worksheet.security_j110, 0.002); end
+  def test_security_k110; assert_in_epsilon(10667.284703297313, worksheet.security_k110, 0.002); end
+  def test_security_l110; assert_in_epsilon(11360.806453315126, worksheet.security_l110, 0.002); end
+  def test_security_m110; assert_in_epsilon(12070.668679399178, worksheet.security_m110, 0.002); end
   def test_security_d76; assert_equal("Shannon-Weiner Index", worksheet.security_d76); end
-  def test_security_e76; assert_in_delta(0.6593612682768191, worksheet.security_e76, 0.002); end
-  def test_security_f76; assert_in_delta(0.6593612682768191, worksheet.security_f76, 0.002); end
-  def test_security_g76; assert_in_delta(0.6593612682768191, worksheet.security_g76, 0.002); end
-  def test_security_h76; assert_in_delta(0.6593612682768191, worksheet.security_h76, 0.002); end
-  def test_security_i76; assert_in_delta(0.6593612682768191, worksheet.security_i76, 0.002); end
-  def test_security_j76; assert_in_delta(0.6593612682768191, worksheet.security_j76, 0.002); end
-  def test_security_k76; assert_in_delta(0.6593612682768191, worksheet.security_k76, 0.002); end
-  def test_security_l76; assert_in_delta(0.6593612682768191, worksheet.security_l76, 0.002); end
-  def test_security_m76; assert_in_delta(0.6593612682768191, worksheet.security_m76, 0.002); end
+  def test_security_e76; assert_in_epsilon(1.4018110697560284, worksheet.security_e76, 0.002); end
+  def test_security_f76; assert_in_epsilon(1.4495037513426556, worksheet.security_f76, 0.002); end
+  def test_security_g76; assert_in_epsilon(1.3423868218414956, worksheet.security_g76, 0.002); end
+  def test_security_h76; assert_in_epsilon(1.3999405649543442, worksheet.security_h76, 0.002); end
+  def test_security_i76; assert_in_epsilon(1.520505216553465, worksheet.security_i76, 0.002); end
+  def test_security_j76; assert_in_epsilon(1.530619241576158, worksheet.security_j76, 0.002); end
+  def test_security_k76; assert_in_epsilon(1.5422108196577753, worksheet.security_k76, 0.002); end
+  def test_security_l76; assert_in_epsilon(1.5248152411640241, worksheet.security_l76, 0.002); end
+  def test_security_m76; assert_in_epsilon(1.4954255154099128, worksheet.security_m76, 0.002); end
   def test_electricity_d55; assert_equal("Sector", worksheet.electricity_d55); end
   def test_electricity_e55; assert_in_epsilon(2013.0, worksheet.electricity_e55, 0.002); end
   def test_electricity_f55; assert_in_epsilon(2015.0, worksheet.electricity_f55, 0.002); end
@@ -755,8 +755,8 @@ class TestModel < Minitest::Unit::TestCase
   def test_electricity_l19; assert_in_epsilon(190.0, worksheet.electricity_l19, 0.002); end
   def test_electricity_m19; assert_in_epsilon(190.0, worksheet.electricity_m19, 0.002); end
   def test_electricity_d20; assert_equal("Transport", worksheet.electricity_d20); end
-  def test_electricity_e20; assert_in_epsilon(1210.1984811911402, worksheet.electricity_e20, 0.002); end
-  def test_electricity_f20; assert_in_epsilon(1265.8155042439537, worksheet.electricity_f20, 0.002); end
+  def test_electricity_e20; assert_in_epsilon(281.65744702914, worksheet.electricity_e20, 0.002); end
+  def test_electricity_f20; assert_in_epsilon(302.89536743168895, worksheet.electricity_f20, 0.002); end
   def test_electricity_g20; assert_in_epsilon(1390.8315403194297, worksheet.electricity_g20, 0.002); end
   def test_electricity_h20; assert_in_epsilon(1493.2552563508584, worksheet.electricity_h20, 0.002); end
   def test_electricity_i20; assert_in_epsilon(1570.4942731425326, worksheet.electricity_i20, 0.002); end
@@ -765,15 +765,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_electricity_l20; assert_in_epsilon(1636.9722108782482, worksheet.electricity_l20, 0.002); end
   def test_electricity_m20; assert_in_epsilon(1602.5328653060164, worksheet.electricity_m20, 0.002); end
   def test_electricity_d21; assert_equal("Energy sector", worksheet.electricity_d21); end
-  def test_electricity_e21; assert_in_epsilon(8394.68693612828, worksheet.electricity_e21, 0.002); end
-  def test_electricity_f21; assert_in_epsilon(8247.93287607352, worksheet.electricity_f21, 0.002); end
-  def test_electricity_g21; assert_in_epsilon(15804.74579466457, worksheet.electricity_g21, 0.002); end
-  def test_electricity_h21; assert_in_epsilon(17778.731134817073, worksheet.electricity_h21, 0.002); end
-  def test_electricity_i21; assert_in_epsilon(18531.1000812135, worksheet.electricity_i21, 0.002); end
-  def test_electricity_j21; assert_in_epsilon(18746.270485665682, worksheet.electricity_j21, 0.002); end
-  def test_electricity_k21; assert_in_epsilon(18036.446363040304, worksheet.electricity_k21, 0.002); end
-  def test_electricity_l21; assert_in_epsilon(16116.504063888198, worksheet.electricity_l21, 0.002); end
-  def test_electricity_m21; assert_in_epsilon(13060.88605517582, worksheet.electricity_m21, 0.002); end
+  def test_electricity_e21; assert_in_epsilon(889.34361511575, worksheet.electricity_e21, 0.002); end
+  def test_electricity_f21; assert_in_epsilon(1898.4026107315594, worksheet.electricity_f21, 0.002); end
+  def test_electricity_g21; assert_in_epsilon(1866.2061598705448, worksheet.electricity_g21, 0.002); end
+  def test_electricity_h21; assert_in_epsilon(1852.6792448377732, worksheet.electricity_h21, 0.002); end
+  def test_electricity_i21; assert_in_epsilon(1551.0225827095007, worksheet.electricity_i21, 0.002); end
+  def test_electricity_j21; assert_in_epsilon(1483.2811020219292, worksheet.electricity_j21, 0.002); end
+  def test_electricity_k21; assert_in_epsilon(1423.9886754613208, worksheet.electricity_k21, 0.002); end
+  def test_electricity_l21; assert_in_epsilon(1359.9833619552319, worksheet.electricity_l21, 0.002); end
+  def test_electricity_m21; assert_in_epsilon(1289.3359753500274, worksheet.electricity_m21, 0.002); end
   def test_electricity_d22; assert_equal("Residential sector", worksheet.electricity_d22); end
   def test_electricity_e22; assert_in_epsilon(116.8005552, worksheet.electricity_e22, 0.002); end
   def test_electricity_f22; assert_in_epsilon(126.07870867932945, worksheet.electricity_f22, 0.002); end
@@ -805,15 +805,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_electricity_l24; assert_in_epsilon(377.49891891891895, worksheet.electricity_l24, 0.002); end
   def test_electricity_m24; assert_in_epsilon(376.74, worksheet.electricity_m24, 0.002); end
   def test_electricity_d25; assert_equal("Total", worksheet.electricity_d25); end
-  def test_electricity_e25; assert_in_epsilon(10703.68597251942, worksheet.electricity_e25, 0.002); end
-  def test_electricity_f25; assert_in_epsilon(10706.106007915723, worksheet.electricity_f25, 0.002); end
-  def test_electricity_g25; assert_in_epsilon(18496.055980391706, worksheet.electricity_g25, 0.002); end
-  def test_electricity_h25; assert_in_epsilon(20684.0158699769, worksheet.electricity_h25, 0.002); end
-  def test_electricity_i25; assert_in_epsilon(21625.958413166485, worksheet.electricity_i25, 0.002); end
-  def test_electricity_j25; assert_in_epsilon(21992.295915276998, worksheet.electricity_j25, 0.002); end
-  def test_electricity_k25; assert_in_epsilon(21408.131518269198, worksheet.electricity_k25, 0.002); end
-  def test_electricity_l25; assert_in_epsilon(19582.247062903025, worksheet.electricity_l25, 0.002); end
-  def test_electricity_m25; assert_in_epsilon(16593.049951481837, worksheet.electricity_m25, 0.002); end
+  def test_electricity_e25; assert_in_epsilon(2269.80161734489, worksheet.electricity_e25, 0.002); end
+  def test_electricity_f25; assert_in_epsilon(3393.655605761497, worksheet.electricity_f25, 0.002); end
+  def test_electricity_g25; assert_in_epsilon(4557.516345597679, worksheet.electricity_g25, 0.002); end
+  def test_electricity_h25; assert_in_epsilon(4757.963979997602, worksheet.electricity_h25, 0.002); end
+  def test_electricity_i25; assert_in_epsilon(4645.880914662486, worksheet.electricity_i25, 0.002); end
+  def test_electricity_j25; assert_in_epsilon(4729.306531633245, worksheet.electricity_j25, 0.002); end
+  def test_electricity_k25; assert_in_epsilon(4795.673830690215, worksheet.electricity_k25, 0.002); end
+  def test_electricity_l25; assert_in_epsilon(4825.726360970062, worksheet.electricity_l25, 0.002); end
+  def test_electricity_m25; assert_in_epsilon(4821.499871656044, worksheet.electricity_m25, 0.002); end
   def test_electricity_d96; assert_equal("Source", worksheet.electricity_d96); end
   def test_electricity_e96; assert_in_epsilon(2013.0, worksheet.electricity_e96, 0.002); end
   def test_electricity_f96; assert_in_epsilon(2015.0, worksheet.electricity_f96, 0.002); end
@@ -825,25 +825,25 @@ class TestModel < Minitest::Unit::TestCase
   def test_electricity_l96; assert_in_epsilon(2045.0, worksheet.electricity_l96, 0.002); end
   def test_electricity_m96; assert_in_epsilon(2050.0, worksheet.electricity_m96, 0.002); end
   def test_electricity_d97; assert_equal("Fuel combustion", worksheet.electricity_d97); end
-  def test_electricity_e97; assert_in_epsilon(4146.708568875234, worksheet.electricity_e97, 0.002); end
-  def test_electricity_f97; assert_in_epsilon(4146.708568875234, worksheet.electricity_f97, 0.002); end
-  def test_electricity_g97; assert_in_epsilon(4146.708568875234, worksheet.electricity_g97, 0.002); end
-  def test_electricity_h97; assert_in_epsilon(4146.708568875234, worksheet.electricity_h97, 0.002); end
-  def test_electricity_i97; assert_in_epsilon(4146.708568875234, worksheet.electricity_i97, 0.002); end
-  def test_electricity_j97; assert_in_epsilon(4146.708568875234, worksheet.electricity_j97, 0.002); end
-  def test_electricity_k97; assert_in_epsilon(4146.708568875234, worksheet.electricity_k97, 0.002); end
-  def test_electricity_l97; assert_in_epsilon(4146.708568875234, worksheet.electricity_l97, 0.002); end
-  def test_electricity_m97; assert_in_epsilon(4146.708568875234, worksheet.electricity_m97, 0.002); end
+  def test_electricity_e97; assert_in_epsilon(1001.9806989302051, worksheet.electricity_e97, 0.002); end
+  def test_electricity_f97; assert_in_epsilon(1444.6975290949215, worksheet.electricity_f97, 0.002); end
+  def test_electricity_g97; assert_in_epsilon(1983.0184085335075, worksheet.electricity_g97, 0.002); end
+  def test_electricity_h97; assert_in_epsilon(2195.2794739926976, worksheet.electricity_h97, 0.002); end
+  def test_electricity_i97; assert_in_epsilon(2121.3543006842956, worksheet.electricity_i97, 0.002); end
+  def test_electricity_j97; assert_in_epsilon(2136.283850856325, worksheet.electricity_j97, 0.002); end
+  def test_electricity_k97; assert_in_epsilon(2212.456359517137, worksheet.electricity_k97, 0.002); end
+  def test_electricity_l97; assert_in_epsilon(2377.2431473306046, worksheet.electricity_l97, 0.002); end
+  def test_electricity_m97; assert_in_epsilon(2562.356257179921, worksheet.electricity_m97, 0.002); end
   def test_electricity_d98; assert_equal("Total", worksheet.electricity_d98); end
-  def test_electricity_e98; assert_in_epsilon(4146.708568875234, worksheet.electricity_e98, 0.002); end
-  def test_electricity_f98; assert_in_epsilon(4146.708568875234, worksheet.electricity_f98, 0.002); end
-  def test_electricity_g98; assert_in_epsilon(4146.708568875234, worksheet.electricity_g98, 0.002); end
-  def test_electricity_h98; assert_in_epsilon(4146.708568875234, worksheet.electricity_h98, 0.002); end
-  def test_electricity_i98; assert_in_epsilon(4146.708568875234, worksheet.electricity_i98, 0.002); end
-  def test_electricity_j98; assert_in_epsilon(4146.708568875234, worksheet.electricity_j98, 0.002); end
-  def test_electricity_k98; assert_in_epsilon(4146.708568875234, worksheet.electricity_k98, 0.002); end
-  def test_electricity_l98; assert_in_epsilon(4146.708568875234, worksheet.electricity_l98, 0.002); end
-  def test_electricity_m98; assert_in_epsilon(4146.708568875234, worksheet.electricity_m98, 0.002); end
+  def test_electricity_e98; assert_in_epsilon(1001.9806989302051, worksheet.electricity_e98, 0.002); end
+  def test_electricity_f98; assert_in_epsilon(1444.6975290949215, worksheet.electricity_f98, 0.002); end
+  def test_electricity_g98; assert_in_epsilon(1983.0184085335075, worksheet.electricity_g98, 0.002); end
+  def test_electricity_h98; assert_in_epsilon(2195.2794739926976, worksheet.electricity_h98, 0.002); end
+  def test_electricity_i98; assert_in_epsilon(2121.3543006842956, worksheet.electricity_i98, 0.002); end
+  def test_electricity_j98; assert_in_epsilon(2136.283850856325, worksheet.electricity_j98, 0.002); end
+  def test_electricity_k98; assert_in_epsilon(2212.456359517137, worksheet.electricity_k98, 0.002); end
+  def test_electricity_l98; assert_in_epsilon(2377.2431473306046, worksheet.electricity_l98, 0.002); end
+  def test_electricity_m98; assert_in_epsilon(2562.356257179921, worksheet.electricity_m98, 0.002); end
   def test_electricity_d34; assert_equal("Sector", worksheet.electricity_d34); end
   def test_electricity_e34; assert_in_epsilon(2013.0, worksheet.electricity_e34, 0.002); end
   def test_electricity_f34; assert_in_epsilon(2015.0, worksheet.electricity_f34, 0.002); end
@@ -855,175 +855,175 @@ class TestModel < Minitest::Unit::TestCase
   def test_electricity_l34; assert_in_epsilon(2045.0, worksheet.electricity_l34, 0.002); end
   def test_electricity_m34; assert_in_epsilon(2050.0, worksheet.electricity_m34, 0.002); end
   def test_electricity_d35; assert_equal("Termelétricas a gás natural", worksheet.electricity_d35); end
-  def test_electricity_e35; assert_in_epsilon(181.65606480000002, worksheet.electricity_e35, 0.002); end
+  def test_electricity_e35; assert_in_epsilon(147.9946248, worksheet.electricity_e35, 0.002); end
   def test_electricity_f35; assert_in_epsilon(181.65606480000002, worksheet.electricity_f35, 0.002); end
-  def test_electricity_g35; assert_in_epsilon(181.65606480000002, worksheet.electricity_g35, 0.002); end
-  def test_electricity_h35; assert_in_epsilon(181.65606480000002, worksheet.electricity_h35, 0.002); end
-  def test_electricity_i35; assert_in_epsilon(181.65606480000002, worksheet.electricity_i35, 0.002); end
-  def test_electricity_j35; assert_in_epsilon(181.65606480000002, worksheet.electricity_j35, 0.002); end
-  def test_electricity_k35; assert_in_epsilon(181.65606480000002, worksheet.electricity_k35, 0.002); end
-  def test_electricity_l35; assert_in_epsilon(181.65606480000002, worksheet.electricity_l35, 0.002); end
-  def test_electricity_m35; assert_in_epsilon(181.65606480000002, worksheet.electricity_m35, 0.002); end
+  def test_electricity_g35; assert_in_epsilon(286.84806480000003, worksheet.electricity_g35, 0.002); end
+  def test_electricity_h35; assert_in_epsilon(412.23692880000004, worksheet.electricity_h35, 0.002); end
+  def test_electricity_i35; assert_in_epsilon(555.6662208, worksheet.electricity_i35, 0.002); end
+  def test_electricity_j35; assert_in_epsilon(804.1823208000001, worksheet.electricity_j35, 0.002); end
+  def test_electricity_k35; assert_in_epsilon(1315.6784208000001, worksheet.electricity_k35, 0.002); end
+  def test_electricity_l35; assert_in_epsilon(1827.1745208000002, worksheet.electricity_l35, 0.002); end
+  def test_electricity_m35; assert_in_epsilon(2405.7305208000002, worksheet.electricity_m35, 0.002); end
   def test_electricity_d36; assert_equal("Termelétricas a carvão", worksheet.electricity_d36); end
-  def test_electricity_e36; assert_in_epsilon(181.65606480000002, worksheet.electricity_e36, 0.002); end
+  def test_electricity_e36; assert_in_epsilon(147.9946248, worksheet.electricity_e36, 0.002); end
   def test_electricity_f36; assert_in_epsilon(181.65606480000002, worksheet.electricity_f36, 0.002); end
-  def test_electricity_g36; assert_in_epsilon(181.65606480000002, worksheet.electricity_g36, 0.002); end
-  def test_electricity_h36; assert_in_epsilon(181.65606480000002, worksheet.electricity_h36, 0.002); end
-  def test_electricity_i36; assert_in_epsilon(181.65606480000002, worksheet.electricity_i36, 0.002); end
-  def test_electricity_j36; assert_in_epsilon(181.65606480000002, worksheet.electricity_j36, 0.002); end
-  def test_electricity_k36; assert_in_epsilon(181.65606480000002, worksheet.electricity_k36, 0.002); end
-  def test_electricity_l36; assert_in_epsilon(181.65606480000002, worksheet.electricity_l36, 0.002); end
-  def test_electricity_m36; assert_in_epsilon(181.65606480000002, worksheet.electricity_m36, 0.002); end
+  def test_electricity_g36; assert_in_epsilon(286.84806480000003, worksheet.electricity_g36, 0.002); end
+  def test_electricity_h36; assert_in_epsilon(412.23692880000004, worksheet.electricity_h36, 0.002); end
+  def test_electricity_i36; assert_in_epsilon(529.0526448, worksheet.electricity_i36, 0.002); end
+  def test_electricity_j36; assert_in_epsilon(737.0698248000001, worksheet.electricity_j36, 0.002); end
+  def test_electricity_k36; assert_in_epsilon(1176.2464248, worksheet.electricity_k36, 0.002); end
+  def test_electricity_l36; assert_in_epsilon(1629.8869248, worksheet.electricity_l36, 0.002); end
+  def test_electricity_m36; assert_in_epsilon(2144.8017648000005, worksheet.electricity_m36, 0.002); end
   def test_electricity_d37; assert_equal("Termelétricas a combustíveis fósseis", worksheet.electricity_d37); end
   def test_electricity_e37; assert_in_epsilon(28.401840000000004, worksheet.electricity_e37, 0.002); end
   def test_electricity_f37; assert_in_epsilon(28.401840000000004, worksheet.electricity_f37, 0.002); end
-  def test_electricity_g37; assert_in_epsilon(28.401840000000004, worksheet.electricity_g37, 0.002); end
-  def test_electricity_h37; assert_in_epsilon(28.401840000000004, worksheet.electricity_h37, 0.002); end
-  def test_electricity_i37; assert_in_epsilon(28.401840000000004, worksheet.electricity_i37, 0.002); end
-  def test_electricity_j37; assert_in_epsilon(28.401840000000004, worksheet.electricity_j37, 0.002); end
-  def test_electricity_k37; assert_in_epsilon(28.401840000000004, worksheet.electricity_k37, 0.002); end
-  def test_electricity_l37; assert_in_epsilon(28.401840000000004, worksheet.electricity_l37, 0.002); end
-  def test_electricity_m37; assert_in_epsilon(28.401840000000004, worksheet.electricity_m37, 0.002); end
+  def test_electricity_g37; assert_in_epsilon(32.9461344, worksheet.electricity_g37, 0.002); end
+  def test_electricity_h37; assert_in_epsilon(33.84079236, worksheet.electricity_h37, 0.002); end
+  def test_electricity_i37; assert_in_epsilon(34.900180992, worksheet.electricity_i37, 0.002); end
+  def test_electricity_j37; assert_in_epsilon(36.479323296000004, worksheet.electricity_j37, 0.002); end
+  def test_electricity_k37; assert_in_epsilon(38.325442896, worksheet.electricity_k37, 0.002); end
+  def test_electricity_l37; assert_in_epsilon(40.469781815999994, worksheet.electricity_l37, 0.002); end
+  def test_electricity_m37; assert_in_epsilon(43.048668887999995, worksheet.electricity_m37, 0.002); end
   def test_electricity_d38; assert_equal("Termelétricas a resíduos de cana", worksheet.electricity_d38); end
-  def test_electricity_e38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_e38, 0.002); end
-  def test_electricity_f38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_f38, 0.002); end
-  def test_electricity_g38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_g38, 0.002); end
-  def test_electricity_h38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_h38, 0.002); end
-  def test_electricity_i38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_i38, 0.002); end
-  def test_electricity_j38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_j38, 0.002); end
-  def test_electricity_k38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_k38, 0.002); end
-  def test_electricity_l38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_l38, 0.002); end
-  def test_electricity_m38; assert_in_epsilon(2.6999999999999997, worksheet.electricity_m38, 0.002); end
+  def test_electricity_e38; assert_in_epsilon(2.25, worksheet.electricity_e38, 0.002); end
+  def test_electricity_f38; assert_in_epsilon(2.25, worksheet.electricity_f38, 0.002); end
+  def test_electricity_g38; assert_in_epsilon(2.25, worksheet.electricity_g38, 0.002); end
+  def test_electricity_h38; assert_in_epsilon(2.25, worksheet.electricity_h38, 0.002); end
+  def test_electricity_i38; assert_in_epsilon(2.25, worksheet.electricity_i38, 0.002); end
+  def test_electricity_j38; assert_in_epsilon(2.25, worksheet.electricity_j38, 0.002); end
+  def test_electricity_k38; assert_in_epsilon(2.25, worksheet.electricity_k38, 0.002); end
+  def test_electricity_l38; assert_in_epsilon(2.25, worksheet.electricity_l38, 0.002); end
+  def test_electricity_m38; assert_in_epsilon(2.25, worksheet.electricity_m38, 0.002); end
   def test_electricity_d39; assert_equal("Termelétricas a outras biomassas", worksheet.electricity_d39); end
-  def test_electricity_e39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_e39, 0.002); end
+  def test_electricity_e39; assert_in_epsilon(2.25, worksheet.electricity_e39, 0.002); end
   def test_electricity_f39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_f39, 0.002); end
-  def test_electricity_g39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_g39, 0.002); end
-  def test_electricity_h39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_h39, 0.002); end
-  def test_electricity_i39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_i39, 0.002); end
-  def test_electricity_j39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_j39, 0.002); end
-  def test_electricity_k39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_k39, 0.002); end
-  def test_electricity_l39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_l39, 0.002); end
-  def test_electricity_m39; assert_in_epsilon(2.6999999999999997, worksheet.electricity_m39, 0.002); end
+  def test_electricity_g39; assert_in_epsilon(3.1500000000000004, worksheet.electricity_g39, 0.002); end
+  def test_electricity_h39; assert_in_epsilon(3.5999999999999996, worksheet.electricity_h39, 0.002); end
+  def test_electricity_i39; assert_in_epsilon(4.05, worksheet.electricity_i39, 0.002); end
+  def test_electricity_j39; assert_in_epsilon(4.5, worksheet.electricity_j39, 0.002); end
+  def test_electricity_k39; assert_in_epsilon(4.95, worksheet.electricity_k39, 0.002); end
+  def test_electricity_l39; assert_in_epsilon(5.3999999999999995, worksheet.electricity_l39, 0.002); end
+  def test_electricity_m39; assert_in_epsilon(5.85, worksheet.electricity_m39, 0.002); end
   def test_electricity_d40; assert_equal("Energia nuclear", worksheet.electricity_d40); end
   def test_electricity_e40; assert_in_epsilon(15.834025800000003, worksheet.electricity_e40, 0.002); end
   def test_electricity_f40; assert_in_epsilon(15.834025800000003, worksheet.electricity_f40, 0.002); end
-  def test_electricity_g40; assert_in_epsilon(15.834025800000003, worksheet.electricity_g40, 0.002); end
-  def test_electricity_h40; assert_in_epsilon(15.834025800000003, worksheet.electricity_h40, 0.002); end
-  def test_electricity_i40; assert_in_epsilon(15.834025800000003, worksheet.electricity_i40, 0.002); end
-  def test_electricity_j40; assert_in_epsilon(15.834025800000003, worksheet.electricity_j40, 0.002); end
-  def test_electricity_k40; assert_in_epsilon(15.834025800000003, worksheet.electricity_k40, 0.002); end
-  def test_electricity_l40; assert_in_epsilon(15.834025800000003, worksheet.electricity_l40, 0.002); end
-  def test_electricity_m40; assert_in_epsilon(15.834025800000003, worksheet.electricity_m40, 0.002); end
+  def test_electricity_g40; assert_in_epsilon(27.155314800000003, worksheet.electricity_g40, 0.002); end
+  def test_electricity_h40; assert_in_epsilon(27.155314800000003, worksheet.electricity_h40, 0.002); end
+  def test_electricity_i40; assert_in_epsilon(27.155314800000003, worksheet.electricity_i40, 0.002); end
+  def test_electricity_j40; assert_in_epsilon(27.155314800000003, worksheet.electricity_j40, 0.002); end
+  def test_electricity_k40; assert_in_epsilon(27.155314800000003, worksheet.electricity_k40, 0.002); end
+  def test_electricity_l40; assert_in_epsilon(21.971979000000005, worksheet.electricity_l40, 0.002); end
+  def test_electricity_m40; assert_in_epsilon(21.971979000000005, worksheet.electricity_m40, 0.002); end
   def test_electricity_d41; assert_equal("Energia eólica", worksheet.electricity_d41); end
-  def test_electricity_e41; assert_in_epsilon(11.70470935174621, worksheet.electricity_e41, 0.002); end
+  def test_electricity_e41; assert_in_epsilon(10.400413309513823, worksheet.electricity_e41, 0.002); end
   def test_electricity_f41; assert_in_epsilon(11.70470935174621, worksheet.electricity_f41, 0.002); end
-  def test_electricity_g41; assert_in_epsilon(11.70470935174621, worksheet.electricity_g41, 0.002); end
-  def test_electricity_h41; assert_in_epsilon(11.70470935174621, worksheet.electricity_h41, 0.002); end
-  def test_electricity_i41; assert_in_epsilon(11.70470935174621, worksheet.electricity_i41, 0.002); end
-  def test_electricity_j41; assert_in_epsilon(11.70470935174621, worksheet.electricity_j41, 0.002); end
-  def test_electricity_k41; assert_in_epsilon(11.70470935174621, worksheet.electricity_k41, 0.002); end
-  def test_electricity_l41; assert_in_epsilon(11.70470935174621, worksheet.electricity_l41, 0.002); end
-  def test_electricity_m41; assert_in_epsilon(11.70470935174621, worksheet.electricity_m41, 0.002); end
+  def test_electricity_g41; assert_in_epsilon(38.188976733592646, worksheet.electricity_g41, 0.002); end
+  def test_electricity_h41; assert_in_epsilon(47.130874531396834, worksheet.electricity_h41, 0.002); end
+  def test_electricity_i41; assert_in_epsilon(59.868810427839755, worksheet.electricity_i41, 0.002); end
+  def test_electricity_j41; assert_in_epsilon(74.04911342292156, worksheet.electricity_j41, 0.002); end
+  def test_electricity_k41; assert_in_epsilon(89.67178351664205, worksheet.electricity_k41, 0.002); end
+  def test_electricity_l41; assert_in_epsilon(106.73682070900153, worksheet.electricity_l41, 0.002); end
+  def test_electricity_m41; assert_in_epsilon(125.24422499999997, worksheet.electricity_m41, 0.002); end
   def test_electricity_d42; assert_equal("Oceanos", worksheet.electricity_d42); end
-  def test_electricity_e42; assert_in_delta(0.0050034246575342495, worksheet.electricity_e42, 0.002); end
+  def test_electricity_e42; assert_in_delta(0.0, (worksheet.electricity_e42||0), 0.002); end
   def test_electricity_f42; assert_in_delta(0.0050034246575342495, worksheet.electricity_f42, 0.002); end
-  def test_electricity_g42; assert_in_delta(0.0050034246575342495, worksheet.electricity_g42, 0.002); end
-  def test_electricity_h42; assert_in_delta(0.0050034246575342495, worksheet.electricity_h42, 0.002); end
-  def test_electricity_i42; assert_in_delta(0.0050034246575342495, worksheet.electricity_i42, 0.002); end
-  def test_electricity_j42; assert_in_delta(0.0050034246575342495, worksheet.electricity_j42, 0.002); end
-  def test_electricity_k42; assert_in_delta(0.0050034246575342495, worksheet.electricity_k42, 0.002); end
-  def test_electricity_l42; assert_in_delta(0.0050034246575342495, worksheet.electricity_l42, 0.002); end
-  def test_electricity_m42; assert_in_delta(0.0050034246575342495, worksheet.electricity_m42, 0.002); end
+  def test_electricity_g42; assert_in_delta(0.20847602739726018, worksheet.electricity_g42, 0.002); end
+  def test_electricity_h42; assert_in_delta(0.5211900684931499, worksheet.electricity_h42, 0.002); end
+  def test_electricity_i42; assert_in_epsilon(1.042380136986302, worksheet.electricity_i42, 0.002); end
+  def test_electricity_j42; assert_in_epsilon(4.169520547945208, worksheet.electricity_j42, 0.002); end
+  def test_electricity_k42; assert_in_epsilon(9.381421232876706, worksheet.electricity_k42, 0.002); end
+  def test_electricity_l42; assert_in_epsilon(20.013698630136993, worksheet.electricity_l42, 0.002); end
+  def test_electricity_m42; assert_in_epsilon(25.01712328767124, worksheet.electricity_m42, 0.002); end
   def test_electricity_d43; assert_equal("Usinas hidrelétricas e PCH", worksheet.electricity_d43); end
-  def test_electricity_e43; assert_in_epsilon(5.329728000000001, worksheet.electricity_e43, 0.002); end
+  def test_electricity_e43; assert_in_epsilon(4.114400994, worksheet.electricity_e43, 0.002); end
   def test_electricity_f43; assert_in_epsilon(5.329728000000001, worksheet.electricity_f43, 0.002); end
-  def test_electricity_g43; assert_in_epsilon(5.329728000000001, worksheet.electricity_g43, 0.002); end
-  def test_electricity_h43; assert_in_epsilon(5.329728000000001, worksheet.electricity_h43, 0.002); end
-  def test_electricity_i43; assert_in_epsilon(5.329728000000001, worksheet.electricity_i43, 0.002); end
-  def test_electricity_j43; assert_in_epsilon(5.329728000000001, worksheet.electricity_j43, 0.002); end
-  def test_electricity_k43; assert_in_epsilon(5.329728000000001, worksheet.electricity_k43, 0.002); end
-  def test_electricity_l43; assert_in_epsilon(5.329728000000001, worksheet.electricity_l43, 0.002); end
-  def test_electricity_m43; assert_in_epsilon(5.329728000000001, worksheet.electricity_m43, 0.002); end
+  def test_electricity_g43; assert_in_epsilon(5.995944000000001, worksheet.electricity_g43, 0.002); end
+  def test_electricity_h43; assert_in_epsilon(6.162498000000001, worksheet.electricity_h43, 0.002); end
+  def test_electricity_i43; assert_in_epsilon(6.329052, worksheet.electricity_i43, 0.002); end
+  def test_electricity_j43; assert_in_epsilon(6.4956059999999995, worksheet.electricity_j43, 0.002); end
+  def test_electricity_k43; assert_in_epsilon(6.66216, worksheet.electricity_k43, 0.002); end
+  def test_electricity_l43; assert_in_epsilon(6.828714, worksheet.electricity_l43, 0.002); end
+  def test_electricity_m43; assert_in_epsilon(6.995268000000001, worksheet.electricity_m43, 0.002); end
   def test_electricity_d44; assert_equal("Solar fotovoltaica", worksheet.electricity_d44); end
-  def test_electricity_e44; assert_in_delta(0.036450194037365886, worksheet.electricity_e44, 0.002); end
+  def test_electricity_e44; assert_in_delta(0.007593086759039999, worksheet.electricity_e44, 0.002); end
   def test_electricity_f44; assert_in_delta(0.036450194037365886, worksheet.electricity_f44, 0.002); end
-  def test_electricity_g44; assert_in_delta(0.036450194037365886, worksheet.electricity_g44, 0.002); end
-  def test_electricity_h44; assert_in_delta(0.036450194037365886, worksheet.electricity_h44, 0.002); end
-  def test_electricity_i44; assert_in_delta(0.036450194037365886, worksheet.electricity_i44, 0.002); end
-  def test_electricity_j44; assert_in_delta(0.036450194037365886, worksheet.electricity_j44, 0.002); end
-  def test_electricity_k44; assert_in_delta(0.036450194037365886, worksheet.electricity_k44, 0.002); end
-  def test_electricity_l44; assert_in_delta(0.036450194037365886, worksheet.electricity_l44, 0.002); end
-  def test_electricity_m44; assert_in_delta(0.036450194037365886, worksheet.electricity_m44, 0.002); end
+  def test_electricity_g44; assert_in_delta(0.16535340233956147, worksheet.electricity_g44, 0.002); end
+  def test_electricity_h44; assert_in_delta(0.4401003927187866, worksheet.electricity_h44, 0.002); end
+  def test_electricity_i44; assert_in_epsilon(1.1689398003511515, worksheet.electricity_i44, 0.002); end
+  def test_electricity_j44; assert_in_epsilon(2.2773254567075365, worksheet.electricity_j44, 0.002); end
+  def test_electricity_k44; assert_in_epsilon(4.428976920164732, worksheet.electricity_k44, 0.002); end
+  def test_electricity_l44; assert_in_epsilon(8.59975949558445, worksheet.electricity_l44, 0.002); end
+  def test_electricity_m44; assert_in_epsilon(16.67348070406792, worksheet.electricity_m44, 0.002); end
   def test_electricity_d45; assert_equal("Solar heliotérmica (CSP)", worksheet.electricity_d45); end
-  def test_electricity_e45; assert_in_delta(0.036450194037365886, worksheet.electricity_e45, 0.002); end
+  def test_electricity_e45; assert_in_delta(0.007593086759039999, worksheet.electricity_e45, 0.002); end
   def test_electricity_f45; assert_in_delta(0.036450194037365886, worksheet.electricity_f45, 0.002); end
-  def test_electricity_g45; assert_in_delta(0.036450194037365886, worksheet.electricity_g45, 0.002); end
-  def test_electricity_h45; assert_in_delta(0.036450194037365886, worksheet.electricity_h45, 0.002); end
-  def test_electricity_i45; assert_in_delta(0.036450194037365886, worksheet.electricity_i45, 0.002); end
-  def test_electricity_j45; assert_in_delta(0.036450194037365886, worksheet.electricity_j45, 0.002); end
-  def test_electricity_k45; assert_in_delta(0.036450194037365886, worksheet.electricity_k45, 0.002); end
-  def test_electricity_l45; assert_in_delta(0.036450194037365886, worksheet.electricity_l45, 0.002); end
-  def test_electricity_m45; assert_in_delta(0.036450194037365886, worksheet.electricity_m45, 0.002); end
+  def test_electricity_g45; assert_in_delta(0.16535340233956147, worksheet.electricity_g45, 0.002); end
+  def test_electricity_h45; assert_in_delta(0.4401003927187866, worksheet.electricity_h45, 0.002); end
+  def test_electricity_i45; assert_in_epsilon(1.1689398003511515, worksheet.electricity_i45, 0.002); end
+  def test_electricity_j45; assert_in_epsilon(2.2773254567075365, worksheet.electricity_j45, 0.002); end
+  def test_electricity_k45; assert_in_epsilon(4.428976920164732, worksheet.electricity_k45, 0.002); end
+  def test_electricity_l45; assert_in_epsilon(8.59975949558445, worksheet.electricity_l45, 0.002); end
+  def test_electricity_m45; assert_in_epsilon(16.67348070406792, worksheet.electricity_m45, 0.002); end
   def test_electricity_d46; assert_equal("Hidrelétricas binacionais", worksheet.electricity_d46); end
-  def test_electricity_e46; assert_in_epsilon(39.27168, worksheet.electricity_e46, 0.002); end
+  def test_electricity_e46; assert_in_epsilon(43.47936000000001, worksheet.electricity_e46, 0.002); end
   def test_electricity_f46; assert_in_epsilon(39.27168, worksheet.electricity_f46, 0.002); end
-  def test_electricity_g46; assert_in_epsilon(39.27168, worksheet.electricity_g46, 0.002); end
-  def test_electricity_h46; assert_in_epsilon(39.27168, worksheet.electricity_h46, 0.002); end
-  def test_electricity_i46; assert_in_epsilon(39.27168, worksheet.electricity_i46, 0.002); end
-  def test_electricity_j46; assert_in_epsilon(39.27168, worksheet.electricity_j46, 0.002); end
-  def test_electricity_k46; assert_in_epsilon(39.27168, worksheet.electricity_k46, 0.002); end
-  def test_electricity_l46; assert_in_epsilon(39.27168, worksheet.electricity_l46, 0.002); end
-  def test_electricity_m46; assert_in_epsilon(39.27168, worksheet.electricity_m46, 0.002); end
+  def test_electricity_g46; assert_in_epsilon(34.81354285714287, worksheet.electricity_g46, 0.002); end
+  def test_electricity_h46; assert_in_epsilon(35.286280714285716, worksheet.electricity_h46, 0.002); end
+  def test_electricity_i46; assert_in_epsilon(30.335056071428575, worksheet.electricity_i46, 0.002); end
+  def test_electricity_j46; assert_in_epsilon(27.68490642857144, worksheet.electricity_j46, 0.002); end
+  def test_electricity_k46; assert_in_epsilon(22.503574285714294, worksheet.electricity_k46, 0.002); end
+  def test_electricity_l46; assert_in_epsilon(17.32224214285715, worksheet.electricity_l46, 0.002); end
+  def test_electricity_m46; assert_in_epsilon(12.140910000000002, worksheet.electricity_m46, 0.002); end
   def test_electricity_d47; assert_equal("Oferta de eficiência", worksheet.electricity_d47); end
-  def test_electricity_e47; assert_in_delta(0.0, (worksheet.electricity_e47||0), 0.002); end
-  def test_electricity_f47; assert_in_delta(0.0, (worksheet.electricity_f47||0), 0.002); end
-  def test_electricity_g47; assert_in_delta(0.0, (worksheet.electricity_g47||0), 0.002); end
-  def test_electricity_h47; assert_in_delta(0.0, (worksheet.electricity_h47||0), 0.002); end
-  def test_electricity_i47; assert_in_delta(0.0, (worksheet.electricity_i47||0), 0.002); end
-  def test_electricity_j47; assert_in_delta(0.0, (worksheet.electricity_j47||0), 0.002); end
-  def test_electricity_k47; assert_in_delta(0.0, (worksheet.electricity_k47||0), 0.002); end
-  def test_electricity_l47; assert_in_delta(0.0, (worksheet.electricity_l47||0), 0.002); end
-  def test_electricity_m47; assert_in_delta(0.0, (worksheet.electricity_m47||0), 0.002); end
+  def test_electricity_e47; assert_in_epsilon(65.6013, worksheet.electricity_e47, 0.002); end
+  def test_electricity_f47; assert_in_epsilon(664.6453409721414, worksheet.electricity_f47, 0.002); end
+  def test_electricity_g47; assert_in_epsilon(2041.6837815122885, worksheet.electricity_g47, 0.002); end
+  def test_electricity_h47; assert_in_epsilon(3806.367596021174, worksheet.electricity_h47, 0.002); end
+  def test_electricity_i47; assert_in_epsilon(5841.922472702203, worksheet.electricity_i47, 0.002); end
+  def test_electricity_j47; assert_in_epsilon(8109.391748352405, worksheet.electricity_j47, 0.002); end
+  def test_electricity_k47; assert_in_epsilon(10553.790463699848, worksheet.electricity_k47, 0.002); end
+  def test_electricity_l47; assert_in_epsilon(13067.361527960851, worksheet.electricity_l47, 0.002); end
+  def test_electricity_m47; assert_in_epsilon(15567.853496811358, worksheet.electricity_m47, 0.002); end
   def test_electricity_d48; assert_equal("Total", worksheet.electricity_d48); end
-  def test_electricity_e48; assert_in_epsilon(469.33201656447847, worksheet.electricity_e48, 0.002); end
-  def test_electricity_f48; assert_in_epsilon(469.33201656447847, worksheet.electricity_f48, 0.002); end
-  def test_electricity_g48; assert_in_epsilon(469.33201656447847, worksheet.electricity_g48, 0.002); end
-  def test_electricity_h48; assert_in_epsilon(469.33201656447847, worksheet.electricity_h48, 0.002); end
-  def test_electricity_i48; assert_in_epsilon(469.33201656447847, worksheet.electricity_i48, 0.002); end
-  def test_electricity_j48; assert_in_epsilon(469.33201656447847, worksheet.electricity_j48, 0.002); end
-  def test_electricity_k48; assert_in_epsilon(469.33201656447847, worksheet.electricity_k48, 0.002); end
-  def test_electricity_l48; assert_in_epsilon(469.33201656447847, worksheet.electricity_l48, 0.002); end
-  def test_electricity_m48; assert_in_epsilon(469.33201656447847, worksheet.electricity_m48, 0.002); end
-  def test_energy_d16; assert_equal("Transport", worksheet.energy_d16); end
-  def test_energy_e16; assert_in_epsilon(16393.642898340724, worksheet.energy_e16, 0.002); end
+  def test_electricity_e48; assert_in_epsilon(468.3357758770318, worksheet.electricity_e48, 0.002); end
+  def test_electricity_f48; assert_in_epsilon(1133.52735753662, worksheet.electricity_f48, 0.002); end
+  def test_electricity_g48; assert_in_epsilon(2760.4190067351005, worksheet.electricity_g48, 0.002); end
+  def test_electricity_h48; assert_in_epsilon(4787.668604880788, worksheet.electricity_h48, 0.002); end
+  def test_electricity_i48; assert_in_epsilon(7094.91001233116, worksheet.electricity_i48, 0.002); end
+  def test_electricity_j48; assert_in_epsilon(9837.982329361259, worksheet.electricity_j48, 0.002); end
+  def test_electricity_k48; assert_in_epsilon(13255.472959871411, worksheet.electricity_k48, 0.002); end
+  def test_electricity_l48; assert_in_epsilon(16762.615728850014, worksheet.electricity_l48, 0.002); end
+  def test_electricity_m48; assert_in_epsilon(20394.250917995167, worksheet.electricity_m48, 0.002); end
+  def test_energy_d16; assert_equal("Transporte", worksheet.energy_d16); end
+  def test_energy_e16; assert_in_epsilon(15322.817063673001, worksheet.energy_e16, 0.002); end
   def test_energy_f16; assert_in_epsilon(16393.642898340724, worksheet.energy_f16, 0.002); end
-  def test_energy_g16; assert_in_epsilon(16393.642898340724, worksheet.energy_g16, 0.002); end
-  def test_energy_h16; assert_in_epsilon(16393.642898340724, worksheet.energy_h16, 0.002); end
-  def test_energy_i16; assert_in_epsilon(16393.642898340724, worksheet.energy_i16, 0.002); end
-  def test_energy_j16; assert_in_epsilon(16393.642898340724, worksheet.energy_j16, 0.002); end
-  def test_energy_k16; assert_in_epsilon(16393.642898340724, worksheet.energy_k16, 0.002); end
-  def test_energy_l16; assert_in_epsilon(16393.642898340724, worksheet.energy_l16, 0.002); end
-  def test_energy_m16; assert_in_epsilon(16393.642898340724, worksheet.energy_m16, 0.002); end
+  def test_energy_g16; assert_in_epsilon(19091.906253846108, worksheet.energy_g16, 0.002); end
+  def test_energy_h16; assert_in_epsilon(21781.985233798252, worksheet.energy_h16, 0.002); end
+  def test_energy_i16; assert_in_epsilon(24412.49663678513, worksheet.energy_i16, 0.002); end
+  def test_energy_j16; assert_in_epsilon(26937.99095987844, worksheet.energy_j16, 0.002); end
+  def test_energy_k16; assert_in_epsilon(29297.05242053831, worksheet.energy_k16, 0.002); end
+  def test_energy_l16; assert_in_epsilon(31424.29718333423, worksheet.energy_l16, 0.002); end
+  def test_energy_m16; assert_in_epsilon(33274.972518464, worksheet.energy_m16, 0.002); end
   def test_energy_d17; assert_equal("Setor residencial", worksheet.energy_d17); end
-  def test_energy_e17; assert_in_epsilon(299.66097018334517, worksheet.energy_e17, 0.002); end
+  def test_energy_e17; assert_in_epsilon(279.12, worksheet.energy_e17, 0.002); end
   def test_energy_f17; assert_in_epsilon(299.66097018334517, worksheet.energy_f17, 0.002); end
-  def test_energy_g17; assert_in_epsilon(299.66097018334517, worksheet.energy_g17, 0.002); end
-  def test_energy_h17; assert_in_epsilon(299.66097018334517, worksheet.energy_h17, 0.002); end
-  def test_energy_i17; assert_in_epsilon(299.66097018334517, worksheet.energy_i17, 0.002); end
-  def test_energy_j17; assert_in_epsilon(299.66097018334517, worksheet.energy_j17, 0.002); end
-  def test_energy_k17; assert_in_epsilon(299.66097018334517, worksheet.energy_k17, 0.002); end
-  def test_energy_l17; assert_in_epsilon(299.66097018334517, worksheet.energy_l17, 0.002); end
-  def test_energy_m17; assert_in_epsilon(299.66097018334517, worksheet.energy_m17, 0.002); end
+  def test_energy_g17; assert_in_epsilon(324.20711624319097, worksheet.energy_g17, 0.002); end
+  def test_energy_h17; assert_in_epsilon(356.0433753796044, worksheet.energy_h17, 0.002); end
+  def test_energy_i17; assert_in_epsilon(388.8415728969421, worksheet.energy_i17, 0.002); end
+  def test_energy_j17; assert_in_epsilon(418.8079404270408, worksheet.energy_j17, 0.002); end
+  def test_energy_k17; assert_in_epsilon(449.5990505624632, worksheet.energy_k17, 0.002); end
+  def test_energy_l17; assert_in_epsilon(474.548487285436, worksheet.energy_l17, 0.002); end
+  def test_energy_m17; assert_in_epsilon(500.09, worksheet.energy_m17, 0.002); end
   def test_energy_d18; assert_equal("Setor comercial/público", worksheet.energy_d18); end
-  def test_energy_e18; assert_in_epsilon(600.0, worksheet.energy_e18, 0.002); end
+  def test_energy_e18; assert_in_epsilon(500.0, worksheet.energy_e18, 0.002); end
   def test_energy_f18; assert_in_epsilon(600.0, worksheet.energy_f18, 0.002); end
-  def test_energy_g18; assert_in_epsilon(600.0, worksheet.energy_g18, 0.002); end
-  def test_energy_h18; assert_in_epsilon(600.0, worksheet.energy_h18, 0.002); end
-  def test_energy_i18; assert_in_epsilon(600.0, worksheet.energy_i18, 0.002); end
-  def test_energy_j18; assert_in_epsilon(600.0, worksheet.energy_j18, 0.002); end
-  def test_energy_k18; assert_in_epsilon(600.0, worksheet.energy_k18, 0.002); end
-  def test_energy_l18; assert_in_epsilon(600.0, worksheet.energy_l18, 0.002); end
-  def test_energy_m18; assert_in_epsilon(600.0, worksheet.energy_m18, 0.002); end
+  def test_energy_g18; assert_in_epsilon(700.0, worksheet.energy_g18, 0.002); end
+  def test_energy_h18; assert_in_epsilon(800.0, worksheet.energy_h18, 0.002); end
+  def test_energy_i18; assert_in_epsilon(900.0, worksheet.energy_i18, 0.002); end
+  def test_energy_j18; assert_in_epsilon(1000.0, worksheet.energy_j18, 0.002); end
+  def test_energy_k18; assert_in_epsilon(1100.0, worksheet.energy_k18, 0.002); end
+  def test_energy_l18; assert_in_epsilon(1200.0, worksheet.energy_l18, 0.002); end
+  def test_energy_m18; assert_in_epsilon(1300.0, worksheet.energy_m18, 0.002); end
   def test_energy_d19; assert_equal("Setor industrial", worksheet.energy_d19); end
   def test_energy_e19; assert_in_epsilon(1000.0, worksheet.energy_e19, 0.002); end
   def test_energy_f19; assert_in_epsilon(1000.0, worksheet.energy_f19, 0.002); end
@@ -1035,35 +1035,35 @@ class TestModel < Minitest::Unit::TestCase
   def test_energy_l19; assert_in_epsilon(1000.0, worksheet.energy_l19, 0.002); end
   def test_energy_m19; assert_in_epsilon(1000.0, worksheet.energy_m19, 0.002); end
   def test_energy_d20; assert_equal("Setor energético", worksheet.energy_d20); end
-  def test_energy_e20; assert_in_epsilon(33334.30348199675, worksheet.energy_e20, 0.002); end
-  def test_energy_f20; assert_in_epsilon(33334.30348199675, worksheet.energy_f20, 0.002); end
-  def test_energy_g20; assert_in_epsilon(33334.30348199675, worksheet.energy_g20, 0.002); end
-  def test_energy_h20; assert_in_epsilon(33334.30348199675, worksheet.energy_h20, 0.002); end
-  def test_energy_i20; assert_in_epsilon(33334.30348199675, worksheet.energy_i20, 0.002); end
-  def test_energy_j20; assert_in_epsilon(33334.30348199675, worksheet.energy_j20, 0.002); end
-  def test_energy_k20; assert_in_epsilon(33334.30348199675, worksheet.energy_k20, 0.002); end
-  def test_energy_l20; assert_in_epsilon(33334.30348199675, worksheet.energy_l20, 0.002); end
-  def test_energy_m20; assert_in_epsilon(33334.30348199675, worksheet.energy_m20, 0.002); end
+  def test_energy_e20; assert_in_epsilon(4572.687269388407, worksheet.energy_e20, 0.002); end
+  def test_energy_f20; assert_in_epsilon(5657.09527263987, worksheet.energy_f20, 0.002); end
+  def test_energy_g20; assert_in_epsilon(5813.068207598081, worksheet.energy_g20, 0.002); end
+  def test_energy_h20; assert_in_epsilon(5862.349115015479, worksheet.energy_h20, 0.002); end
+  def test_energy_i20; assert_in_epsilon(4701.338672658623, worksheet.energy_i20, 0.002); end
+  def test_energy_j20; assert_in_epsilon(4461.009905526087, worksheet.energy_j20, 0.002); end
+  def test_energy_k20; assert_in_epsilon(4215.532881904494, worksheet.energy_k20, 0.002); end
+  def test_energy_l20; assert_in_epsilon(3905.3164048317135, worksheet.energy_l20, 0.002); end
+  def test_energy_m20; assert_in_epsilon(3525.504751229347, worksheet.energy_m20, 0.002); end
   def test_energy_d21; assert_equal("Setor agropecuário", worksheet.energy_d21); end
-  def test_energy_e21; assert_in_epsilon(1816.2162162162163, worksheet.energy_e21, 0.002); end
+  def test_energy_e21; assert_in_epsilon(1800.0000000000002, worksheet.energy_e21, 0.002); end
   def test_energy_f21; assert_in_epsilon(1816.2162162162163, worksheet.energy_f21, 0.002); end
-  def test_energy_g21; assert_in_epsilon(1816.2162162162163, worksheet.energy_g21, 0.002); end
-  def test_energy_h21; assert_in_epsilon(1816.2162162162163, worksheet.energy_h21, 0.002); end
-  def test_energy_i21; assert_in_epsilon(1816.2162162162163, worksheet.energy_i21, 0.002); end
-  def test_energy_j21; assert_in_epsilon(1816.2162162162163, worksheet.energy_j21, 0.002); end
-  def test_energy_k21; assert_in_epsilon(1816.2162162162163, worksheet.energy_k21, 0.002); end
-  def test_energy_l21; assert_in_epsilon(1816.2162162162163, worksheet.energy_l21, 0.002); end
-  def test_energy_m21; assert_in_epsilon(1816.2162162162163, worksheet.energy_m21, 0.002); end
+  def test_energy_g21; assert_in_epsilon(1856.7567567567569, worksheet.energy_g21, 0.002); end
+  def test_energy_h21; assert_in_epsilon(1897.2972972972973, worksheet.energy_h21, 0.002); end
+  def test_energy_i21; assert_in_epsilon(1937.837837837838, worksheet.energy_i21, 0.002); end
+  def test_energy_j21; assert_in_epsilon(1978.3783783783783, worksheet.energy_j21, 0.002); end
+  def test_energy_k21; assert_in_epsilon(2018.9189189189187, worksheet.energy_k21, 0.002); end
+  def test_energy_l21; assert_in_epsilon(2059.4594594594596, worksheet.energy_l21, 0.002); end
+  def test_energy_m21; assert_in_epsilon(2100.0, worksheet.energy_m21, 0.002); end
   def test_energy_d22; assert_equal("Total", worksheet.energy_d22); end
-  def test_energy_e22; assert_in_epsilon(53443.82356673703, worksheet.energy_e22, 0.002); end
-  def test_energy_f22; assert_in_epsilon(53443.82356673703, worksheet.energy_f22, 0.002); end
-  def test_energy_g22; assert_in_epsilon(53443.82356673703, worksheet.energy_g22, 0.002); end
-  def test_energy_h22; assert_in_epsilon(53443.82356673703, worksheet.energy_h22, 0.002); end
-  def test_energy_i22; assert_in_epsilon(53443.82356673703, worksheet.energy_i22, 0.002); end
-  def test_energy_j22; assert_in_epsilon(53443.82356673703, worksheet.energy_j22, 0.002); end
-  def test_energy_k22; assert_in_epsilon(53443.82356673703, worksheet.energy_k22, 0.002); end
-  def test_energy_l22; assert_in_epsilon(53443.82356673703, worksheet.energy_l22, 0.002); end
-  def test_energy_m22; assert_in_epsilon(53443.82356673703, worksheet.energy_m22, 0.002); end
+  def test_energy_e22; assert_in_epsilon(23474.62433306141, worksheet.energy_e22, 0.002); end
+  def test_energy_f22; assert_in_epsilon(25766.615357380153, worksheet.energy_f22, 0.002); end
+  def test_energy_g22; assert_in_epsilon(28785.938334444134, worksheet.energy_g22, 0.002); end
+  def test_energy_h22; assert_in_epsilon(31697.67502149063, worksheet.energy_h22, 0.002); end
+  def test_energy_i22; assert_in_epsilon(33340.51472017854, worksheet.energy_i22, 0.002); end
+  def test_energy_j22; assert_in_epsilon(35796.18718420994, worksheet.energy_j22, 0.002); end
+  def test_energy_k22; assert_in_epsilon(38081.10327192419, worksheet.energy_k22, 0.002); end
+  def test_energy_l22; assert_in_epsilon(40063.62153491084, worksheet.energy_l22, 0.002); end
+  def test_energy_m22; assert_in_epsilon(41700.56726969334, worksheet.energy_m22, 0.002); end
   def test_energy_d15; assert_equal("Vector", worksheet.energy_d15); end
   def test_energy_e15; assert_equal("2013", worksheet.energy_e15); end
   def test_energy_f15; assert_in_epsilon(2015.0, worksheet.energy_f15, 0.002); end
@@ -1085,75 +1085,75 @@ class TestModel < Minitest::Unit::TestCase
   def test_energy_l49; assert_in_epsilon(2045.0, worksheet.energy_l49, 0.002); end
   def test_energy_m49; assert_in_epsilon(2050.0, worksheet.energy_m49, 0.002); end
   def test_energy_d50; assert_equal("Oferta interna de óleo", worksheet.energy_d50); end
-  def test_energy_e50; assert_in_epsilon(38432.40547232726, worksheet.energy_e50, 0.002); end
-  def test_energy_f50; assert_in_epsilon(38432.40547232726, worksheet.energy_f50, 0.002); end
-  def test_energy_g50; assert_in_epsilon(38432.40547232726, worksheet.energy_g50, 0.002); end
-  def test_energy_h50; assert_in_epsilon(38432.40547232726, worksheet.energy_h50, 0.002); end
-  def test_energy_i50; assert_in_epsilon(38432.40547232726, worksheet.energy_i50, 0.002); end
-  def test_energy_j50; assert_in_epsilon(38432.40547232726, worksheet.energy_j50, 0.002); end
-  def test_energy_k50; assert_in_epsilon(38432.40547232726, worksheet.energy_k50, 0.002); end
-  def test_energy_l50; assert_in_epsilon(38432.40547232726, worksheet.energy_l50, 0.002); end
-  def test_energy_m50; assert_in_epsilon(38432.40547232726, worksheet.energy_m50, 0.002); end
+  def test_energy_e50; assert_in_epsilon(21462.25899619369, worksheet.energy_e50, 0.002); end
+  def test_energy_f50; assert_in_epsilon(21717.830776808725, worksheet.energy_f50, 0.002); end
+  def test_energy_g50; assert_in_epsilon(21360.08094011477, worksheet.energy_g50, 0.002); end
+  def test_energy_h50; assert_in_epsilon(21948.041233808326, worksheet.energy_h50, 0.002); end
+  def test_energy_i50; assert_in_epsilon(21396.78539550367, worksheet.energy_i50, 0.002); end
+  def test_energy_j50; assert_in_epsilon(21141.954573396157, worksheet.energy_j50, 0.002); end
+  def test_energy_k50; assert_in_epsilon(20674.32891722369, worksheet.energy_k50, 0.002); end
+  def test_energy_l50; assert_in_epsilon(19836.964035319965, worksheet.energy_l50, 0.002); end
+  def test_energy_m50; assert_in_epsilon(18657.681580425902, worksheet.energy_m50, 0.002); end
   def test_energy_d51; assert_equal("Produção líquida de gás natural", worksheet.energy_d51); end
-  def test_energy_e51; assert_in_epsilon(26559.98545263177, worksheet.energy_e51, 0.002); end
-  def test_energy_f51; assert_in_epsilon(26559.98545263177, worksheet.energy_f51, 0.002); end
-  def test_energy_g51; assert_in_epsilon(26559.98545263177, worksheet.energy_g51, 0.002); end
-  def test_energy_h51; assert_in_epsilon(26559.98545263177, worksheet.energy_h51, 0.002); end
-  def test_energy_i51; assert_in_epsilon(26559.98545263177, worksheet.energy_i51, 0.002); end
-  def test_energy_j51; assert_in_epsilon(26559.98545263177, worksheet.energy_j51, 0.002); end
-  def test_energy_k51; assert_in_epsilon(26559.98545263177, worksheet.energy_k51, 0.002); end
-  def test_energy_l51; assert_in_epsilon(26559.98545263177, worksheet.energy_l51, 0.002); end
-  def test_energy_m51; assert_in_epsilon(26559.98545263177, worksheet.energy_m51, 0.002); end
+  def test_energy_e51; assert_in_epsilon(4262.872297768496, worksheet.energy_e51, 0.002); end
+  def test_energy_f51; assert_in_epsilon(6417.360137754429, worksheet.energy_f51, 0.002); end
+  def test_energy_g51; assert_in_epsilon(9048.994880612308, worksheet.energy_g51, 0.002); end
+  def test_energy_h51; assert_in_epsilon(9352.142314689445, worksheet.energy_h51, 0.002); end
+  def test_energy_i51; assert_in_epsilon(8624.00284961673, worksheet.energy_i51, 0.002); end
+  def test_energy_j51; assert_in_epsilon(8455.345926650161, worksheet.energy_j51, 0.002); end
+  def test_energy_k51; assert_in_epsilon(7852.35452993379, worksheet.energy_k51, 0.002); end
+  def test_energy_l51; assert_in_epsilon(7125.580474703265, worksheet.energy_l51, 0.002); end
+  def test_energy_m51; assert_in_epsilon(6181.322064688081, worksheet.energy_m51, 0.002); end
   def test_energy_d52; assert_equal("Produção líquida de carvão", worksheet.energy_d52); end
-  def test_energy_e52; assert_in_epsilon(1021.7975554389318, worksheet.energy_e52, 0.002); end
+  def test_energy_e52; assert_in_epsilon(599.9863548513317, worksheet.energy_e52, 0.002); end
   def test_energy_f52; assert_in_epsilon(1021.7975554389318, worksheet.energy_f52, 0.002); end
-  def test_energy_g52; assert_in_epsilon(1021.7975554389318, worksheet.energy_g52, 0.002); end
-  def test_energy_h52; assert_in_epsilon(1021.7975554389318, worksheet.energy_h52, 0.002); end
-  def test_energy_i52; assert_in_epsilon(1021.7975554389318, worksheet.energy_i52, 0.002); end
-  def test_energy_j52; assert_in_epsilon(1021.7975554389318, worksheet.energy_j52, 0.002); end
-  def test_energy_k52; assert_in_epsilon(1021.7975554389318, worksheet.energy_k52, 0.002); end
-  def test_energy_l52; assert_in_epsilon(1021.7975554389318, worksheet.energy_l52, 0.002); end
-  def test_energy_m52; assert_in_epsilon(1021.7975554389318, worksheet.energy_m52, 0.002); end
+  def test_energy_g52; assert_in_epsilon(719.983625821598, worksheet.energy_g52, 0.002); end
+  def test_energy_h52; assert_in_epsilon(839.9808967918644, worksheet.energy_h52, 0.002); end
+  def test_energy_i52; assert_in_epsilon(2304.0889278721775, worksheet.energy_i52, 0.002); end
+  def test_energy_j52; assert_in_epsilon(3156.1247505057154, worksheet.energy_j52, 0.002); end
+  def test_energy_k52; assert_in_epsilon(4909.785782275271, worksheet.energy_k52, 0.002); end
+  def test_energy_l52; assert_in_epsilon(6663.446814044826, worksheet.energy_l52, 0.002); end
+  def test_energy_m52; assert_in_epsilon(8647.022274144067, worksheet.energy_m52, 0.002); end
   def test_energy_d53; assert_equal("Nuclear fission", worksheet.energy_d53); end
   def test_energy_e53; assert_in_epsilon(46.27054206000001, worksheet.energy_e53, 0.002); end
   def test_energy_f53; assert_in_epsilon(46.27054206000001, worksheet.energy_f53, 0.002); end
-  def test_energy_g53; assert_in_epsilon(46.27054206000001, worksheet.energy_g53, 0.002); end
-  def test_energy_h53; assert_in_epsilon(46.27054206000001, worksheet.energy_h53, 0.002); end
-  def test_energy_i53; assert_in_epsilon(46.27054206000001, worksheet.energy_i53, 0.002); end
-  def test_energy_j53; assert_in_epsilon(46.27054206000001, worksheet.energy_j53, 0.002); end
-  def test_energy_k53; assert_in_epsilon(46.27054206000001, worksheet.energy_k53, 0.002); end
-  def test_energy_l53; assert_in_epsilon(46.27054206000001, worksheet.energy_l53, 0.002); end
-  def test_energy_m53; assert_in_epsilon(46.27054206000001, worksheet.energy_m53, 0.002); end
+  def test_energy_g53; assert_in_epsilon(79.35386436000002, worksheet.energy_g53, 0.002); end
+  def test_energy_h53; assert_in_epsilon(79.35386436000002, worksheet.energy_h53, 0.002); end
+  def test_energy_i53; assert_in_epsilon(79.35386436000002, worksheet.energy_i53, 0.002); end
+  def test_energy_j53; assert_in_epsilon(79.35386436000002, worksheet.energy_j53, 0.002); end
+  def test_energy_k53; assert_in_epsilon(79.35386436000002, worksheet.energy_k53, 0.002); end
+  def test_energy_l53; assert_in_epsilon(64.20700530000002, worksheet.energy_l53, 0.002); end
+  def test_energy_m53; assert_in_epsilon(64.20700530000002, worksheet.energy_m53, 0.002); end
   def test_energy_d54; assert_equal("Sol", worksheet.energy_d54); end
-  def test_energy_e54; assert_in_delta(0.07290038807473177, worksheet.energy_e54, 0.002); end
+  def test_energy_e54; assert_in_delta(0.015186173518079998, worksheet.energy_e54, 0.002); end
   def test_energy_f54; assert_in_delta(0.07290038807473177, worksheet.energy_f54, 0.002); end
-  def test_energy_g54; assert_in_delta(0.07290038807473177, worksheet.energy_g54, 0.002); end
-  def test_energy_h54; assert_in_delta(0.07290038807473177, worksheet.energy_h54, 0.002); end
-  def test_energy_i54; assert_in_delta(0.07290038807473177, worksheet.energy_i54, 0.002); end
-  def test_energy_j54; assert_in_delta(0.07290038807473177, worksheet.energy_j54, 0.002); end
-  def test_energy_k54; assert_in_delta(0.07290038807473177, worksheet.energy_k54, 0.002); end
-  def test_energy_l54; assert_in_delta(0.07290038807473177, worksheet.energy_l54, 0.002); end
-  def test_energy_m54; assert_in_delta(0.07290038807473177, worksheet.energy_m54, 0.002); end
+  def test_energy_g54; assert_in_delta(0.33070680467912295, worksheet.energy_g54, 0.002); end
+  def test_energy_h54; assert_in_delta(0.8802007854375732, worksheet.energy_h54, 0.002); end
+  def test_energy_i54; assert_in_epsilon(2.337879600702303, worksheet.energy_i54, 0.002); end
+  def test_energy_j54; assert_in_epsilon(4.554650913415073, worksheet.energy_j54, 0.002); end
+  def test_energy_k54; assert_in_epsilon(8.857953840329465, worksheet.energy_k54, 0.002); end
+  def test_energy_l54; assert_in_epsilon(17.1995189911689, worksheet.energy_l54, 0.002); end
+  def test_energy_m54; assert_in_epsilon(33.34696140813584, worksheet.energy_m54, 0.002); end
   def test_energy_d55; assert_equal("Wind", worksheet.energy_d55); end
-  def test_energy_e55; assert_in_epsilon(11.70470935174621, worksheet.energy_e55, 0.002); end
+  def test_energy_e55; assert_in_epsilon(10.400413309513823, worksheet.energy_e55, 0.002); end
   def test_energy_f55; assert_in_epsilon(11.70470935174621, worksheet.energy_f55, 0.002); end
-  def test_energy_g55; assert_in_epsilon(11.70470935174621, worksheet.energy_g55, 0.002); end
-  def test_energy_h55; assert_in_epsilon(11.70470935174621, worksheet.energy_h55, 0.002); end
-  def test_energy_i55; assert_in_epsilon(11.70470935174621, worksheet.energy_i55, 0.002); end
-  def test_energy_j55; assert_in_epsilon(11.70470935174621, worksheet.energy_j55, 0.002); end
-  def test_energy_k55; assert_in_epsilon(11.70470935174621, worksheet.energy_k55, 0.002); end
-  def test_energy_l55; assert_in_epsilon(11.70470935174621, worksheet.energy_l55, 0.002); end
-  def test_energy_m55; assert_in_epsilon(11.70470935174621, worksheet.energy_m55, 0.002); end
+  def test_energy_g55; assert_in_epsilon(38.188976733592646, worksheet.energy_g55, 0.002); end
+  def test_energy_h55; assert_in_epsilon(47.130874531396834, worksheet.energy_h55, 0.002); end
+  def test_energy_i55; assert_in_epsilon(59.868810427839755, worksheet.energy_i55, 0.002); end
+  def test_energy_j55; assert_in_epsilon(74.04911342292156, worksheet.energy_j55, 0.002); end
+  def test_energy_k55; assert_in_epsilon(89.67178351664205, worksheet.energy_k55, 0.002); end
+  def test_energy_l55; assert_in_epsilon(106.73682070900153, worksheet.energy_l55, 0.002); end
+  def test_energy_m55; assert_in_epsilon(125.24422499999997, worksheet.energy_m55, 0.002); end
   def test_energy_d56; assert_equal("Ocean", worksheet.energy_d56); end
   def test_energy_e56; assert_in_delta(0.0, (worksheet.energy_e56||0), 0.002); end
   def test_energy_f56; assert_in_delta(0.0, (worksheet.energy_f56||0), 0.002); end
-  def test_energy_g56; assert_in_delta(0.0, (worksheet.energy_g56||0), 0.002); end
-  def test_energy_h56; assert_in_delta(0.0, (worksheet.energy_h56||0), 0.002); end
-  def test_energy_i56; assert_in_delta(0.0, (worksheet.energy_i56||0), 0.002); end
-  def test_energy_j56; assert_in_delta(0.0, (worksheet.energy_j56||0), 0.002); end
-  def test_energy_k56; assert_in_delta(0.0, (worksheet.energy_k56||0), 0.002); end
-  def test_energy_l56; assert_in_delta(0.0, (worksheet.energy_l56||0), 0.002); end
-  def test_energy_m56; assert_in_delta(0.0, (worksheet.energy_m56||0), 0.002); end
+  def test_energy_g56; assert_in_delta(0.1584417808219177, worksheet.energy_g56, 0.002); end
+  def test_energy_h56; assert_in_delta(0.39610445205479383, worksheet.energy_h56, 0.002); end
+  def test_energy_i56; assert_in_delta(0.7922089041095896, worksheet.energy_i56, 0.002); end
+  def test_energy_j56; assert_in_epsilon(3.168835616438358, worksheet.energy_j56, 0.002); end
+  def test_energy_k56; assert_in_epsilon(7.129880136986295, worksheet.energy_k56, 0.002); end
+  def test_energy_l56; assert_in_epsilon(15.210410958904115, worksheet.energy_l56, 0.002); end
+  def test_energy_m56; assert_in_epsilon(19.01301369863013, worksheet.energy_m56, 0.002); end
   def test_energy_d57; assert_equal("Wave", worksheet.energy_d57); end
   def test_energy_e57; assert_in_delta(0.0, (worksheet.energy_e57||0), 0.002); end
   def test_energy_f57; assert_in_delta(0.0, (worksheet.energy_f57||0), 0.002); end
@@ -1165,55 +1165,55 @@ class TestModel < Minitest::Unit::TestCase
   def test_energy_l57; assert_in_delta(0.0, (worksheet.energy_l57||0), 0.002); end
   def test_energy_m57; assert_in_delta(0.0, (worksheet.energy_m57||0), 0.002); end
   def test_energy_d58; assert_equal("Hydro", worksheet.energy_d58); end
-  def test_energy_e58; assert_in_epsilon(5.329728000000001, worksheet.energy_e58, 0.002); end
+  def test_energy_e58; assert_in_epsilon(4.114400994, worksheet.energy_e58, 0.002); end
   def test_energy_f58; assert_in_epsilon(5.329728000000001, worksheet.energy_f58, 0.002); end
-  def test_energy_g58; assert_in_epsilon(5.329728000000001, worksheet.energy_g58, 0.002); end
-  def test_energy_h58; assert_in_epsilon(5.329728000000001, worksheet.energy_h58, 0.002); end
-  def test_energy_i58; assert_in_epsilon(5.329728000000001, worksheet.energy_i58, 0.002); end
-  def test_energy_j58; assert_in_epsilon(5.329728000000001, worksheet.energy_j58, 0.002); end
-  def test_energy_k58; assert_in_epsilon(5.329728000000001, worksheet.energy_k58, 0.002); end
-  def test_energy_l58; assert_in_epsilon(5.329728000000001, worksheet.energy_l58, 0.002); end
-  def test_energy_m58; assert_in_epsilon(5.329728000000001, worksheet.energy_m58, 0.002); end
+  def test_energy_g58; assert_in_epsilon(5.995944000000001, worksheet.energy_g58, 0.002); end
+  def test_energy_h58; assert_in_epsilon(6.162498000000001, worksheet.energy_h58, 0.002); end
+  def test_energy_i58; assert_in_epsilon(6.329052, worksheet.energy_i58, 0.002); end
+  def test_energy_j58; assert_in_epsilon(6.4956059999999995, worksheet.energy_j58, 0.002); end
+  def test_energy_k58; assert_in_epsilon(6.66216, worksheet.energy_k58, 0.002); end
+  def test_energy_l58; assert_in_epsilon(6.828714, worksheet.energy_l58, 0.002); end
+  def test_energy_m58; assert_in_epsilon(6.995268000000001, worksheet.energy_m58, 0.002); end
   def test_energy_d59; assert_equal("Bioenergia", worksheet.energy_d59); end
-  def test_energy_e59; assert_in_epsilon(1194.5773256021848, worksheet.energy_e59, 0.002); end
-  def test_energy_f59; assert_in_epsilon(1194.5773256021848, worksheet.energy_f59, 0.002); end
-  def test_energy_g59; assert_in_epsilon(1194.5773256021848, worksheet.energy_g59, 0.002); end
-  def test_energy_h59; assert_in_epsilon(1194.5773256021848, worksheet.energy_h59, 0.002); end
-  def test_energy_i59; assert_in_epsilon(1194.5773256021848, worksheet.energy_i59, 0.002); end
-  def test_energy_j59; assert_in_epsilon(1194.5773256021848, worksheet.energy_j59, 0.002); end
-  def test_energy_k59; assert_in_epsilon(1194.5773256021848, worksheet.energy_k59, 0.002); end
-  def test_energy_l59; assert_in_epsilon(1194.5773256021848, worksheet.energy_l59, 0.002); end
-  def test_energy_m59; assert_in_epsilon(1194.5773256021848, worksheet.energy_m59, 0.002); end
+  def test_energy_e59; assert_in_epsilon(946.9216189348749, worksheet.energy_e59, 0.002); end
+  def test_energy_f59; assert_in_epsilon(1261.5667792139686, worksheet.energy_f59, 0.002); end
+  def test_energy_g59; assert_in_epsilon(1574.4324324324325, worksheet.energy_g59, 0.002); end
+  def test_energy_h59; assert_in_epsilon(1907.4594594594594, worksheet.energy_h59, 0.002); end
+  def test_energy_i59; assert_in_epsilon(2267.5135135135133, worksheet.energy_i59, 0.002); end
+  def test_energy_j59; assert_in_epsilon(2565.628995998524, worksheet.energy_j59, 0.002); end
+  def test_energy_k59; assert_in_epsilon(2738.123002289072, worksheet.energy_k59, 0.002); end
+  def test_energy_l59; assert_in_epsilon(2928.5646605311817, worksheet.energy_l59, 0.002); end
+  def test_energy_m59; assert_in_epsilon(3147.587225784064, worksheet.energy_m59, 0.002); end
   def test_energy_d60; assert_equal("Eficiência energética", worksheet.energy_d60); end
-  def test_energy_e60; assert_in_epsilon(589.7050346724043, worksheet.energy_e60, 0.002); end
-  def test_energy_f60; assert_in_epsilon(589.7050346724043, worksheet.energy_f60, 0.002); end
-  def test_energy_g60; assert_in_epsilon(589.7050346724043, worksheet.energy_g60, 0.002); end
-  def test_energy_h60; assert_in_epsilon(589.7050346724043, worksheet.energy_h60, 0.002); end
-  def test_energy_i60; assert_in_epsilon(589.7050346724043, worksheet.energy_i60, 0.002); end
-  def test_energy_j60; assert_in_epsilon(589.7050346724043, worksheet.energy_j60, 0.002); end
-  def test_energy_k60; assert_in_epsilon(589.7050346724043, worksheet.energy_k60, 0.002); end
-  def test_energy_l60; assert_in_epsilon(589.7050346724043, worksheet.energy_l60, 0.002); end
-  def test_energy_m60; assert_in_epsilon(589.7050346724043, worksheet.energy_m60, 0.002); end
+  def test_energy_e60; assert_in_epsilon(65.6013, worksheet.energy_e60, 0.002); end
+  def test_energy_f60; assert_in_epsilon(664.6453409721414, worksheet.energy_f60, 0.002); end
+  def test_energy_g60; assert_in_epsilon(2041.6837815122885, worksheet.energy_g60, 0.002); end
+  def test_energy_h60; assert_in_epsilon(3806.367596021174, worksheet.energy_h60, 0.002); end
+  def test_energy_i60; assert_in_epsilon(5841.922472702203, worksheet.energy_i60, 0.002); end
+  def test_energy_j60; assert_in_epsilon(8109.391748352405, worksheet.energy_j60, 0.002); end
+  def test_energy_k60; assert_in_epsilon(10553.790463699848, worksheet.energy_k60, 0.002); end
+  def test_energy_l60; assert_in_epsilon(13067.361527960851, worksheet.energy_l60, 0.002); end
+  def test_energy_m60; assert_in_epsilon(15567.853496811358, worksheet.energy_m60, 0.002); end
   def test_energy_d61; assert_equal("Electricity oversupply (imports)", worksheet.energy_d61); end
-  def test_energy_e61; assert_in_epsilon(39.27168, worksheet.energy_e61, 0.002); end
+  def test_energy_e61; assert_in_epsilon(43.47936000000001, worksheet.energy_e61, 0.002); end
   def test_energy_f61; assert_in_epsilon(39.27168, worksheet.energy_f61, 0.002); end
-  def test_energy_g61; assert_in_epsilon(39.27168, worksheet.energy_g61, 0.002); end
-  def test_energy_h61; assert_in_epsilon(39.27168, worksheet.energy_h61, 0.002); end
-  def test_energy_i61; assert_in_epsilon(39.27168, worksheet.energy_i61, 0.002); end
-  def test_energy_j61; assert_in_epsilon(39.27168, worksheet.energy_j61, 0.002); end
-  def test_energy_k61; assert_in_epsilon(39.27168, worksheet.energy_k61, 0.002); end
-  def test_energy_l61; assert_in_epsilon(39.27168, worksheet.energy_l61, 0.002); end
-  def test_energy_m61; assert_in_epsilon(39.27168, worksheet.energy_m61, 0.002); end
+  def test_energy_g61; assert_in_epsilon(34.81354285714287, worksheet.energy_g61, 0.002); end
+  def test_energy_h61; assert_in_epsilon(35.286280714285716, worksheet.energy_h61, 0.002); end
+  def test_energy_i61; assert_in_epsilon(30.335056071428575, worksheet.energy_i61, 0.002); end
+  def test_energy_j61; assert_in_epsilon(27.68490642857144, worksheet.energy_j61, 0.002); end
+  def test_energy_k61; assert_in_epsilon(22.503574285714294, worksheet.energy_k61, 0.002); end
+  def test_energy_l61; assert_in_epsilon(17.32224214285715, worksheet.energy_l61, 0.002); end
+  def test_energy_m61; assert_in_epsilon(12.140910000000002, worksheet.energy_m61, 0.002); end
   def test_energy_d62; assert_equal("Total used in Brazil", worksheet.energy_d62); end
-  def test_energy_e62; assert_in_epsilon(67901.12040047234, worksheet.energy_e62, 0.002); end
-  def test_energy_f62; assert_in_epsilon(67901.12040047234, worksheet.energy_f62, 0.002); end
-  def test_energy_g62; assert_in_epsilon(67901.12040047234, worksheet.energy_g62, 0.002); end
-  def test_energy_h62; assert_in_epsilon(67901.12040047234, worksheet.energy_h62, 0.002); end
-  def test_energy_i62; assert_in_epsilon(67901.12040047234, worksheet.energy_i62, 0.002); end
-  def test_energy_j62; assert_in_epsilon(67901.12040047234, worksheet.energy_j62, 0.002); end
-  def test_energy_k62; assert_in_epsilon(67901.12040047234, worksheet.energy_k62, 0.002); end
-  def test_energy_l62; assert_in_epsilon(67901.12040047234, worksheet.energy_l62, 0.002); end
-  def test_energy_m62; assert_in_epsilon(67901.12040047234, worksheet.energy_m62, 0.002); end
+  def test_energy_e62; assert_in_epsilon(27441.920470285422, worksheet.energy_e62, 0.002); end
+  def test_energy_f62; assert_in_epsilon(31185.850149988015, worksheet.energy_f62, 0.002); end
+  def test_energy_g62; assert_in_epsilon(34904.01713702962, worksheet.energy_g62, 0.002); end
+  def test_energy_h62; assert_in_epsilon(38023.20132361345, worksheet.energy_h62, 0.002); end
+  def test_energy_i62; assert_in_epsilon(40613.330030572375, worksheet.energy_i62, 0.002); end
+  def test_energy_j62; assert_in_epsilon(43623.7529716443, worksheet.energy_j62, 0.002); end
+  def test_energy_k62; assert_in_epsilon(46942.561911561344, worksheet.energy_k62, 0.002); end
+  def test_energy_l62; assert_in_epsilon(49849.422224662034, worksheet.energy_l62, 0.002); end
+  def test_energy_m62; assert_in_epsilon(52462.414025260245, worksheet.energy_m62, 0.002); end
   def test_ghg_d13; assert_equal("Mt CO2e", worksheet.ghg_d13); end
   def test_ghg_e13; assert_in_epsilon(2013.0, worksheet.ghg_e13, 0.002); end
   def test_ghg_f13; assert_in_epsilon(2015.0, worksheet.ghg_f13, 0.002); end
@@ -1225,15 +1225,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_ghg_l13; assert_in_epsilon(2045.0, worksheet.ghg_l13, 0.002); end
   def test_ghg_m13; assert_in_epsilon(2050.0, worksheet.ghg_m13, 0.002); end
   def test_ghg_d14; assert_equal("Energy emissions", worksheet.ghg_d14); end
-  def test_ghg_e14; assert_in_epsilon(26253.192042085295, worksheet.ghg_e14, 0.002); end
-  def test_ghg_f14; assert_in_epsilon(26253.192042085295, worksheet.ghg_f14, 0.002); end
-  def test_ghg_g14; assert_in_epsilon(26253.192042085295, worksheet.ghg_g14, 0.002); end
-  def test_ghg_h14; assert_in_epsilon(26253.192042085295, worksheet.ghg_h14, 0.002); end
-  def test_ghg_i14; assert_in_epsilon(26253.192042085295, worksheet.ghg_i14, 0.002); end
-  def test_ghg_j14; assert_in_epsilon(26253.192042085295, worksheet.ghg_j14, 0.002); end
-  def test_ghg_k14; assert_in_epsilon(26253.192042085295, worksheet.ghg_k14, 0.002); end
-  def test_ghg_l14; assert_in_epsilon(26253.192042085295, worksheet.ghg_l14, 0.002); end
-  def test_ghg_m14; assert_in_epsilon(26253.192042085295, worksheet.ghg_m14, 0.002); end
+  def test_ghg_e14; assert_in_epsilon(6683.751848762513, worksheet.ghg_e14, 0.002); end
+  def test_ghg_f14; assert_in_epsilon(7251.761696539887, worksheet.ghg_f14, 0.002); end
+  def test_ghg_g14; assert_in_epsilon(7673.363150535255, worksheet.ghg_g14, 0.002); end
+  def test_ghg_h14; assert_in_epsilon(7872.980537826009, worksheet.ghg_h14, 0.002); end
+  def test_ghg_i14; assert_in_epsilon(7225.518934278225, worksheet.ghg_i14, 0.002); end
+  def test_ghg_j14; assert_in_epsilon(7129.989852284279, worksheet.ghg_j14, 0.002); end
+  def test_ghg_k14; assert_in_epsilon(7084.292607341204, worksheet.ghg_k14, 0.002); end
+  def test_ghg_l14; assert_in_epsilon(7087.102277288657, worksheet.ghg_l14, 0.002); end
+  def test_ghg_m14; assert_in_epsilon(7079.006223466436, worksheet.ghg_m14, 0.002); end
   def test_ghg_d15; assert_equal("Bioenergy credit", worksheet.ghg_d15); end
   def test_ghg_e15; assert_in_delta(0.0, (worksheet.ghg_e15||0), 0.002); end
   def test_ghg_f15; assert_in_delta(0.0, (worksheet.ghg_f15||0), 0.002); end
@@ -1315,15 +1315,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_ghg_l22; assert_in_delta(0.0, (worksheet.ghg_l22||0), 0.002); end
   def test_ghg_m22; assert_in_delta(0.0, (worksheet.ghg_m22||0), 0.002); end
   def test_ghg_d23; assert_equal("Total", worksheet.ghg_d23); end
-  def test_ghg_e23; assert_in_epsilon(26253.192042085295, worksheet.ghg_e23, 0.002); end
-  def test_ghg_f23; assert_in_epsilon(26253.192042085295, worksheet.ghg_f23, 0.002); end
-  def test_ghg_g23; assert_in_epsilon(26253.192042085295, worksheet.ghg_g23, 0.002); end
-  def test_ghg_h23; assert_in_epsilon(26253.192042085295, worksheet.ghg_h23, 0.002); end
-  def test_ghg_i23; assert_in_epsilon(26253.192042085295, worksheet.ghg_i23, 0.002); end
-  def test_ghg_j23; assert_in_epsilon(26253.192042085295, worksheet.ghg_j23, 0.002); end
-  def test_ghg_k23; assert_in_epsilon(26253.192042085295, worksheet.ghg_k23, 0.002); end
-  def test_ghg_l23; assert_in_epsilon(26253.192042085295, worksheet.ghg_l23, 0.002); end
-  def test_ghg_m23; assert_in_epsilon(26253.192042085295, worksheet.ghg_m23, 0.002); end
+  def test_ghg_e23; assert_in_epsilon(6683.751848762513, worksheet.ghg_e23, 0.002); end
+  def test_ghg_f23; assert_in_epsilon(7251.761696539887, worksheet.ghg_f23, 0.002); end
+  def test_ghg_g23; assert_in_epsilon(7673.363150535255, worksheet.ghg_g23, 0.002); end
+  def test_ghg_h23; assert_in_epsilon(7872.980537826009, worksheet.ghg_h23, 0.002); end
+  def test_ghg_i23; assert_in_epsilon(7225.518934278225, worksheet.ghg_i23, 0.002); end
+  def test_ghg_j23; assert_in_epsilon(7129.989852284279, worksheet.ghg_j23, 0.002); end
+  def test_ghg_k23; assert_in_epsilon(7084.292607341204, worksheet.ghg_k23, 0.002); end
+  def test_ghg_l23; assert_in_epsilon(7087.102277288657, worksheet.ghg_l23, 0.002); end
+  def test_ghg_m23; assert_in_epsilon(7079.006223466436, worksheet.ghg_m23, 0.002); end
   def test_ghg_d24; assert_equal("Targets", worksheet.ghg_d24); end
   def test_intermediate_output_b2; assert_equal("Energy source / use charts", worksheet.intermediate_output_b2); end
   def test_intermediate_output_d4; assert_equal("TWh / year", worksheet.intermediate_output_d4); end
@@ -1511,13 +1511,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h23; assert_equal(:ref, worksheet.intermediate_output_h23); end
   def test_intermediate_output_i23; assert_equal(:ref, worksheet.intermediate_output_i23); end
   def test_intermediate_output_j23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_j23, 0.002); end
-  def test_intermediate_output_k23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_k23, 0.002); end
-  def test_intermediate_output_l23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_l23, 0.002); end
-  def test_intermediate_output_m23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_m23, 0.002); end
-  def test_intermediate_output_n23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_n23, 0.002); end
-  def test_intermediate_output_o23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_o23, 0.002); end
-  def test_intermediate_output_p23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_p23, 0.002); end
-  def test_intermediate_output_q23; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_q23, 0.002); end
+  def test_intermediate_output_k23; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_k23, 0.002); end
+  def test_intermediate_output_l23; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_l23, 0.002); end
+  def test_intermediate_output_m23; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_m23, 0.002); end
+  def test_intermediate_output_n23; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_n23, 0.002); end
+  def test_intermediate_output_o23; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_o23, 0.002); end
+  def test_intermediate_output_p23; assert_in_epsilon(64.20700530000002, worksheet.intermediate_output_p23, 0.002); end
+  def test_intermediate_output_q23; assert_in_epsilon(64.20700530000002, worksheet.intermediate_output_q23, 0.002); end
   def test_intermediate_output_c24; assert_equal("R.01", worksheet.intermediate_output_c24); end
   def test_intermediate_output_d24; assert_equal(:na, worksheet.intermediate_output_d24); end
   def test_intermediate_output_f24; assert_in_delta(0.5360591477000001, worksheet.intermediate_output_f24, 0.002); end
@@ -1601,14 +1601,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f30; assert_in_epsilon(5.21452425, worksheet.intermediate_output_f30, 0.002); end
   def test_intermediate_output_h30; assert_equal(:ref, worksheet.intermediate_output_h30); end
   def test_intermediate_output_i30; assert_equal(:ref, worksheet.intermediate_output_i30); end
-  def test_intermediate_output_j30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_j30, 0.002); end
-  def test_intermediate_output_k30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_k30, 0.002); end
-  def test_intermediate_output_l30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_l30, 0.002); end
-  def test_intermediate_output_m30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_m30, 0.002); end
-  def test_intermediate_output_n30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_n30, 0.002); end
-  def test_intermediate_output_o30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_o30, 0.002); end
-  def test_intermediate_output_p30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_p30, 0.002); end
-  def test_intermediate_output_q30; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_q30, 0.002); end
+  def test_intermediate_output_j30; assert_in_epsilon(4880.760562892715, worksheet.intermediate_output_j30, 0.002); end
+  def test_intermediate_output_k30; assert_in_epsilon(7647.02966436062, worksheet.intermediate_output_k30, 0.002); end
+  def test_intermediate_output_l30; assert_in_epsilon(7922.694891114956, worksheet.intermediate_output_l30, 0.002); end
+  def test_intermediate_output_m30; assert_in_epsilon(7485.990829304501, worksheet.intermediate_output_m30, 0.002); end
+  def test_intermediate_output_n30; assert_in_epsilon(7344.559930019617, worksheet.intermediate_output_n30, 0.002); end
+  def test_intermediate_output_o30; assert_in_epsilon(6790.4296779802235, worksheet.intermediate_output_o30, 0.002); end
+  def test_intermediate_output_p30; assert_in_epsilon(6112.44826876868, worksheet.intermediate_output_p30, 0.002); end
+  def test_intermediate_output_q30; assert_in_epsilon(5270.3165668316415, worksheet.intermediate_output_q30, 0.002); end
   def test_intermediate_output_d31; assert_equal("Primary electricity, solar, marine, and net imports", worksheet.intermediate_output_d31); end
   def test_intermediate_output_f31; assert_in_epsilon(181.06231645293323, worksheet.intermediate_output_f31, 0.002); end
   def test_intermediate_output_h31; assert_equal(:ref, worksheet.intermediate_output_h31); end
@@ -1665,14 +1665,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f35; assert_in_epsilon(26.262503111111116, worksheet.intermediate_output_f35, 0.002); end
   def test_intermediate_output_h35; assert_equal(:ref, worksheet.intermediate_output_h35); end
   def test_intermediate_output_i35; assert_equal(:ref, worksheet.intermediate_output_i35); end
-  def test_intermediate_output_j35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_j35, 0.002); end
-  def test_intermediate_output_k35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_k35, 0.002); end
-  def test_intermediate_output_l35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_l35, 0.002); end
-  def test_intermediate_output_m35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_m35, 0.002); end
-  def test_intermediate_output_n35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_n35, 0.002); end
-  def test_intermediate_output_o35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_o35, 0.002); end
-  def test_intermediate_output_p35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_p35, 0.002); end
-  def test_intermediate_output_q35; assert_in_epsilon(-1450238.8768193393, worksheet.intermediate_output_q35, 0.002); end
+  def test_intermediate_output_j35; assert_in_epsilon(-133967.5880179829, worksheet.intermediate_output_j35, 0.002); end
+  def test_intermediate_output_k35; assert_in_epsilon(-115737.13974469568, worksheet.intermediate_output_k35, 0.002); end
+  def test_intermediate_output_l35; assert_in_epsilon(-109822.22500289368, worksheet.intermediate_output_l35, 0.002); end
+  def test_intermediate_output_m35; assert_in_epsilon(-56274.961788443456, worksheet.intermediate_output_m35, 0.002); end
+  def test_intermediate_output_n35; assert_in_epsilon(-45658.16493020364, worksheet.intermediate_output_n35, 0.002); end
+  def test_intermediate_output_o35; assert_in_epsilon(-38417.08582335866, worksheet.intermediate_output_o35, 0.002); end
+  def test_intermediate_output_p35; assert_in_epsilon(-33636.64311113462, worksheet.intermediate_output_p35, 0.002); end
+  def test_intermediate_output_q35; assert_in_epsilon(-30607.435684757394, worksheet.intermediate_output_q35, 0.002); end
   def test_intermediate_output_d36; assert_equal("Agriculture, waste, and biomatter imports", worksheet.intermediate_output_d36); end
   def test_intermediate_output_f36; assert_in_epsilon(98.50879965682326, worksheet.intermediate_output_f36, 0.002); end
   def test_intermediate_output_h36; assert_equal(:ref, worksheet.intermediate_output_h36); end
@@ -1691,51 +1691,51 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h37; assert_equal(:ref, worksheet.intermediate_output_h37); end
   def test_intermediate_output_i37; assert_equal(:ref, worksheet.intermediate_output_i37); end
   def test_intermediate_output_j37; assert_in_epsilon(39.27168, worksheet.intermediate_output_j37, 0.002); end
-  def test_intermediate_output_k37; assert_in_epsilon(39.27168, worksheet.intermediate_output_k37, 0.002); end
-  def test_intermediate_output_l37; assert_in_epsilon(39.27168, worksheet.intermediate_output_l37, 0.002); end
-  def test_intermediate_output_m37; assert_in_epsilon(39.27168, worksheet.intermediate_output_m37, 0.002); end
-  def test_intermediate_output_n37; assert_in_epsilon(39.27168, worksheet.intermediate_output_n37, 0.002); end
-  def test_intermediate_output_o37; assert_in_epsilon(39.27168, worksheet.intermediate_output_o37, 0.002); end
-  def test_intermediate_output_p37; assert_in_epsilon(39.27168, worksheet.intermediate_output_p37, 0.002); end
-  def test_intermediate_output_q37; assert_in_epsilon(39.27168, worksheet.intermediate_output_q37, 0.002); end
+  def test_intermediate_output_k37; assert_in_epsilon(34.81354285714287, worksheet.intermediate_output_k37, 0.002); end
+  def test_intermediate_output_l37; assert_in_epsilon(35.286280714285716, worksheet.intermediate_output_l37, 0.002); end
+  def test_intermediate_output_m37; assert_in_epsilon(30.335056071428575, worksheet.intermediate_output_m37, 0.002); end
+  def test_intermediate_output_n37; assert_in_epsilon(27.68490642857144, worksheet.intermediate_output_n37, 0.002); end
+  def test_intermediate_output_o37; assert_in_epsilon(22.503574285714294, worksheet.intermediate_output_o37, 0.002); end
+  def test_intermediate_output_p37; assert_in_epsilon(17.32224214285715, worksheet.intermediate_output_p37, 0.002); end
+  def test_intermediate_output_q37; assert_in_epsilon(12.140910000000002, worksheet.intermediate_output_q37, 0.002); end
   def test_intermediate_output_c38; assert_equal("Q.01", worksheet.intermediate_output_c38); end
   def test_intermediate_output_d38; assert_equal("Produção bruta de petróleo", worksheet.intermediate_output_d38); end
   def test_intermediate_output_f38; assert_in_epsilon(145.79944495555736, worksheet.intermediate_output_f38, 0.002); end
   def test_intermediate_output_h38; assert_equal(:ref, worksheet.intermediate_output_h38); end
   def test_intermediate_output_i38; assert_equal(:ref, worksheet.intermediate_output_i38); end
-  def test_intermediate_output_j38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_j38, 0.002); end
-  def test_intermediate_output_k38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_k38, 0.002); end
-  def test_intermediate_output_l38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_l38, 0.002); end
-  def test_intermediate_output_m38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_m38, 0.002); end
-  def test_intermediate_output_n38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_n38, 0.002); end
-  def test_intermediate_output_o38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_o38, 0.002); end
-  def test_intermediate_output_p38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_p38, 0.002); end
-  def test_intermediate_output_q38; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_q38, 0.002); end
+  def test_intermediate_output_j38; assert_in_epsilon(155685.41879479162, worksheet.intermediate_output_j38, 0.002); end
+  def test_intermediate_output_k38; assert_in_epsilon(137097.22068481045, worksheet.intermediate_output_k38, 0.002); end
+  def test_intermediate_output_l38; assert_in_epsilon(131770.266236702, worksheet.intermediate_output_l38, 0.002); end
+  def test_intermediate_output_m38; assert_in_epsilon(77671.74718394713, worksheet.intermediate_output_m38, 0.002); end
+  def test_intermediate_output_n38; assert_in_epsilon(66800.1195035998, worksheet.intermediate_output_n38, 0.002); end
+  def test_intermediate_output_o38; assert_in_epsilon(59091.41474058235, worksheet.intermediate_output_o38, 0.002); end
+  def test_intermediate_output_p38; assert_in_epsilon(53473.60714645458, worksheet.intermediate_output_p38, 0.002); end
+  def test_intermediate_output_q38; assert_in_epsilon(49265.1172651833, worksheet.intermediate_output_q38, 0.002); end
   def test_intermediate_output_d39; assert_equal("Coal", worksheet.intermediate_output_d39); end
   def test_intermediate_output_f39; assert_in_epsilon(475.4021773117744, worksheet.intermediate_output_f39, 0.002); end
   def test_intermediate_output_h39; assert_equal(:ref, worksheet.intermediate_output_h39); end
   def test_intermediate_output_i39; assert_equal(:ref, worksheet.intermediate_output_i39); end
-  def test_intermediate_output_j39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_j39, 0.002); end
-  def test_intermediate_output_k39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_k39, 0.002); end
-  def test_intermediate_output_l39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_l39, 0.002); end
-  def test_intermediate_output_m39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_m39, 0.002); end
-  def test_intermediate_output_n39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_n39, 0.002); end
-  def test_intermediate_output_o39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_o39, 0.002); end
-  def test_intermediate_output_p39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_p39, 0.002); end
-  def test_intermediate_output_q39; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_q39, 0.002); end
+  def test_intermediate_output_j39; assert_in_epsilon(155724.69047479163, worksheet.intermediate_output_j39, 0.002); end
+  def test_intermediate_output_k39; assert_in_epsilon(137132.0342276676, worksheet.intermediate_output_k39, 0.002); end
+  def test_intermediate_output_l39; assert_in_epsilon(131805.5525174163, worksheet.intermediate_output_l39, 0.002); end
+  def test_intermediate_output_m39; assert_in_epsilon(77702.08224001856, worksheet.intermediate_output_m39, 0.002); end
+  def test_intermediate_output_n39; assert_in_epsilon(66827.80441002837, worksheet.intermediate_output_n39, 0.002); end
+  def test_intermediate_output_o39; assert_in_epsilon(59113.91831486807, worksheet.intermediate_output_o39, 0.002); end
+  def test_intermediate_output_p39; assert_in_epsilon(53490.92938859744, worksheet.intermediate_output_p39, 0.002); end
+  def test_intermediate_output_q39; assert_in_epsilon(49277.2581751833, worksheet.intermediate_output_q39, 0.002); end
   def test_intermediate_output_c40; assert_equal("Q.02", worksheet.intermediate_output_c40); end
   def test_intermediate_output_d40; assert_equal("Produção bruta de gás natural", worksheet.intermediate_output_d40); end
   def test_intermediate_output_f40; assert_in_epsilon(887.460075730032, worksheet.intermediate_output_f40, 0.002); end
   def test_intermediate_output_h40; assert_equal(:ref, worksheet.intermediate_output_h40); end
   def test_intermediate_output_i40; assert_equal(:ref, worksheet.intermediate_output_i40); end
   def test_intermediate_output_j40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_j40, 0.002); end
-  def test_intermediate_output_k40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_k40, 0.002); end
-  def test_intermediate_output_l40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_l40, 0.002); end
-  def test_intermediate_output_m40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_m40, 0.002); end
-  def test_intermediate_output_n40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_n40, 0.002); end
-  def test_intermediate_output_o40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_o40, 0.002); end
-  def test_intermediate_output_p40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_p40, 0.002); end
-  def test_intermediate_output_q40; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_q40, 0.002); end
+  def test_intermediate_output_k40; assert_in_epsilon(1401.9652162516888, worksheet.intermediate_output_k40, 0.002); end
+  def test_intermediate_output_l40; assert_in_epsilon(1429.4474235744901, worksheet.intermediate_output_l40, 0.002); end
+  def test_intermediate_output_m40; assert_in_epsilon(1138.012020312229, worksheet.intermediate_output_m40, 0.002); end
+  def test_intermediate_output_n40; assert_in_epsilon(1110.7859966305443, worksheet.intermediate_output_n40, 0.002); end
+  def test_intermediate_output_o40; assert_in_epsilon(1061.9248519535668, worksheet.intermediate_output_o40, 0.002); end
+  def test_intermediate_output_p40; assert_in_epsilon(1013.1322059345862, worksheet.intermediate_output_p40, 0.002); end
+  def test_intermediate_output_q40; assert_in_epsilon(911.0054978564398, worksheet.intermediate_output_q40, 0.002); end
   def test_intermediate_output_c41; assert_equal("Y.05", worksheet.intermediate_output_c41); end
   def test_intermediate_output_d41; assert_equal(:na, worksheet.intermediate_output_d41); end
   def test_intermediate_output_f41; assert_in_epsilon(79.74397690520158, worksheet.intermediate_output_f41, 0.002); end
@@ -1755,25 +1755,25 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h42; assert_equal(:ref, worksheet.intermediate_output_h42); end
   def test_intermediate_output_i42; assert_equal(:ref, worksheet.intermediate_output_i42); end
   def test_intermediate_output_j42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_j42, 0.002); end
-  def test_intermediate_output_k42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_k42, 0.002); end
-  def test_intermediate_output_l42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_l42, 0.002); end
-  def test_intermediate_output_m42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_m42, 0.002); end
-  def test_intermediate_output_n42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_n42, 0.002); end
-  def test_intermediate_output_o42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_o42, 0.002); end
-  def test_intermediate_output_p42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_p42, 0.002); end
-  def test_intermediate_output_q42; assert_in_epsilon(802.1463797227541, worksheet.intermediate_output_q42, 0.002); end
+  def test_intermediate_output_k42; assert_in_epsilon(565.2120186022244, worksheet.intermediate_output_k42, 0.002); end
+  def test_intermediate_output_l42; assert_in_epsilon(659.4140217025952, worksheet.intermediate_output_l42, 0.002); end
+  def test_intermediate_output_m42; assert_in_epsilon(1808.7894047251013, worksheet.intermediate_output_m42, 0.002); end
+  def test_intermediate_output_n42; assert_in_epsilon(2477.66695965916, worksheet.intermediate_output_n42, 0.002); end
+  def test_intermediate_output_o42; assert_in_epsilon(3854.3514510313753, worksheet.intermediate_output_o42, 0.002); end
+  def test_intermediate_output_p42; assert_in_epsilon(5231.0359424035905, worksheet.intermediate_output_p42, 0.002); end
+  def test_intermediate_output_q42; assert_in_epsilon(6788.211202567536, worksheet.intermediate_output_q42, 0.002); end
   def test_intermediate_output_d43; assert_equal("Oil and petroleum products", worksheet.intermediate_output_d43); end
   def test_intermediate_output_f43; assert_in_epsilon(906.622998738918, worksheet.intermediate_output_f43, 0.002); end
   def test_intermediate_output_h43; assert_equal(:ref, worksheet.intermediate_output_h43); end
   def test_intermediate_output_i43; assert_equal(:ref, worksheet.intermediate_output_i43); end
   def test_intermediate_output_j43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_j43, 0.002); end
-  def test_intermediate_output_k43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_k43, 0.002); end
-  def test_intermediate_output_l43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_l43, 0.002); end
-  def test_intermediate_output_m43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_m43, 0.002); end
-  def test_intermediate_output_n43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_n43, 0.002); end
-  def test_intermediate_output_o43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_o43, 0.002); end
-  def test_intermediate_output_p43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_p43, 0.002); end
-  def test_intermediate_output_q43; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_q43, 0.002); end
+  def test_intermediate_output_k43; assert_in_epsilon(1967.1772348539132, worksheet.intermediate_output_k43, 0.002); end
+  def test_intermediate_output_l43; assert_in_epsilon(2088.8614452770853, worksheet.intermediate_output_l43, 0.002); end
+  def test_intermediate_output_m43; assert_in_epsilon(2946.8014250373303, worksheet.intermediate_output_m43, 0.002); end
+  def test_intermediate_output_n43; assert_in_epsilon(3588.452956289704, worksheet.intermediate_output_n43, 0.002); end
+  def test_intermediate_output_o43; assert_in_epsilon(4916.276302984942, worksheet.intermediate_output_o43, 0.002); end
+  def test_intermediate_output_p43; assert_in_epsilon(6244.168148338176, worksheet.intermediate_output_p43, 0.002); end
+  def test_intermediate_output_q43; assert_in_epsilon(7699.216700423975, worksheet.intermediate_output_q43, 0.002); end
   def test_intermediate_output_c44; assert_equal("Y.06", worksheet.intermediate_output_c44); end
   def test_intermediate_output_d44; assert_equal(:na, worksheet.intermediate_output_d44); end
   def test_intermediate_output_f44; assert_in_epsilon(214.86865308275657, worksheet.intermediate_output_f44, 0.002); end
@@ -1793,25 +1793,25 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h45; assert_equal(:ref, worksheet.intermediate_output_h45); end
   def test_intermediate_output_i45; assert_equal(:ref, worksheet.intermediate_output_i45); end
   def test_intermediate_output_j45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_j45, 0.002); end
-  def test_intermediate_output_k45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_k45, 0.002); end
-  def test_intermediate_output_l45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_l45, 0.002); end
-  def test_intermediate_output_m45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_m45, 0.002); end
-  def test_intermediate_output_n45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_n45, 0.002); end
-  def test_intermediate_output_o45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_o45, 0.002); end
-  def test_intermediate_output_p45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_p45, 0.002); end
-  def test_intermediate_output_q45; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_q45, 0.002); end
+  def test_intermediate_output_k45; assert_in_epsilon(154.77160721937366, worksheet.intermediate_output_k45, 0.002); end
+  def test_intermediate_output_l45; assert_in_epsilon(180.56687508926927, worksheet.intermediate_output_l45, 0.002); end
+  def test_intermediate_output_m45; assert_in_epsilon(495.2995231470762, worksheet.intermediate_output_m45, 0.002); end
+  def test_intermediate_output_n45; assert_in_epsilon(678.4577908465552, worksheet.intermediate_output_n45, 0.002); end
+  def test_intermediate_output_o45; assert_in_epsilon(1055.4343312438957, worksheet.intermediate_output_o45, 0.002); end
+  def test_intermediate_output_p45; assert_in_epsilon(1432.4108716412359, worksheet.intermediate_output_p45, 0.002); end
+  def test_intermediate_output_q45; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_q45, 0.002); end
   def test_intermediate_output_d46; assert_equal("Natural gas", worksheet.intermediate_output_d46); end
   def test_intermediate_output_f46; assert_in_epsilon(1048.9298032969484, worksheet.intermediate_output_f46, 0.002); end
   def test_intermediate_output_h46; assert_equal(:ref, worksheet.intermediate_output_h46); end
   def test_intermediate_output_i46; assert_equal(:ref, worksheet.intermediate_output_i46); end
   def test_intermediate_output_j46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_j46, 0.002); end
-  def test_intermediate_output_k46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_k46, 0.002); end
-  def test_intermediate_output_l46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_l46, 0.002); end
-  def test_intermediate_output_m46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_m46, 0.002); end
-  def test_intermediate_output_n46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_n46, 0.002); end
-  def test_intermediate_output_o46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_o46, 0.002); end
-  def test_intermediate_output_p46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_p46, 0.002); end
-  def test_intermediate_output_q46; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_q46, 0.002); end
+  def test_intermediate_output_k46; assert_in_epsilon(154.77160721937366, worksheet.intermediate_output_k46, 0.002); end
+  def test_intermediate_output_l46; assert_in_epsilon(180.56687508926927, worksheet.intermediate_output_l46, 0.002); end
+  def test_intermediate_output_m46; assert_in_epsilon(495.2995231470762, worksheet.intermediate_output_m46, 0.002); end
+  def test_intermediate_output_n46; assert_in_epsilon(678.4577908465552, worksheet.intermediate_output_n46, 0.002); end
+  def test_intermediate_output_o46; assert_in_epsilon(1055.4343312438957, worksheet.intermediate_output_o46, 0.002); end
+  def test_intermediate_output_p46; assert_in_epsilon(1432.4108716412359, worksheet.intermediate_output_p46, 0.002); end
+  def test_intermediate_output_q46; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_q46, 0.002); end
   def test_intermediate_output_d47; assert_equal("Total Primary Supply", worksheet.intermediate_output_d47); end
   def test_intermediate_output_f47; assert_in_epsilon(2710.526095457397, worksheet.intermediate_output_f47, 0.002); end
   def test_intermediate_output_h47; assert_equal(:ref, worksheet.intermediate_output_h47); end
@@ -1841,27 +1841,27 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f52; assert_in_epsilon(561.5563382843222, worksheet.intermediate_output_f52, 0.002); end
   def test_intermediate_output_h52; assert_equal(:ref, worksheet.intermediate_output_h52); end
   def test_intermediate_output_i52; assert_equal(:ref, worksheet.intermediate_output_i52); end
-  def test_intermediate_output_j52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_j52, 0.002); end
-  def test_intermediate_output_k52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_k52, 0.002); end
-  def test_intermediate_output_l52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_l52, 0.002); end
-  def test_intermediate_output_m52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_m52, 0.002); end
-  def test_intermediate_output_n52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_n52, 0.002); end
-  def test_intermediate_output_o52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_o52, 0.002); end
-  def test_intermediate_output_p52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_p52, 0.002); end
-  def test_intermediate_output_q52; assert_in_epsilon(15021.246986739072, worksheet.intermediate_output_q52, 0.002); end
+  def test_intermediate_output_j52; assert_in_epsilon(5984.688420907183, worksheet.intermediate_output_j52, 0.002); end
+  def test_intermediate_output_k52; assert_in_epsilon(7265.407875642539, worksheet.intermediate_output_k52, 0.002); end
+  def test_intermediate_output_l52; assert_in_epsilon(7731.958510821519, worksheet.intermediate_output_l52, 0.002); end
+  def test_intermediate_output_m52; assert_in_epsilon(7896.769483952896, worksheet.intermediate_output_m52, 0.002); end
+  def test_intermediate_output_n52; assert_in_epsilon(8473.69614436298, worksheet.intermediate_output_n52, 0.002); end
+  def test_intermediate_output_o52; assert_in_epsilon(9564.454418941794, worksheet.intermediate_output_o52, 0.002); end
+  def test_intermediate_output_p52; assert_in_epsilon(10526.95642570397, worksheet.intermediate_output_p52, 0.002); end
+  def test_intermediate_output_q52; assert_in_epsilon(11560.660167874761, worksheet.intermediate_output_q52, 0.002); end
   def test_intermediate_output_c53; assert_equal("X.02", worksheet.intermediate_output_c53); end
   def test_intermediate_output_d53; assert_equal("Perdas de distribuição", worksheet.intermediate_output_d53); end
   def test_intermediate_output_f53; assert_in_epsilon(186.94703532055274, worksheet.intermediate_output_f53, 0.002); end
   def test_intermediate_output_h53; assert_equal(:ref, worksheet.intermediate_output_h53); end
   def test_intermediate_output_i53; assert_equal(:ref, worksheet.intermediate_output_i53); end
   def test_intermediate_output_j53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_j53, 0.002); end
-  def test_intermediate_output_k53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_k53, 0.002); end
-  def test_intermediate_output_l53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_l53, 0.002); end
-  def test_intermediate_output_m53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_m53, 0.002); end
-  def test_intermediate_output_n53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_n53, 0.002); end
-  def test_intermediate_output_o53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_o53, 0.002); end
-  def test_intermediate_output_p53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_p53, 0.002); end
-  def test_intermediate_output_q53; assert_in_epsilon(269.8242526404242, worksheet.intermediate_output_q53, 0.002); end
+  def test_intermediate_output_k53; assert_in_epsilon(272.04513761932594, worksheet.intermediate_output_k53, 0.002); end
+  def test_intermediate_output_l53; assert_in_epsilon(306.80568377417467, worksheet.intermediate_output_l53, 0.002); end
+  def test_intermediate_output_m53; assert_in_epsilon(316.12940170099387, worksheet.intermediate_output_m53, 0.002); end
+  def test_intermediate_output_n53; assert_in_epsilon(330.5407227256403, worksheet.intermediate_output_n53, 0.002); end
+  def test_intermediate_output_o53; assert_in_epsilon(302.8468786880146, worksheet.intermediate_output_o53, 0.002); end
+  def test_intermediate_output_p53; assert_in_epsilon(293.3066659161692, worksheet.intermediate_output_p53, 0.002); end
+  def test_intermediate_output_q53; assert_in_epsilon(257.3000347381151, worksheet.intermediate_output_q53, 0.002); end
   def test_intermediate_output_d54; assert_equal("Supply net of losses", worksheet.intermediate_output_d54); end
   def test_intermediate_output_f54; assert_in_epsilon(1962.022721852522, worksheet.intermediate_output_f54, 0.002); end
   def test_intermediate_output_h54; assert_equal(:ref, worksheet.intermediate_output_h54); end
@@ -1920,87 +1920,87 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h61; assert_equal(:ref, worksheet.intermediate_output_h61); end
   def test_intermediate_output_i61; assert_equal(:ref, worksheet.intermediate_output_i61); end
   def test_intermediate_output_j61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_j61, 0.002); end
-  def test_intermediate_output_k61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_k61, 0.002); end
-  def test_intermediate_output_l61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_l61, 0.002); end
-  def test_intermediate_output_m61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_m61, 0.002); end
-  def test_intermediate_output_n61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_n61, 0.002); end
-  def test_intermediate_output_o61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_o61, 0.002); end
-  def test_intermediate_output_p61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_p61, 0.002); end
-  def test_intermediate_output_q61; assert_in_delta(-1.1368683772161603e-13, worksheet.intermediate_output_q61, 0.002); end
+  def test_intermediate_output_k61; assert_in_epsilon(-552.0658994285716, worksheet.intermediate_output_k61, 0.002); end
+  def test_intermediate_output_l61; assert_in_epsilon(-810.3197965714287, worksheet.intermediate_output_l61, 0.002); end
+  def test_intermediate_output_m61; assert_in_delta(0.0, (worksheet.intermediate_output_m61||0), 0.002); end
+  def test_intermediate_output_n61; assert_in_delta(0.0, (worksheet.intermediate_output_n61||0), 0.002); end
+  def test_intermediate_output_o61; assert_in_delta(0.0, (worksheet.intermediate_output_o61||0), 0.002); end
+  def test_intermediate_output_p61; assert_in_delta(-9.094947017729282e-13, worksheet.intermediate_output_p61, 0.002); end
+  def test_intermediate_output_q61; assert_in_delta(-9.094947017729282e-13, worksheet.intermediate_output_q61, 0.002); end
   def test_intermediate_output_c62; assert_equal("V.04", worksheet.intermediate_output_c62); end
   def test_intermediate_output_d62; assert_equal("Eletricidade (ofertada)", worksheet.intermediate_output_d62); end
   def test_intermediate_output_f62; assert_in_epsilon(-40.98525046434433, worksheet.intermediate_output_f62, 0.002); end
   def test_intermediate_output_h62; assert_equal(:ref, worksheet.intermediate_output_h62); end
   def test_intermediate_output_i62; assert_equal(:ref, worksheet.intermediate_output_i62); end
-  def test_intermediate_output_j62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_j62, 0.002); end
-  def test_intermediate_output_k62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_k62, 0.002); end
-  def test_intermediate_output_l62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_l62, 0.002); end
-  def test_intermediate_output_m62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_m62, 0.002); end
-  def test_intermediate_output_n62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_n62, 0.002); end
-  def test_intermediate_output_o62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_o62, 0.002); end
-  def test_intermediate_output_p62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_p62, 0.002); end
-  def test_intermediate_output_q62; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_q62, 0.002); end
+  def test_intermediate_output_j62; assert_in_epsilon(3393.6556057614966, worksheet.intermediate_output_j62, 0.002); end
+  def test_intermediate_output_k62; assert_in_epsilon(4557.516345597679, worksheet.intermediate_output_k62, 0.002); end
+  def test_intermediate_output_l62; assert_in_epsilon(4757.963979997601, worksheet.intermediate_output_l62, 0.002); end
+  def test_intermediate_output_m62; assert_in_epsilon(4645.880914662485, worksheet.intermediate_output_m62, 0.002); end
+  def test_intermediate_output_n62; assert_in_epsilon(4729.306531633245, worksheet.intermediate_output_n62, 0.002); end
+  def test_intermediate_output_o62; assert_in_epsilon(4795.673830690215, worksheet.intermediate_output_o62, 0.002); end
+  def test_intermediate_output_p62; assert_in_epsilon(4825.726360970062, worksheet.intermediate_output_p62, 0.002); end
+  def test_intermediate_output_q62; assert_in_epsilon(4826.397421183808, worksheet.intermediate_output_q62, 0.002); end
   def test_intermediate_output_c63; assert_equal("V.05", worksheet.intermediate_output_c63); end
   def test_intermediate_output_d63; assert_equal("Eletricidade (consumo final)", worksheet.intermediate_output_d63); end
   def test_intermediate_output_f63; assert_in_epsilon(15.047768550745332, worksheet.intermediate_output_f63, 0.002); end
   def test_intermediate_output_h63; assert_equal(:ref, worksheet.intermediate_output_h63); end
   def test_intermediate_output_i63; assert_equal(:ref, worksheet.intermediate_output_i63); end
-  def test_intermediate_output_j63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_j63, 0.002); end
-  def test_intermediate_output_k63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_k63, 0.002); end
-  def test_intermediate_output_l63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_l63, 0.002); end
-  def test_intermediate_output_m63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_m63, 0.002); end
-  def test_intermediate_output_n63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_n63, 0.002); end
-  def test_intermediate_output_o63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_o63, 0.002); end
-  def test_intermediate_output_p63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_p63, 0.002); end
-  def test_intermediate_output_q63; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_q63, 0.002); end
+  def test_intermediate_output_j63; assert_in_epsilon(-3393.6556057614966, worksheet.intermediate_output_j63, 0.002); end
+  def test_intermediate_output_k63; assert_in_epsilon(-4557.516345597679, worksheet.intermediate_output_k63, 0.002); end
+  def test_intermediate_output_l63; assert_in_epsilon(-4757.963979997601, worksheet.intermediate_output_l63, 0.002); end
+  def test_intermediate_output_m63; assert_in_epsilon(-4645.880914662485, worksheet.intermediate_output_m63, 0.002); end
+  def test_intermediate_output_n63; assert_in_epsilon(-4729.306531633245, worksheet.intermediate_output_n63, 0.002); end
+  def test_intermediate_output_o63; assert_in_epsilon(-4795.673830690215, worksheet.intermediate_output_o63, 0.002); end
+  def test_intermediate_output_p63; assert_in_epsilon(-4825.726360970062, worksheet.intermediate_output_p63, 0.002); end
+  def test_intermediate_output_q63; assert_in_epsilon(-4821.499871656044, worksheet.intermediate_output_q63, 0.002); end
   def test_intermediate_output_c64; assert_equal("V.06", worksheet.intermediate_output_c64); end
   def test_intermediate_output_d64; assert_equal("Biomassa sólida", worksheet.intermediate_output_d64); end
   def test_intermediate_output_f64; assert_in_delta(-0.11045622230000071, worksheet.intermediate_output_f64, 0.002); end
   def test_intermediate_output_h64; assert_equal(:ref, worksheet.intermediate_output_h64); end
   def test_intermediate_output_i64; assert_equal(:ref, worksheet.intermediate_output_i64); end
-  def test_intermediate_output_j64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_j64, 0.002); end
-  def test_intermediate_output_k64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_k64, 0.002); end
-  def test_intermediate_output_l64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_l64, 0.002); end
-  def test_intermediate_output_m64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_m64, 0.002); end
-  def test_intermediate_output_n64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_n64, 0.002); end
-  def test_intermediate_output_o64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_o64, 0.002); end
-  def test_intermediate_output_p64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_p64, 0.002); end
-  def test_intermediate_output_q64; assert_in_epsilon(-638.3437706291942, worksheet.intermediate_output_q64, 0.002); end
+  def test_intermediate_output_j64; assert_in_epsilon(-636.8437706291942, worksheet.intermediate_output_j64, 0.002); end
+  def test_intermediate_output_k64; assert_in_epsilon(-651.0911733786542, worksheet.intermediate_output_k64, 0.002); end
+  def test_intermediate_output_l64; assert_in_epsilon(-666.6134142259059, worksheet.intermediate_output_l64, 0.002); end
+  def test_intermediate_output_m64; assert_in_epsilon(-681.5953029971997, worksheet.intermediate_output_m64, 0.002); end
+  def test_intermediate_output_n64; assert_in_epsilon(-693.8256136605658, worksheet.intermediate_output_n64, 0.002); end
+  def test_intermediate_output_o64; assert_in_epsilon(-696.740275071873, worksheet.intermediate_output_o64, 0.002); end
+  def test_intermediate_output_p64; assert_in_epsilon(-697.3063939665303, worksheet.intermediate_output_p64, 0.002); end
+  def test_intermediate_output_q64; assert_in_epsilon(-696.9834599999999, worksheet.intermediate_output_q64, 0.002); end
   def test_intermediate_output_c65; assert_equal("V.08", worksheet.intermediate_output_c65); end
   def test_intermediate_output_d65; assert_equal("Etanol", worksheet.intermediate_output_d65); end
   def test_intermediate_output_f65; assert_in_delta(0.0, (worksheet.intermediate_output_f65||0), 0.002); end
   def test_intermediate_output_h65; assert_equal(:ref, worksheet.intermediate_output_h65); end
   def test_intermediate_output_i65; assert_equal(:ref, worksheet.intermediate_output_i65); end
   def test_intermediate_output_j65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_j65, 0.002); end
-  def test_intermediate_output_k65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_k65, 0.002); end
-  def test_intermediate_output_l65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_l65, 0.002); end
-  def test_intermediate_output_m65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_m65, 0.002); end
-  def test_intermediate_output_n65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_n65, 0.002); end
-  def test_intermediate_output_o65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_o65, 0.002); end
-  def test_intermediate_output_p65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_p65, 0.002); end
-  def test_intermediate_output_q65; assert_in_epsilon(-1185.165305290354, worksheet.intermediate_output_q65, 0.002); end
+  def test_intermediate_output_k65; assert_in_epsilon(-1379.8877023764821, worksheet.intermediate_output_k65, 0.002); end
+  def test_intermediate_output_l65; assert_in_epsilon(-1549.0118511040444, worksheet.intermediate_output_l65, 0.002); end
+  def test_intermediate_output_m65; assert_in_epsilon(-1676.7122288774342, worksheet.intermediate_output_m65, 0.002); end
+  def test_intermediate_output_n65; assert_in_epsilon(-1747.3462136109563, worksheet.intermediate_output_n65, 0.002); end
+  def test_intermediate_output_o65; assert_in_epsilon(-1743.5505283581558, worksheet.intermediate_output_o65, 0.002); end
+  def test_intermediate_output_p65; assert_in_epsilon(-1648.2941934126538, worksheet.intermediate_output_p65, 0.002); end
+  def test_intermediate_output_q65; assert_in_epsilon(-1448.583202845226, worksheet.intermediate_output_q65, 0.002); end
   def test_intermediate_output_c66; assert_equal("V.07", worksheet.intermediate_output_c66); end
   def test_intermediate_output_d66; assert_equal("Produtos da cana", worksheet.intermediate_output_d66); end
   def test_intermediate_output_f66; assert_in_delta(0.0029616599999983118, worksheet.intermediate_output_f66, 0.002); end
   def test_intermediate_output_h66; assert_equal(:ref, worksheet.intermediate_output_h66); end
   def test_intermediate_output_i66; assert_equal(:ref, worksheet.intermediate_output_i66); end
-  def test_intermediate_output_j66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_j66, 0.002); end
-  def test_intermediate_output_k66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_k66, 0.002); end
-  def test_intermediate_output_l66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_l66, 0.002); end
-  def test_intermediate_output_m66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_m66, 0.002); end
-  def test_intermediate_output_n66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_n66, 0.002); end
-  def test_intermediate_output_o66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_o66, 0.002); end
-  def test_intermediate_output_p66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_p66, 0.002); end
-  def test_intermediate_output_q66; assert_in_epsilon(-88.44696299121017, worksheet.intermediate_output_q66, 0.002); end
+  def test_intermediate_output_j66; assert_in_epsilon(-91.45043828690551, worksheet.intermediate_output_j66, 0.002); end
+  def test_intermediate_output_k66; assert_in_epsilon(-90.32792731780725, worksheet.intermediate_output_k66, 0.002); end
+  def test_intermediate_output_l66; assert_in_epsilon(-89.05372567720923, worksheet.intermediate_output_l66, 0.002); end
+  def test_intermediate_output_m66; assert_in_epsilon(-87.62783336511144, worksheet.intermediate_output_m66, 0.002); end
+  def test_intermediate_output_n66; assert_in_epsilon(-86.05025038151388, worksheet.intermediate_output_n66, 0.002); end
+  def test_intermediate_output_o66; assert_in_epsilon(-84.32097672641657, worksheet.intermediate_output_o66, 0.002); end
+  def test_intermediate_output_p66; assert_in_epsilon(-82.4400123998195, worksheet.intermediate_output_p66, 0.002); end
+  def test_intermediate_output_q66; assert_in_epsilon(-80.40735740172263, worksheet.intermediate_output_q66, 0.002); end
   def test_intermediate_output_c67; assert_equal("V.09", worksheet.intermediate_output_c67); end
   def test_intermediate_output_d67; assert_equal("Biodiesel", worksheet.intermediate_output_d67); end
   def test_intermediate_output_f67; assert_in_delta(-0.3409880345172063, worksheet.intermediate_output_f67, 0.002); end
   def test_intermediate_output_h67; assert_equal(:ref, worksheet.intermediate_output_h67); end
   def test_intermediate_output_i67; assert_equal(:ref, worksheet.intermediate_output_i67); end
   def test_intermediate_output_j67; assert_in_delta(0.0, (worksheet.intermediate_output_j67||0), 0.002); end
-  def test_intermediate_output_k67; assert_in_delta(0.0, (worksheet.intermediate_output_k67||0), 0.002); end
-  def test_intermediate_output_l67; assert_in_delta(0.0, (worksheet.intermediate_output_l67||0), 0.002); end
-  def test_intermediate_output_m67; assert_in_delta(0.0, (worksheet.intermediate_output_m67||0), 0.002); end
+  def test_intermediate_output_k67; assert_in_epsilon(-59.17009612509082, worksheet.intermediate_output_k67, 0.002); end
+  def test_intermediate_output_l67; assert_in_epsilon(-329.0728893824339, worksheet.intermediate_output_l67, 0.002); end
+  def test_intermediate_output_m67; assert_in_epsilon(-133.8262421646632, worksheet.intermediate_output_m67, 0.002); end
   def test_intermediate_output_n67; assert_in_delta(0.0, (worksheet.intermediate_output_n67||0), 0.002); end
   def test_intermediate_output_o67; assert_in_delta(0.0, (worksheet.intermediate_output_o67||0), 0.002); end
   def test_intermediate_output_p67; assert_in_delta(0.0, (worksheet.intermediate_output_p67||0), 0.002); end
@@ -2024,13 +2024,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h69; assert_equal(:ref, worksheet.intermediate_output_h69); end
   def test_intermediate_output_i69; assert_equal(:ref, worksheet.intermediate_output_i69); end
   def test_intermediate_output_j69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_j69, 0.002); end
-  def test_intermediate_output_k69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_k69, 0.002); end
-  def test_intermediate_output_l69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_l69, 0.002); end
-  def test_intermediate_output_m69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_m69, 0.002); end
-  def test_intermediate_output_n69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_n69, 0.002); end
-  def test_intermediate_output_o69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_o69, 0.002); end
-  def test_intermediate_output_p69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_p69, 0.002); end
-  def test_intermediate_output_q69; assert_in_delta(-0.7936966237288594, worksheet.intermediate_output_q69, 0.002); end
+  def test_intermediate_output_k69; assert_in_epsilon(-3.0054875911193104, worksheet.intermediate_output_k69, 0.002); end
+  def test_intermediate_output_l69; assert_in_epsilon(-5.658202830356956, worksheet.intermediate_output_l69, 0.002); end
+  def test_intermediate_output_m69; assert_in_epsilon(-8.754190006031159, worksheet.intermediate_output_m69, 0.002); end
+  def test_intermediate_output_n69; assert_in_epsilon(-12.077515471233852, worksheet.intermediate_output_n69, 0.002); end
+  def test_intermediate_output_o69; assert_in_epsilon(-15.912160992203937, worksheet.intermediate_output_o69, 0.002); end
+  def test_intermediate_output_p69; assert_in_epsilon(-19.90538519640532, worksheet.intermediate_output_p69, 0.002); end
+  def test_intermediate_output_q69; assert_in_epsilon(-24.254365, worksheet.intermediate_output_q69, 0.002); end
   def test_intermediate_output_c70; assert_equal("V.12", worksheet.intermediate_output_c70); end
   def test_intermediate_output_d70; assert_equal("Aquecimento solar", worksheet.intermediate_output_d70); end
   def test_intermediate_output_f70; assert_in_delta(0.0, (worksheet.intermediate_output_f70||0), 0.002); end
@@ -2087,14 +2087,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f80; assert_in_epsilon(-352.03495223253594, worksheet.intermediate_output_f80, 0.002); end
   def test_intermediate_output_h80; assert_equal(:ref, worksheet.intermediate_output_h80); end
   def test_intermediate_output_i80; assert_equal(:ref, worksheet.intermediate_output_i80); end
-  def test_intermediate_output_j80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_j80, 0.002); end
-  def test_intermediate_output_k80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_k80, 0.002); end
-  def test_intermediate_output_l80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_l80, 0.002); end
-  def test_intermediate_output_m80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_m80, 0.002); end
-  def test_intermediate_output_n80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_n80, 0.002); end
-  def test_intermediate_output_o80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_o80, 0.002); end
-  def test_intermediate_output_p80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_p80, 0.002); end
-  def test_intermediate_output_q80; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_q80, 0.002); end
+  def test_intermediate_output_j80; assert_in_epsilon(22902.99608209907, worksheet.intermediate_output_j80, 0.002); end
+  def test_intermediate_output_k80; assert_in_epsilon(22799.13873861638, worksheet.intermediate_output_k80, 0.002); end
+  def test_intermediate_output_l80; assert_in_epsilon(23826.125974294802, worksheet.intermediate_output_l80, 0.002); end
+  def test_intermediate_output_m80; assert_in_epsilon(23207.32386654576, worksheet.intermediate_output_m80, 0.002); end
+  def test_intermediate_output_n80; assert_in_epsilon(22889.300787007116, worksheet.intermediate_output_n80, 0.002); end
+  def test_intermediate_output_o80; assert_in_epsilon(22417.879445581853, worksheet.intermediate_output_o80, 0.002); end
+  def test_intermediate_output_p80; assert_in_epsilon(21485.25822873263, worksheet.intermediate_output_p80, 0.002); end
+  def test_intermediate_output_q80; assert_in_epsilon(20106.264783271123, worksheet.intermediate_output_q80, 0.002); end
   def test_intermediate_output_r80; assert_equal("REFERENCED", worksheet.intermediate_output_r80); end
   def test_intermediate_output_c81; assert_equal("V.02", worksheet.intermediate_output_c81); end
   def test_intermediate_output_d81; assert_equal("Combustíveis fósseis gasosos", worksheet.intermediate_output_d81); end
@@ -2113,14 +2113,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f82; assert_in_epsilon(2.6888746300838875, worksheet.intermediate_output_f82, 0.002); end
   def test_intermediate_output_h82; assert_equal(:ref, worksheet.intermediate_output_h82); end
   def test_intermediate_output_i82; assert_equal(:ref, worksheet.intermediate_output_i82); end
-  def test_intermediate_output_j82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_j82, 0.002); end
-  def test_intermediate_output_k82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_k82, 0.002); end
-  def test_intermediate_output_l82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_l82, 0.002); end
-  def test_intermediate_output_m82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_m82, 0.002); end
-  def test_intermediate_output_n82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_n82, 0.002); end
-  def test_intermediate_output_o82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_o82, 0.002); end
-  def test_intermediate_output_p82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_p82, 0.002); end
-  def test_intermediate_output_q82; assert_in_epsilon(39617.5707776177, worksheet.intermediate_output_q82, 0.002); end
+  def test_intermediate_output_j82; assert_in_epsilon(22902.99608209907, worksheet.intermediate_output_j82, 0.002); end
+  def test_intermediate_output_k82; assert_in_epsilon(22799.13873861638, worksheet.intermediate_output_k82, 0.002); end
+  def test_intermediate_output_l82; assert_in_epsilon(23826.125974294802, worksheet.intermediate_output_l82, 0.002); end
+  def test_intermediate_output_m82; assert_in_epsilon(23207.32386654576, worksheet.intermediate_output_m82, 0.002); end
+  def test_intermediate_output_n82; assert_in_epsilon(22889.300787007116, worksheet.intermediate_output_n82, 0.002); end
+  def test_intermediate_output_o82; assert_in_epsilon(22417.879445581853, worksheet.intermediate_output_o82, 0.002); end
+  def test_intermediate_output_p82; assert_in_epsilon(21485.25822873263, worksheet.intermediate_output_p82, 0.002); end
+  def test_intermediate_output_q82; assert_in_epsilon(20106.264783271123, worksheet.intermediate_output_q82, 0.002); end
   def test_intermediate_output_c84; assert_equal("V.02", worksheet.intermediate_output_c84); end
   def test_intermediate_output_d84; assert_equal("Losses", worksheet.intermediate_output_d84); end
   def test_intermediate_output_h84; assert_equal(:ref, worksheet.intermediate_output_h84); end
@@ -2136,14 +2136,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_d85; assert_equal("Demand (for charting)", worksheet.intermediate_output_d85); end
   def test_intermediate_output_h85; assert_equal(:ref, worksheet.intermediate_output_h85); end
   def test_intermediate_output_i85; assert_equal(:ref, worksheet.intermediate_output_i85); end
-  def test_intermediate_output_j85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_j85, 0.002); end
-  def test_intermediate_output_k85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_k85, 0.002); end
-  def test_intermediate_output_l85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_l85, 0.002); end
-  def test_intermediate_output_m85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_m85, 0.002); end
-  def test_intermediate_output_n85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_n85, 0.002); end
-  def test_intermediate_output_o85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_o85, 0.002); end
-  def test_intermediate_output_p85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_p85, 0.002); end
-  def test_intermediate_output_q85; assert_in_epsilon(-39617.5707776177, worksheet.intermediate_output_q85, 0.002); end
+  def test_intermediate_output_j85; assert_in_epsilon(-22902.99608209907, worksheet.intermediate_output_j85, 0.002); end
+  def test_intermediate_output_k85; assert_in_epsilon(-22799.13873861638, worksheet.intermediate_output_k85, 0.002); end
+  def test_intermediate_output_l85; assert_in_epsilon(-23826.125974294802, worksheet.intermediate_output_l85, 0.002); end
+  def test_intermediate_output_m85; assert_in_epsilon(-23207.32386654576, worksheet.intermediate_output_m85, 0.002); end
+  def test_intermediate_output_n85; assert_in_epsilon(-22889.300787007116, worksheet.intermediate_output_n85, 0.002); end
+  def test_intermediate_output_o85; assert_in_epsilon(-22417.879445581853, worksheet.intermediate_output_o85, 0.002); end
+  def test_intermediate_output_p85; assert_in_epsilon(-21485.25822873263, worksheet.intermediate_output_p85, 0.002); end
+  def test_intermediate_output_q85; assert_in_epsilon(-20106.264783271123, worksheet.intermediate_output_q85, 0.002); end
   def test_intermediate_output_d86; assert_equal("Dummy for charting", worksheet.intermediate_output_d86); end
   def test_intermediate_output_h86; assert_equal(:ref, worksheet.intermediate_output_h86); end
   def test_intermediate_output_i86; assert_equal(:ref, worksheet.intermediate_output_i86); end
@@ -2160,14 +2160,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f89; assert_in_delta(0.0, (worksheet.intermediate_output_f89||0), 0.002); end
   def test_intermediate_output_h89; assert_equal(:ref, worksheet.intermediate_output_h89); end
   def test_intermediate_output_i89; assert_equal(:ref, worksheet.intermediate_output_i89); end
-  def test_intermediate_output_j89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_j89, 0.002); end
-  def test_intermediate_output_k89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_k89, 0.002); end
-  def test_intermediate_output_l89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_l89, 0.002); end
-  def test_intermediate_output_m89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_m89, 0.002); end
-  def test_intermediate_output_n89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_n89, 0.002); end
-  def test_intermediate_output_o89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_o89, 0.002); end
-  def test_intermediate_output_p89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_p89, 0.002); end
-  def test_intermediate_output_q89; assert_in_epsilon(38432.410475751996, worksheet.intermediate_output_q89, 0.002); end
+  def test_intermediate_output_j89; assert_in_epsilon(21717.835780233352, worksheet.intermediate_output_j89, 0.002); end
+  def test_intermediate_output_k89; assert_in_epsilon(21360.130974361386, worksheet.intermediate_output_k89, 0.002); end
+  def test_intermediate_output_l89; assert_in_epsilon(21948.166319424752, worksheet.intermediate_output_l89, 0.002); end
+  def test_intermediate_output_m89; assert_in_epsilon(21397.03556673654, worksheet.intermediate_output_m89, 0.002); end
+  def test_intermediate_output_n89; assert_in_epsilon(21142.95525832766, worksheet.intermediate_output_n89, 0.002); end
+  def test_intermediate_output_o89; assert_in_epsilon(20676.58045831959, worksheet.intermediate_output_o89, 0.002); end
+  def test_intermediate_output_p89; assert_in_epsilon(19841.767322991218, worksheet.intermediate_output_p89, 0.002); end
+  def test_intermediate_output_q89; assert_in_epsilon(18663.685690014914, worksheet.intermediate_output_q89, 0.002); end
   def test_intermediate_output_d91; assert_equal("Net balance (should be zero!)", worksheet.intermediate_output_d91); end
   def test_intermediate_output_f91; assert_in_delta(1.7630341631047486e-13, worksheet.intermediate_output_f91, 0.002); end
   def test_intermediate_output_h91; assert_equal(:ref, worksheet.intermediate_output_h91); end
@@ -2199,26 +2199,26 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h96; assert_equal(:ref, worksheet.intermediate_output_h96); end
   def test_intermediate_output_i96; assert_equal(:ref, worksheet.intermediate_output_i96); end
   def test_intermediate_output_j96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_j96, 0.002); end
-  def test_intermediate_output_k96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_k96, 0.002); end
-  def test_intermediate_output_l96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_l96, 0.002); end
-  def test_intermediate_output_m96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_m96, 0.002); end
-  def test_intermediate_output_n96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_n96, 0.002); end
-  def test_intermediate_output_o96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_o96, 0.002); end
-  def test_intermediate_output_p96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_p96, 0.002); end
-  def test_intermediate_output_q96; assert_in_epsilon(-519.0173280000001, worksheet.intermediate_output_q96, 0.002); end
+  def test_intermediate_output_k96; assert_in_epsilon(-819.5658994285716, worksheet.intermediate_output_k96, 0.002); end
+  def test_intermediate_output_l96; assert_in_epsilon(-1177.8197965714287, worksheet.intermediate_output_l96, 0.002); end
+  def test_intermediate_output_m96; assert_in_epsilon(-1587.617773714286, worksheet.intermediate_output_m96, 0.002); end
+  def test_intermediate_output_n96; assert_in_epsilon(-2297.663773714286, worksheet.intermediate_output_n96, 0.002); end
+  def test_intermediate_output_o96; assert_in_epsilon(-3759.081202285715, worksheet.intermediate_output_o96, 0.002); end
+  def test_intermediate_output_p96; assert_in_epsilon(-5220.498630857144, worksheet.intermediate_output_p96, 0.002); end
+  def test_intermediate_output_q96; assert_in_epsilon(-6873.515773714287, worksheet.intermediate_output_q96, 0.002); end
   def test_intermediate_output_c97; assert_equal("IX.a", worksheet.intermediate_output_c97); end
   def test_intermediate_output_d97; assert_equal("Comercial/ público", worksheet.intermediate_output_d97); end
   def test_intermediate_output_f97; assert_in_delta(0.0, (worksheet.intermediate_output_f97||0), 0.002); end
   def test_intermediate_output_h97; assert_equal(:ref, worksheet.intermediate_output_h97); end
   def test_intermediate_output_i97; assert_equal(:ref, worksheet.intermediate_output_i97); end
   def test_intermediate_output_j97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_j97, 0.002); end
-  def test_intermediate_output_k97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_k97, 0.002); end
-  def test_intermediate_output_l97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_l97, 0.002); end
-  def test_intermediate_output_m97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_m97, 0.002); end
-  def test_intermediate_output_n97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_n97, 0.002); end
-  def test_intermediate_output_o97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_o97, 0.002); end
-  def test_intermediate_output_p97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_p97, 0.002); end
-  def test_intermediate_output_q97; assert_in_epsilon(-29.400000000000002, worksheet.intermediate_output_q97, 0.002); end
+  def test_intermediate_output_k97; assert_in_epsilon(-34.300000000000004, worksheet.intermediate_output_k97, 0.002); end
+  def test_intermediate_output_l97; assert_in_epsilon(-39.2, worksheet.intermediate_output_l97, 0.002); end
+  def test_intermediate_output_m97; assert_in_epsilon(-44.1, worksheet.intermediate_output_m97, 0.002); end
+  def test_intermediate_output_n97; assert_in_epsilon(-48.5, worksheet.intermediate_output_n97, 0.002); end
+  def test_intermediate_output_o97; assert_in_epsilon(-53.35, worksheet.intermediate_output_o97, 0.002); end
+  def test_intermediate_output_p97; assert_in_epsilon(-58.2, worksheet.intermediate_output_p97, 0.002); end
+  def test_intermediate_output_q97; assert_in_epsilon(-63.050000000000004, worksheet.intermediate_output_q97, 0.002); end
   def test_intermediate_output_c98; assert_equal("IX.c", worksheet.intermediate_output_c98); end
   def test_intermediate_output_d98; assert_equal(:na, worksheet.intermediate_output_d98); end
   def test_intermediate_output_f98; assert_in_delta(0.0, (worksheet.intermediate_output_f98||0), 0.002); end
@@ -2379,14 +2379,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f110; assert_in_epsilon(5.21452425, worksheet.intermediate_output_f110, 0.002); end
   def test_intermediate_output_h110; assert_equal(:ref, worksheet.intermediate_output_h110); end
   def test_intermediate_output_i110; assert_equal(:ref, worksheet.intermediate_output_i110); end
-  def test_intermediate_output_j110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_j110, 0.002); end
-  def test_intermediate_output_k110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_k110, 0.002); end
-  def test_intermediate_output_l110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_l110, 0.002); end
-  def test_intermediate_output_m110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_m110, 0.002); end
-  def test_intermediate_output_n110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_n110, 0.002); end
-  def test_intermediate_output_o110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_o110, 0.002); end
-  def test_intermediate_output_p110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_p110, 0.002); end
-  def test_intermediate_output_q110; assert_in_epsilon(-252.13805995838578, worksheet.intermediate_output_q110, 0.002); end
+  def test_intermediate_output_j110; assert_in_epsilon(-58.71671073783524, worksheet.intermediate_output_j110, 0.002); end
+  def test_intermediate_output_k110; assert_in_epsilon(-285.3843982969802, worksheet.intermediate_output_k110, 0.002); end
+  def test_intermediate_output_l110; assert_in_epsilon(-316.1984683717312, worksheet.intermediate_output_l110, 0.002); end
+  def test_intermediate_output_m110; assert_in_epsilon(-343.87954360397185, worksheet.intermediate_output_m110, 0.002); end
+  def test_intermediate_output_n110; assert_in_epsilon(-367.88150511131767, worksheet.intermediate_output_n110, 0.002); end
+  def test_intermediate_output_o110; assert_in_epsilon(-387.53913984040406, worksheet.intermediate_output_o110, 0.002); end
+  def test_intermediate_output_p110; assert_in_epsilon(-402.23641440387007, worksheet.intermediate_output_p110, 0.002); end
+  def test_intermediate_output_q110; assert_in_epsilon(-411.72340916599205, worksheet.intermediate_output_q110, 0.002); end
   def test_intermediate_output_d111; assert_equal("Total generation supplied to grid", worksheet.intermediate_output_d111); end
   def test_intermediate_output_f111; assert_in_epsilon(348.38502523322467, worksheet.intermediate_output_f111, 0.002); end
   def test_intermediate_output_h111; assert_equal(:ref, worksheet.intermediate_output_h111); end
@@ -2405,14 +2405,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_g113; assert_in_delta(0.0, (worksheet.intermediate_output_g113||0), 0.002); end
   def test_intermediate_output_h113; assert_equal(:ref, worksheet.intermediate_output_h113); end
   def test_intermediate_output_i113; assert_equal(:ref, worksheet.intermediate_output_i113); end
-  def test_intermediate_output_j113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_j113, 0.002); end
-  def test_intermediate_output_k113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_k113, 0.002); end
-  def test_intermediate_output_l113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_l113, 0.002); end
-  def test_intermediate_output_m113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_m113, 0.002); end
-  def test_intermediate_output_n113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_n113, 0.002); end
-  def test_intermediate_output_o113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_o113, 0.002); end
-  def test_intermediate_output_p113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_p113, 0.002); end
-  def test_intermediate_output_q113; assert_in_epsilon(25275.52393772844, worksheet.intermediate_output_q113, 0.002); end
+  def test_intermediate_output_j113; assert_in_epsilon(4939.47727363055, worksheet.intermediate_output_j113, 0.002); end
+  def test_intermediate_output_k113; assert_in_epsilon(7932.4140626576, worksheet.intermediate_output_k113, 0.002); end
+  def test_intermediate_output_l113; assert_in_epsilon(8238.893359486687, worksheet.intermediate_output_l113, 0.002); end
+  def test_intermediate_output_m113; assert_in_epsilon(7829.870372908473, worksheet.intermediate_output_m113, 0.002); end
+  def test_intermediate_output_n113; assert_in_epsilon(7712.441435130935, worksheet.intermediate_output_n113, 0.002); end
+  def test_intermediate_output_o113; assert_in_epsilon(7177.968817820628, worksheet.intermediate_output_o113, 0.002); end
+  def test_intermediate_output_p113; assert_in_epsilon(6514.68468317255, worksheet.intermediate_output_p113, 0.002); end
+  def test_intermediate_output_q113; assert_in_epsilon(5682.0399759976335, worksheet.intermediate_output_q113, 0.002); end
   def test_intermediate_output_r113; assert_equal("REFERENCED", worksheet.intermediate_output_r113); end
   def test_intermediate_output_d114; assert_equal("Electricity used in UK, before losses and district heating heat demand", worksheet.intermediate_output_d114); end
   def test_intermediate_output_f114; assert_in_epsilon(348.38502523322467, worksheet.intermediate_output_f114, 0.002); end
@@ -2819,14 +2819,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f158; assert_equal("Hydrocarbon fuel power generation", worksheet.intermediate_output_f158); end
   def test_intermediate_output_h158; assert_equal(:ref, worksheet.intermediate_output_h158); end
   def test_intermediate_output_i158; assert_equal(:ref, worksheet.intermediate_output_i158); end
-  def test_intermediate_output_j158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_j158, 0.002); end
-  def test_intermediate_output_k158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_k158, 0.002); end
-  def test_intermediate_output_l158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_l158, 0.002); end
-  def test_intermediate_output_m158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_m158, 0.002); end
-  def test_intermediate_output_n158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_n158, 0.002); end
-  def test_intermediate_output_o158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_o158, 0.002); end
-  def test_intermediate_output_p158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_p158, 0.002); end
-  def test_intermediate_output_q158; assert_in_epsilon(4146.708568875234, worksheet.intermediate_output_q158, 0.002); end
+  def test_intermediate_output_j158; assert_in_epsilon(1444.6975290949215, worksheet.intermediate_output_j158, 0.002); end
+  def test_intermediate_output_k158; assert_in_epsilon(1983.0184085335075, worksheet.intermediate_output_k158, 0.002); end
+  def test_intermediate_output_l158; assert_in_epsilon(2195.2794739926976, worksheet.intermediate_output_l158, 0.002); end
+  def test_intermediate_output_m158; assert_in_epsilon(2121.3543006842956, worksheet.intermediate_output_m158, 0.002); end
+  def test_intermediate_output_n158; assert_in_epsilon(2136.283850856325, worksheet.intermediate_output_n158, 0.002); end
+  def test_intermediate_output_o158; assert_in_epsilon(2212.456359517137, worksheet.intermediate_output_o158, 0.002); end
+  def test_intermediate_output_p158; assert_in_epsilon(2377.2431473306046, worksheet.intermediate_output_p158, 0.002); end
+  def test_intermediate_output_q158; assert_in_epsilon(2562.356257179921, worksheet.intermediate_output_q158, 0.002); end
   def test_intermediate_output_c159; assert_equal("II", worksheet.intermediate_output_c159); end
   def test_intermediate_output_f159; assert_equal("Nuclear power generation", worksheet.intermediate_output_f159); end
   def test_intermediate_output_h159; assert_equal(:ref, worksheet.intermediate_output_h159); end
@@ -2879,62 +2879,62 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f163; assert_equal("Agriculture and waste", worksheet.intermediate_output_f163); end
   def test_intermediate_output_h163; assert_equal(:ref, worksheet.intermediate_output_h163); end
   def test_intermediate_output_i163; assert_equal(:ref, worksheet.intermediate_output_i163); end
-  def test_intermediate_output_j163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_j163, 0.002); end
-  def test_intermediate_output_k163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_k163, 0.002); end
-  def test_intermediate_output_l163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_l163, 0.002); end
-  def test_intermediate_output_m163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_m163, 0.002); end
-  def test_intermediate_output_n163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_n163, 0.002); end
-  def test_intermediate_output_o163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_o163, 0.002); end
-  def test_intermediate_output_p163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_p163, 0.002); end
-  def test_intermediate_output_q163; assert_in_epsilon(18445.71438682719, worksheet.intermediate_output_q163, 0.002); end
+  def test_intermediate_output_j163; assert_in_epsilon(2101.4656086573946, worksheet.intermediate_output_j163, 0.002); end
+  def test_intermediate_output_k163; assert_in_epsilon(1865.2516665002424, worksheet.intermediate_output_k163, 0.002); end
+  def test_intermediate_output_l163; assert_in_epsilon(1803.0042318421858, worksheet.intermediate_output_l163, 0.002); end
+  def test_intermediate_output_m163; assert_in_epsilon(1140.1366119501163, worksheet.intermediate_output_m163, 0.002); end
+  def test_intermediate_output_n163; assert_in_epsilon(1008.8603352273149, worksheet.intermediate_output_n163, 0.002); end
+  def test_intermediate_output_o163; assert_in_epsilon(925.4582636576379, worksheet.intermediate_output_o163, 0.002); end
+  def test_intermediate_output_p163; assert_in_epsilon(858.0060309164604, worksheet.intermediate_output_p163, 0.002); end
+  def test_intermediate_output_q163; assert_in_epsilon(804.2543565834983, worksheet.intermediate_output_q163, 0.002); end
   def test_intermediate_output_c164; assert_equal("VII", worksheet.intermediate_output_c164); end
   def test_intermediate_output_f164; assert_equal("Electricity distribution, storage, and balancing", worksheet.intermediate_output_f164); end
   def test_intermediate_output_h164; assert_equal(:ref, worksheet.intermediate_output_h164); end
   def test_intermediate_output_i164; assert_equal(:ref, worksheet.intermediate_output_i164); end
-  def test_intermediate_output_j164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_j164, 0.002); end
-  def test_intermediate_output_k164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_k164, 0.002); end
-  def test_intermediate_output_l164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_l164, 0.002); end
-  def test_intermediate_output_m164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_m164, 0.002); end
-  def test_intermediate_output_n164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_n164, 0.002); end
-  def test_intermediate_output_o164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_o164, 0.002); end
-  def test_intermediate_output_p164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_p164, 0.002); end
-  def test_intermediate_output_q164; assert_in_epsilon(3336.2204704365363, worksheet.intermediate_output_q164, 0.002); end
+  def test_intermediate_output_j164; assert_in_epsilon(3381.049942841235, worksheet.intermediate_output_j164, 0.002); end
+  def test_intermediate_output_k164; assert_in_epsilon(3479.365813356487, worksheet.intermediate_output_k164, 0.002); end
+  def test_intermediate_output_l164; assert_in_epsilon(3506.182743102723, worksheet.intermediate_output_l164, 0.002); end
+  def test_intermediate_output_m164; assert_in_epsilon(3573.14016256608, worksheet.intermediate_output_m164, 0.002); end
+  def test_intermediate_output_n164; assert_in_epsilon(3574.264606999765, worksheet.intermediate_output_n164, 0.002); end
+  def test_intermediate_output_o164; assert_in_epsilon(3513.786591854824, worksheet.intermediate_output_o164, 0.002); end
+  def test_intermediate_output_p164; assert_in_epsilon(3397.9680091253176, worksheet.intermediate_output_p164, 0.002); end
+  def test_intermediate_output_q164; assert_in_epsilon(3237.0864795691214, worksheet.intermediate_output_q164, 0.002); end
   def test_intermediate_output_c165; assert_equal("VIII", worksheet.intermediate_output_c165); end
   def test_intermediate_output_f165; assert_equal("H2 Production", worksheet.intermediate_output_f165); end
   def test_intermediate_output_h165; assert_equal(:ref, worksheet.intermediate_output_h165); end
   def test_intermediate_output_i165; assert_equal(:ref, worksheet.intermediate_output_i165); end
   def test_intermediate_output_j165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_j165, 0.002); end
-  def test_intermediate_output_k165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_k165, 0.002); end
-  def test_intermediate_output_l165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_l165, 0.002); end
-  def test_intermediate_output_m165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_m165, 0.002); end
-  def test_intermediate_output_n165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_n165, 0.002); end
-  def test_intermediate_output_o165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_o165, 0.002); end
-  def test_intermediate_output_p165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_p165, 0.002); end
-  def test_intermediate_output_q165; assert_in_epsilon(38.539032754166286, worksheet.intermediate_output_q165, 0.002); end
+  def test_intermediate_output_k165; assert_in_epsilon(42.029069009229424, worksheet.intermediate_output_k165, 0.002); end
+  def test_intermediate_output_l165; assert_in_epsilon(46.52211381343902, worksheet.intermediate_output_l165, 0.002); end
+  def test_intermediate_output_m165; assert_in_epsilon(51.20727405915292, worksheet.intermediate_output_m165, 0.002); end
+  def test_intermediate_output_n165; assert_in_epsilon(55.016824437001944, worksheet.intermediate_output_n165, 0.002); end
+  def test_intermediate_output_o165; assert_in_epsilon(59.51904362394623, worksheet.intermediate_output_o165, 0.002); end
+  def test_intermediate_output_p165; assert_in_epsilon(63.30462730483034, worksheet.intermediate_output_p165, 0.002); end
+  def test_intermediate_output_q165; assert_in_epsilon(67.22055359866376, worksheet.intermediate_output_q165, 0.002); end
   def test_intermediate_output_c166; assert_equal("IX", worksheet.intermediate_output_c166); end
   def test_intermediate_output_f166; assert_equal("Heating", worksheet.intermediate_output_f166); end
   def test_intermediate_output_h166; assert_equal(:ref, worksheet.intermediate_output_h166); end
   def test_intermediate_output_i166; assert_equal(:ref, worksheet.intermediate_output_i166); end
   def test_intermediate_output_j166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_j166, 0.002); end
-  def test_intermediate_output_k166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_k166, 0.002); end
-  def test_intermediate_output_l166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_l166, 0.002); end
-  def test_intermediate_output_m166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_m166, 0.002); end
-  def test_intermediate_output_n166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_n166, 0.002); end
-  def test_intermediate_output_o166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_o166, 0.002); end
-  def test_intermediate_output_p166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_p166, 0.002); end
-  def test_intermediate_output_q166; assert_in_epsilon(106.13165966171513, worksheet.intermediate_output_q166, 0.002); end
+  def test_intermediate_output_k166; assert_in_epsilon(123.82026960533429, worksheet.intermediate_output_k166, 0.002); end
+  def test_intermediate_output_l166; assert_in_epsilon(141.50887954895347, worksheet.intermediate_output_l166, 0.002); end
+  def test_intermediate_output_m166; assert_in_epsilon(159.19748949257269, worksheet.intermediate_output_m166, 0.002); end
+  def test_intermediate_output_n166; assert_in_epsilon(175.08113923786337, worksheet.intermediate_output_n166, 0.002); end
+  def test_intermediate_output_o166; assert_in_epsilon(192.58925316164968, worksheet.intermediate_output_o166, 0.002); end
+  def test_intermediate_output_p166; assert_in_epsilon(210.09736708543608, worksheet.intermediate_output_p166, 0.002); end
+  def test_intermediate_output_q166; assert_in_epsilon(227.6054810092224, worksheet.intermediate_output_q166, 0.002); end
   def test_intermediate_output_c167; assert_equal("X", worksheet.intermediate_output_c167); end
   def test_intermediate_output_f167; assert_equal("Lighting and appliances", worksheet.intermediate_output_f167); end
   def test_intermediate_output_h167; assert_equal(:ref, worksheet.intermediate_output_h167); end
   def test_intermediate_output_i167; assert_equal(:ref, worksheet.intermediate_output_i167); end
   def test_intermediate_output_j167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_j167, 0.002); end
   def test_intermediate_output_k167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_k167, 0.002); end
-  def test_intermediate_output_l167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_l167, 0.002); end
-  def test_intermediate_output_m167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_m167, 0.002); end
-  def test_intermediate_output_n167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_n167, 0.002); end
-  def test_intermediate_output_o167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_o167, 0.002); end
-  def test_intermediate_output_p167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_p167, 0.002); end
-  def test_intermediate_output_q167; assert_in_epsilon(179.8779235304551, worksheet.intermediate_output_q167, 0.002); end
+  def test_intermediate_output_l167; assert_in_epsilon(180.4830955260087, worksheet.intermediate_output_l167, 0.002); end
+  def test_intermediate_output_m167; assert_in_epsilon(180.4830955260087, worksheet.intermediate_output_m167, 0.002); end
+  def test_intermediate_output_n167; assert_in_epsilon(180.4830955260087, worksheet.intermediate_output_n167, 0.002); end
+  def test_intermediate_output_o167; assert_in_epsilon(180.4830955260087, worksheet.intermediate_output_o167, 0.002); end
+  def test_intermediate_output_p167; assert_in_epsilon(180.4830955260087, worksheet.intermediate_output_p167, 0.002); end
+  def test_intermediate_output_q167; assert_in_epsilon(180.4830955260087, worksheet.intermediate_output_q167, 0.002); end
   def test_intermediate_output_c168; assert_equal("XI", worksheet.intermediate_output_c168); end
   def test_intermediate_output_f168; assert_equal("Industry", worksheet.intermediate_output_f168); end
   def test_intermediate_output_h168; assert_equal(:ref, worksheet.intermediate_output_h168); end
@@ -3022,24 +3022,24 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f175; assert_equal("Total", worksheet.intermediate_output_f175); end
   def test_intermediate_output_h175; assert_equal(:ref, worksheet.intermediate_output_h175); end
   def test_intermediate_output_i175; assert_equal(:ref, worksheet.intermediate_output_i175); end
-  def test_intermediate_output_j175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_j175, 0.002); end
-  def test_intermediate_output_k175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_k175, 0.002); end
-  def test_intermediate_output_l175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_l175, 0.002); end
-  def test_intermediate_output_m175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_m175, 0.002); end
-  def test_intermediate_output_n175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_n175, 0.002); end
-  def test_intermediate_output_o175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_o175, 0.002); end
-  def test_intermediate_output_p175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_p175, 0.002); end
-  def test_intermediate_output_q175; assert_in_epsilon(26253.19204208529, worksheet.intermediate_output_q175, 0.002); end
+  def test_intermediate_output_j175; assert_in_epsilon(7251.761696539888, worksheet.intermediate_output_j175, 0.002); end
+  def test_intermediate_output_k175; assert_in_epsilon(7673.363150535256, worksheet.intermediate_output_k175, 0.002); end
+  def test_intermediate_output_l175; assert_in_epsilon(7872.980537826008, worksheet.intermediate_output_l175, 0.002); end
+  def test_intermediate_output_m175; assert_in_epsilon(7225.518934278226, worksheet.intermediate_output_m175, 0.002); end
+  def test_intermediate_output_n175; assert_in_epsilon(7129.989852284279, worksheet.intermediate_output_n175, 0.002); end
+  def test_intermediate_output_o175; assert_in_epsilon(7084.2926073412045, worksheet.intermediate_output_o175, 0.002); end
+  def test_intermediate_output_p175; assert_in_epsilon(7087.102277288658, worksheet.intermediate_output_p175, 0.002); end
+  def test_intermediate_output_q175; assert_in_epsilon(7079.0062234664365, worksheet.intermediate_output_q175, 0.002); end
   def test_intermediate_output_f176; assert_equal("Emissions in the time period (up to and including year above)", worksheet.intermediate_output_f176); end
   def test_intermediate_output_i176; assert_equal(:ref, worksheet.intermediate_output_i176); end
   def test_intermediate_output_j176; assert_equal(:ref, worksheet.intermediate_output_j176); end
-  def test_intermediate_output_k176; assert_in_epsilon(131265.96021042645, worksheet.intermediate_output_k176, 0.002); end
-  def test_intermediate_output_l176; assert_in_epsilon(131265.96021042645, worksheet.intermediate_output_l176, 0.002); end
-  def test_intermediate_output_m176; assert_in_epsilon(131265.96021042645, worksheet.intermediate_output_m176, 0.002); end
-  def test_intermediate_output_n176; assert_in_epsilon(131265.96021042645, worksheet.intermediate_output_n176, 0.002); end
-  def test_intermediate_output_o176; assert_in_epsilon(131265.96021042645, worksheet.intermediate_output_o176, 0.002); end
-  def test_intermediate_output_p176; assert_in_epsilon(131265.96021042645, worksheet.intermediate_output_p176, 0.002); end
-  def test_intermediate_output_q176; assert_in_epsilon(131265.96021042645, worksheet.intermediate_output_q176, 0.002); end
+  def test_intermediate_output_k176; assert_in_epsilon(37523.612844685544, worksheet.intermediate_output_k176, 0.002); end
+  def test_intermediate_output_l176; assert_in_epsilon(38965.66791454854, worksheet.intermediate_output_l176, 0.002); end
+  def test_intermediate_output_m176; assert_in_epsilon(37422.517878486695, worksheet.intermediate_output_m176, 0.002); end
+  def test_intermediate_output_n176; assert_in_epsilon(35841.00742540929, worksheet.intermediate_output_n176, 0.002); end
+  def test_intermediate_output_o176; assert_in_epsilon(35512.85752659217, worksheet.intermediate_output_o176, 0.002); end
+  def test_intermediate_output_p176; assert_in_epsilon(35429.89204654838, worksheet.intermediate_output_p176, 0.002); end
+  def test_intermediate_output_q176; assert_in_epsilon(35411.223224976624, worksheet.intermediate_output_q176, 0.002); end
   def test_intermediate_output_r176; assert_equal("REFERENCED - All costs", worksheet.intermediate_output_r176); end
   def test_intermediate_output_c177; assert_equal("Modelled emissions", worksheet.intermediate_output_c177); end
   def test_intermediate_output_f177; assert_equal("Cumulative emissions", worksheet.intermediate_output_f177); end
@@ -3060,40 +3060,40 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f180; assert_in_epsilon(532.6387375112939, worksheet.intermediate_output_f180, 0.002); end
   def test_intermediate_output_h180; assert_equal(:ref, worksheet.intermediate_output_h180); end
   def test_intermediate_output_i180; assert_equal(:ref, worksheet.intermediate_output_i180); end
-  def test_intermediate_output_j180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_j180, 0.002); end
-  def test_intermediate_output_k180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_k180, 0.002); end
-  def test_intermediate_output_l180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_l180, 0.002); end
-  def test_intermediate_output_m180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_m180, 0.002); end
-  def test_intermediate_output_n180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_n180, 0.002); end
-  def test_intermediate_output_o180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_o180, 0.002); end
-  def test_intermediate_output_p180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_p180, 0.002); end
-  def test_intermediate_output_q180; assert_in_epsilon(26234.65113967066, worksheet.intermediate_output_q180, 0.002); end
+  def test_intermediate_output_j180; assert_in_epsilon(7233.220794125252, worksheet.intermediate_output_j180, 0.002); end
+  def test_intermediate_output_k180; assert_in_epsilon(7660.34143054868, worksheet.intermediate_output_k180, 0.002); end
+  def test_intermediate_output_l180; assert_in_epsilon(7861.992355772119, worksheet.intermediate_output_l180, 0.002); end
+  def test_intermediate_output_m180; assert_in_epsilon(7211.986623347973, worksheet.intermediate_output_m180, 0.002); end
+  def test_intermediate_output_n180; assert_in_epsilon(7113.1586749192065, worksheet.intermediate_output_n180, 0.002); end
+  def test_intermediate_output_o180; assert_in_epsilon(7053.807174284975, worksheet.intermediate_output_o180, 0.002); end
+  def test_intermediate_output_p180; assert_in_epsilon(7048.609517104561, worksheet.intermediate_output_p180, 0.002); end
+  def test_intermediate_output_q180; assert_in_epsilon(7031.456332340791, worksheet.intermediate_output_q180, 0.002); end
   def test_intermediate_output_c181; assert_equal("1B", worksheet.intermediate_output_c181); end
   def test_intermediate_output_d181; assert_equal("Fugitive Emissions from Fuels", worksheet.intermediate_output_d181); end
   def test_intermediate_output_f181; assert_in_epsilon(13.3650064404099, worksheet.intermediate_output_f181, 0.002); end
   def test_intermediate_output_h181; assert_equal(:ref, worksheet.intermediate_output_h181); end
   def test_intermediate_output_i181; assert_equal(:ref, worksheet.intermediate_output_i181); end
   def test_intermediate_output_j181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_j181, 0.002); end
-  def test_intermediate_output_k181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_k181, 0.002); end
-  def test_intermediate_output_l181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_l181, 0.002); end
-  def test_intermediate_output_m181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_m181, 0.002); end
-  def test_intermediate_output_n181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_n181, 0.002); end
-  def test_intermediate_output_o181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_o181, 0.002); end
-  def test_intermediate_output_p181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_p181, 0.002); end
-  def test_intermediate_output_q181; assert_in_epsilon(18.540902414635784, worksheet.intermediate_output_q181, 0.002); end
+  def test_intermediate_output_k181; assert_in_epsilon(13.021719986574901, worksheet.intermediate_output_k181, 0.002); end
+  def test_intermediate_output_l181; assert_in_epsilon(10.988182053889949, worksheet.intermediate_output_l181, 0.002); end
+  def test_intermediate_output_m181; assert_in_epsilon(13.532310930251672, worksheet.intermediate_output_m181, 0.002); end
+  def test_intermediate_output_n181; assert_in_epsilon(16.831177365072122, worksheet.intermediate_output_n181, 0.002); end
+  def test_intermediate_output_o181; assert_in_epsilon(30.48543305622816, worksheet.intermediate_output_o181, 0.002); end
+  def test_intermediate_output_p181; assert_in_epsilon(38.492760184096575, worksheet.intermediate_output_p181, 0.002); end
+  def test_intermediate_output_q181; assert_in_epsilon(47.549891125644415, worksheet.intermediate_output_q181, 0.002); end
   def test_intermediate_output_c182; assert_in_delta(1.0, worksheet.intermediate_output_c182, 0.002); end
   def test_intermediate_output_d182; assert_equal("Fuel Combustion", worksheet.intermediate_output_d182); end
   def test_intermediate_output_f182; assert_in_epsilon(546.0037439517039, worksheet.intermediate_output_f182, 0.002); end
   def test_intermediate_output_h182; assert_equal(:ref, worksheet.intermediate_output_h182); end
   def test_intermediate_output_i182; assert_equal(:ref, worksheet.intermediate_output_i182); end
-  def test_intermediate_output_j182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_j182, 0.002); end
-  def test_intermediate_output_k182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_k182, 0.002); end
-  def test_intermediate_output_l182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_l182, 0.002); end
-  def test_intermediate_output_m182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_m182, 0.002); end
-  def test_intermediate_output_n182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_n182, 0.002); end
-  def test_intermediate_output_o182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_o182, 0.002); end
-  def test_intermediate_output_p182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_p182, 0.002); end
-  def test_intermediate_output_q182; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_q182, 0.002); end
+  def test_intermediate_output_j182; assert_in_epsilon(7251.761696539887, worksheet.intermediate_output_j182, 0.002); end
+  def test_intermediate_output_k182; assert_in_epsilon(7673.363150535255, worksheet.intermediate_output_k182, 0.002); end
+  def test_intermediate_output_l182; assert_in_epsilon(7872.980537826009, worksheet.intermediate_output_l182, 0.002); end
+  def test_intermediate_output_m182; assert_in_epsilon(7225.518934278225, worksheet.intermediate_output_m182, 0.002); end
+  def test_intermediate_output_n182; assert_in_epsilon(7129.989852284279, worksheet.intermediate_output_n182, 0.002); end
+  def test_intermediate_output_o182; assert_in_epsilon(7084.292607341204, worksheet.intermediate_output_o182, 0.002); end
+  def test_intermediate_output_p182; assert_in_epsilon(7087.102277288657, worksheet.intermediate_output_p182, 0.002); end
+  def test_intermediate_output_q182; assert_in_epsilon(7079.006223466436, worksheet.intermediate_output_q182, 0.002); end
   def test_intermediate_output_c183; assert_in_epsilon(2.0, worksheet.intermediate_output_c183, 0.002); end
   def test_intermediate_output_d183; assert_equal("Industrial Processes", worksheet.intermediate_output_d183); end
   def test_intermediate_output_f183; assert_in_epsilon(27.8913120599484, worksheet.intermediate_output_f183, 0.002); end
@@ -3212,27 +3212,27 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_f192; assert_in_epsilon(680.9589720076677, worksheet.intermediate_output_f192, 0.002); end
   def test_intermediate_output_h192; assert_equal(:ref, worksheet.intermediate_output_h192); end
   def test_intermediate_output_i192; assert_equal(:ref, worksheet.intermediate_output_i192); end
-  def test_intermediate_output_j192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_j192, 0.002); end
-  def test_intermediate_output_k192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_k192, 0.002); end
-  def test_intermediate_output_l192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_l192, 0.002); end
-  def test_intermediate_output_m192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_m192, 0.002); end
-  def test_intermediate_output_n192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_n192, 0.002); end
-  def test_intermediate_output_o192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_o192, 0.002); end
-  def test_intermediate_output_p192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_p192, 0.002); end
-  def test_intermediate_output_q192; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_q192, 0.002); end
+  def test_intermediate_output_j192; assert_in_epsilon(7251.761696539887, worksheet.intermediate_output_j192, 0.002); end
+  def test_intermediate_output_k192; assert_in_epsilon(7673.363150535255, worksheet.intermediate_output_k192, 0.002); end
+  def test_intermediate_output_l192; assert_in_epsilon(7872.980537826009, worksheet.intermediate_output_l192, 0.002); end
+  def test_intermediate_output_m192; assert_in_epsilon(7225.518934278225, worksheet.intermediate_output_m192, 0.002); end
+  def test_intermediate_output_n192; assert_in_epsilon(7129.989852284279, worksheet.intermediate_output_n192, 0.002); end
+  def test_intermediate_output_o192; assert_in_epsilon(7084.292607341204, worksheet.intermediate_output_o192, 0.002); end
+  def test_intermediate_output_p192; assert_in_epsilon(7087.102277288657, worksheet.intermediate_output_p192, 0.002); end
+  def test_intermediate_output_q192; assert_in_epsilon(7079.006223466436, worksheet.intermediate_output_q192, 0.002); end
   def test_intermediate_output_r192; assert_equal("REFERENCED - All costs", worksheet.intermediate_output_r192); end
   def test_intermediate_output_c194; assert_equal("Excluding international bunkers", worksheet.intermediate_output_c194); end
   def test_intermediate_output_f194; assert_in_epsilon(638.4346120076677, worksheet.intermediate_output_f194, 0.002); end
   def test_intermediate_output_h194; assert_equal(:ref, worksheet.intermediate_output_h194); end
   def test_intermediate_output_i194; assert_equal(:ref, worksheet.intermediate_output_i194); end
-  def test_intermediate_output_j194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_j194, 0.002); end
-  def test_intermediate_output_k194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_k194, 0.002); end
-  def test_intermediate_output_l194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_l194, 0.002); end
-  def test_intermediate_output_m194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_m194, 0.002); end
-  def test_intermediate_output_n194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_n194, 0.002); end
-  def test_intermediate_output_o194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_o194, 0.002); end
-  def test_intermediate_output_p194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_p194, 0.002); end
-  def test_intermediate_output_q194; assert_in_epsilon(26253.192042085295, worksheet.intermediate_output_q194, 0.002); end
+  def test_intermediate_output_j194; assert_in_epsilon(7251.761696539887, worksheet.intermediate_output_j194, 0.002); end
+  def test_intermediate_output_k194; assert_in_epsilon(7673.363150535255, worksheet.intermediate_output_k194, 0.002); end
+  def test_intermediate_output_l194; assert_in_epsilon(7872.980537826009, worksheet.intermediate_output_l194, 0.002); end
+  def test_intermediate_output_m194; assert_in_epsilon(7225.518934278225, worksheet.intermediate_output_m194, 0.002); end
+  def test_intermediate_output_n194; assert_in_epsilon(7129.989852284279, worksheet.intermediate_output_n194, 0.002); end
+  def test_intermediate_output_o194; assert_in_epsilon(7084.292607341204, worksheet.intermediate_output_o194, 0.002); end
+  def test_intermediate_output_p194; assert_in_epsilon(7087.102277288657, worksheet.intermediate_output_p194, 0.002); end
+  def test_intermediate_output_q194; assert_in_epsilon(7079.006223466436, worksheet.intermediate_output_q194, 0.002); end
   def test_intermediate_output_r194; assert_equal("REFERENCED - All costs", worksheet.intermediate_output_r194); end
   def test_intermediate_output_c197; assert_equal("Please note: emissions by sector need to account for bio-energy, which is accounted for seperately (in V). ", worksheet.intermediate_output_c197); end
   def test_intermediate_output_c198; assert_equal("Cumulative emissions are estimates based on a linear trajectory between the 5 year time periods", worksheet.intermediate_output_c198); end
@@ -3427,13 +3427,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h231; assert_equal(:ref, worksheet.intermediate_output_h231); end
   def test_intermediate_output_i231; assert_equal(:ref, worksheet.intermediate_output_i231); end
   def test_intermediate_output_j231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_j231, 0.002); end
-  def test_intermediate_output_k231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_k231, 0.002); end
-  def test_intermediate_output_l231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_l231, 0.002); end
-  def test_intermediate_output_m231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_m231, 0.002); end
-  def test_intermediate_output_n231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_n231, 0.002); end
-  def test_intermediate_output_o231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_o231, 0.002); end
-  def test_intermediate_output_p231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_p231, 0.002); end
-  def test_intermediate_output_q231; assert_in_delta(1.1368683772161603e-13, worksheet.intermediate_output_q231, 0.002); end
+  def test_intermediate_output_k231; assert_in_epsilon(552.0658994285716, worksheet.intermediate_output_k231, 0.002); end
+  def test_intermediate_output_l231; assert_in_epsilon(810.3197965714287, worksheet.intermediate_output_l231, 0.002); end
+  def test_intermediate_output_m231; assert_in_delta(0.0, (worksheet.intermediate_output_m231||0), 0.002); end
+  def test_intermediate_output_n231; assert_in_delta(0.0, (worksheet.intermediate_output_n231||0), 0.002); end
+  def test_intermediate_output_o231; assert_in_delta(0.0, (worksheet.intermediate_output_o231||0), 0.002); end
+  def test_intermediate_output_p231; assert_in_delta(9.094947017729282e-13, worksheet.intermediate_output_p231, 0.002); end
+  def test_intermediate_output_q231; assert_in_delta(9.094947017729282e-13, worksheet.intermediate_output_q231, 0.002); end
   def test_intermediate_output_c232; assert_equal("V", worksheet.intermediate_output_c232); end
   def test_intermediate_output_d232; assert_equal("Share of solid biomass to total solid hydrocarbon consumption", worksheet.intermediate_output_d232); end
   def test_intermediate_output_h232; assert_equal(:ref, worksheet.intermediate_output_h232); end
@@ -3441,9 +3441,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_j232; assert_in_delta(0.0, (worksheet.intermediate_output_j232||0), 0.002); end
   def test_intermediate_output_k232; assert_in_delta(0.0, (worksheet.intermediate_output_k232||0), 0.002); end
   def test_intermediate_output_l232; assert_in_delta(0.0, (worksheet.intermediate_output_l232||0), 0.002); end
-  def test_intermediate_output_m232; assert_in_delta(0.0, (worksheet.intermediate_output_m232||0), 0.002); end
-  def test_intermediate_output_n232; assert_in_delta(0.0, (worksheet.intermediate_output_n232||0), 0.002); end
-  def test_intermediate_output_o232; assert_in_delta(0.0, (worksheet.intermediate_output_o232||0), 0.002); end
+  def test_intermediate_output_m232; assert_equal(:div0, worksheet.intermediate_output_m232); end
+  def test_intermediate_output_n232; assert_equal(:div0, worksheet.intermediate_output_n232); end
+  def test_intermediate_output_o232; assert_equal(:div0, worksheet.intermediate_output_o232); end
   def test_intermediate_output_p232; assert_in_delta(0.0, (worksheet.intermediate_output_p232||0), 0.002); end
   def test_intermediate_output_q232; assert_in_delta(0.0, (worksheet.intermediate_output_q232||0), 0.002); end
   def test_intermediate_output_c233; assert_equal("I.b", worksheet.intermediate_output_c233); end
@@ -3451,13 +3451,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h233; assert_equal(:ref, worksheet.intermediate_output_h233); end
   def test_intermediate_output_i233; assert_equal(:ref, worksheet.intermediate_output_i233); end
   def test_intermediate_output_j233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_j233, 0.002); end
-  def test_intermediate_output_k233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_k233, 0.002); end
-  def test_intermediate_output_l233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_l233, 0.002); end
-  def test_intermediate_output_m233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_m233, 0.002); end
-  def test_intermediate_output_n233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_n233, 0.002); end
-  def test_intermediate_output_o233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_o233, 0.002); end
-  def test_intermediate_output_p233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_p233, 0.002); end
-  def test_intermediate_output_q233; assert_in_epsilon(519.0173280000001, worksheet.intermediate_output_q233, 0.002); end
+  def test_intermediate_output_k233; assert_in_epsilon(819.5658994285716, worksheet.intermediate_output_k233, 0.002); end
+  def test_intermediate_output_l233; assert_in_epsilon(1177.8197965714287, worksheet.intermediate_output_l233, 0.002); end
+  def test_intermediate_output_m233; assert_in_epsilon(1587.617773714286, worksheet.intermediate_output_m233, 0.002); end
+  def test_intermediate_output_n233; assert_in_epsilon(2297.6637737142864, worksheet.intermediate_output_n233, 0.002); end
+  def test_intermediate_output_o233; assert_in_epsilon(3759.081202285715, worksheet.intermediate_output_o233, 0.002); end
+  def test_intermediate_output_p233; assert_in_epsilon(5220.498630857143, worksheet.intermediate_output_p233, 0.002); end
+  def test_intermediate_output_q233; assert_in_epsilon(6873.515773714286, worksheet.intermediate_output_q233, 0.002); end
   def test_intermediate_output_c234; assert_equal("I.a", worksheet.intermediate_output_c234); end
   def test_intermediate_output_d234; assert_equal("Termelétricas a gás natural", worksheet.intermediate_output_d234); end
   def test_intermediate_output_h234; assert_equal(:ref, worksheet.intermediate_output_h234); end
@@ -3497,26 +3497,26 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_c238; assert_equal("Liquid Hydrocarbon consumption", worksheet.intermediate_output_c238); end
   def test_intermediate_output_h238; assert_equal(:ref, worksheet.intermediate_output_h238); end
   def test_intermediate_output_i238; assert_equal(:ref, worksheet.intermediate_output_i238); end
-  def test_intermediate_output_j238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_j238, 0.002); end
-  def test_intermediate_output_k238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_k238, 0.002); end
-  def test_intermediate_output_l238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_l238, 0.002); end
-  def test_intermediate_output_m238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_m238, 0.002); end
-  def test_intermediate_output_n238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_n238, 0.002); end
-  def test_intermediate_output_o238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_o238, 0.002); end
-  def test_intermediate_output_p238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_p238, 0.002); end
-  def test_intermediate_output_q238; assert_in_epsilon(-10706.106007915723, worksheet.intermediate_output_q238, 0.002); end
+  def test_intermediate_output_j238; assert_in_epsilon(-3393.6556057614966, worksheet.intermediate_output_j238, 0.002); end
+  def test_intermediate_output_k238; assert_in_epsilon(-4557.516345597679, worksheet.intermediate_output_k238, 0.002); end
+  def test_intermediate_output_l238; assert_in_epsilon(-4757.963979997601, worksheet.intermediate_output_l238, 0.002); end
+  def test_intermediate_output_m238; assert_in_epsilon(-4645.880914662485, worksheet.intermediate_output_m238, 0.002); end
+  def test_intermediate_output_n238; assert_in_epsilon(-4729.306531633245, worksheet.intermediate_output_n238, 0.002); end
+  def test_intermediate_output_o238; assert_in_epsilon(-4795.673830690215, worksheet.intermediate_output_o238, 0.002); end
+  def test_intermediate_output_p238; assert_in_epsilon(-4825.726360970062, worksheet.intermediate_output_p238, 0.002); end
+  def test_intermediate_output_q238; assert_in_epsilon(-4826.397421183808, worksheet.intermediate_output_q238, 0.002); end
   def test_intermediate_output_c239; assert_equal("V", worksheet.intermediate_output_c239); end
   def test_intermediate_output_d239; assert_equal("Share of Bioliquids to total liquid hydrocarbon consumption", worksheet.intermediate_output_d239); end
   def test_intermediate_output_h239; assert_equal(:ref, worksheet.intermediate_output_h239); end
   def test_intermediate_output_i239; assert_equal(:ref, worksheet.intermediate_output_i239); end
-  def test_intermediate_output_j239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_j239, 0.002); end
-  def test_intermediate_output_k239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_k239, 0.002); end
-  def test_intermediate_output_l239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_l239, 0.002); end
-  def test_intermediate_output_m239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_m239, 0.002); end
-  def test_intermediate_output_n239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_n239, 0.002); end
-  def test_intermediate_output_o239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_o239, 0.002); end
-  def test_intermediate_output_p239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_p239, 0.002); end
-  def test_intermediate_output_q239; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_q239, 0.002); end
+  def test_intermediate_output_j239; assert_in_delta(-0.011572087613524325, worksheet.intermediate_output_j239, 0.002); end
+  def test_intermediate_output_k239; assert_in_delta(-0.007638709379675823, worksheet.intermediate_output_k239, 0.002); end
+  def test_intermediate_output_l239; assert_in_delta(-0.007416256378280423, worksheet.intermediate_output_l239, 0.002); end
+  def test_intermediate_output_m239; assert_in_delta(-0.006529451922818465, worksheet.intermediate_output_m239, 0.002); end
+  def test_intermediate_output_n239; assert_in_delta(-0.005853904001230088, worksheet.intermediate_output_n239, 0.002); end
+  def test_intermediate_output_o239; assert_in_delta(-0.004692473900476979, worksheet.intermediate_output_o239, 0.002); end
+  def test_intermediate_output_p239; assert_in_delta(-0.003589561621843608, worksheet.intermediate_output_p239, 0.002); end
+  def test_intermediate_output_q239; assert_in_delta(-0.002515522229212137, worksheet.intermediate_output_q239, 0.002); end
   def test_intermediate_output_c240; assert_equal("XII", worksheet.intermediate_output_c240); end
   def test_intermediate_output_d240; assert_equal("Transport", worksheet.intermediate_output_d240); end
   def test_intermediate_output_h240; assert_equal(:ref, worksheet.intermediate_output_h240); end
@@ -3556,14 +3556,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_c244; assert_equal("Gaseous Hydrocarbon consumption", worksheet.intermediate_output_c244); end
   def test_intermediate_output_h244; assert_equal(:ref, worksheet.intermediate_output_h244); end
   def test_intermediate_output_i244; assert_equal(:ref, worksheet.intermediate_output_i244); end
-  def test_intermediate_output_j244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_j244, 0.002); end
-  def test_intermediate_output_k244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_k244, 0.002); end
-  def test_intermediate_output_l244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_l244, 0.002); end
-  def test_intermediate_output_m244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_m244, 0.002); end
-  def test_intermediate_output_n244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_n244, 0.002); end
-  def test_intermediate_output_o244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_o244, 0.002); end
-  def test_intermediate_output_p244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_p244, 0.002); end
-  def test_intermediate_output_q244; assert_in_epsilon(10706.106007915723, worksheet.intermediate_output_q244, 0.002); end
+  def test_intermediate_output_j244; assert_in_epsilon(3393.6556057614966, worksheet.intermediate_output_j244, 0.002); end
+  def test_intermediate_output_k244; assert_in_epsilon(4557.516345597679, worksheet.intermediate_output_k244, 0.002); end
+  def test_intermediate_output_l244; assert_in_epsilon(4757.963979997601, worksheet.intermediate_output_l244, 0.002); end
+  def test_intermediate_output_m244; assert_in_epsilon(4645.880914662485, worksheet.intermediate_output_m244, 0.002); end
+  def test_intermediate_output_n244; assert_in_epsilon(4729.306531633245, worksheet.intermediate_output_n244, 0.002); end
+  def test_intermediate_output_o244; assert_in_epsilon(4795.673830690215, worksheet.intermediate_output_o244, 0.002); end
+  def test_intermediate_output_p244; assert_in_epsilon(4825.726360970062, worksheet.intermediate_output_p244, 0.002); end
+  def test_intermediate_output_q244; assert_in_epsilon(4821.499871656044, worksheet.intermediate_output_q244, 0.002); end
   def test_intermediate_output_c245; assert_equal("V", worksheet.intermediate_output_c245); end
   def test_intermediate_output_d245; assert_equal("Share of Biogas to total gaseous hydrocarbon consumption", worksheet.intermediate_output_d245); end
   def test_intermediate_output_h245; assert_equal(:ref, worksheet.intermediate_output_h245); end
@@ -3581,13 +3581,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h246; assert_equal(:ref, worksheet.intermediate_output_h246); end
   def test_intermediate_output_i246; assert_equal(:ref, worksheet.intermediate_output_i246); end
   def test_intermediate_output_j246; assert_in_epsilon(529.2, worksheet.intermediate_output_j246, 0.002); end
-  def test_intermediate_output_k246; assert_in_epsilon(529.2, worksheet.intermediate_output_k246, 0.002); end
-  def test_intermediate_output_l246; assert_in_epsilon(529.2, worksheet.intermediate_output_l246, 0.002); end
-  def test_intermediate_output_m246; assert_in_epsilon(529.2, worksheet.intermediate_output_m246, 0.002); end
-  def test_intermediate_output_n246; assert_in_epsilon(529.2, worksheet.intermediate_output_n246, 0.002); end
-  def test_intermediate_output_o246; assert_in_epsilon(529.2, worksheet.intermediate_output_o246, 0.002); end
-  def test_intermediate_output_p246; assert_in_epsilon(529.2, worksheet.intermediate_output_p246, 0.002); end
-  def test_intermediate_output_q246; assert_in_epsilon(529.2, worksheet.intermediate_output_q246, 0.002); end
+  def test_intermediate_output_k246; assert_in_epsilon(617.4, worksheet.intermediate_output_k246, 0.002); end
+  def test_intermediate_output_l246; assert_in_epsilon(705.6, worksheet.intermediate_output_l246, 0.002); end
+  def test_intermediate_output_m246; assert_in_epsilon(793.8000000000001, worksheet.intermediate_output_m246, 0.002); end
+  def test_intermediate_output_n246; assert_in_epsilon(873.0, worksheet.intermediate_output_n246, 0.002); end
+  def test_intermediate_output_o246; assert_in_epsilon(960.3000000000001, worksheet.intermediate_output_o246, 0.002); end
+  def test_intermediate_output_p246; assert_in_epsilon(1047.6000000000001, worksheet.intermediate_output_p246, 0.002); end
+  def test_intermediate_output_q246; assert_in_epsilon(1134.9, worksheet.intermediate_output_q246, 0.002); end
   def test_intermediate_output_c247; assert_equal("IX.c", worksheet.intermediate_output_c247); end
   def test_intermediate_output_d247; assert_equal(:na, worksheet.intermediate_output_d247); end
   def test_intermediate_output_h247; assert_equal(:ref, worksheet.intermediate_output_h247); end
@@ -3605,13 +3605,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h248; assert_equal(:ref, worksheet.intermediate_output_h248); end
   def test_intermediate_output_i248; assert_equal(:ref, worksheet.intermediate_output_i248); end
   def test_intermediate_output_j248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_j248, 0.002); end
-  def test_intermediate_output_k248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_k248, 0.002); end
-  def test_intermediate_output_l248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_l248, 0.002); end
-  def test_intermediate_output_m248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_m248, 0.002); end
-  def test_intermediate_output_n248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_n248, 0.002); end
-  def test_intermediate_output_o248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_o248, 0.002); end
-  def test_intermediate_output_p248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_p248, 0.002); end
-  def test_intermediate_output_q248; assert_in_epsilon(347.07891891891893, worksheet.intermediate_output_q248, 0.002); end
+  def test_intermediate_output_k248; assert_in_epsilon(354.82621621621627, worksheet.intermediate_output_k248, 0.002); end
+  def test_intermediate_output_l248; assert_in_epsilon(362.5735135135135, worksheet.intermediate_output_l248, 0.002); end
+  def test_intermediate_output_m248; assert_in_epsilon(370.3208108108108, worksheet.intermediate_output_m248, 0.002); end
+  def test_intermediate_output_n248; assert_in_epsilon(378.0681081081081, worksheet.intermediate_output_n248, 0.002); end
+  def test_intermediate_output_o248; assert_in_epsilon(377.94162162162166, worksheet.intermediate_output_o248, 0.002); end
+  def test_intermediate_output_p248; assert_in_epsilon(377.49891891891895, worksheet.intermediate_output_p248, 0.002); end
+  def test_intermediate_output_q248; assert_in_epsilon(376.74, worksheet.intermediate_output_q248, 0.002); end
   def test_intermediate_output_c249; assert_equal("I.a", worksheet.intermediate_output_c249); end
   def test_intermediate_output_d249; assert_equal("Termelétricas a gás natural", worksheet.intermediate_output_d249); end
   def test_intermediate_output_h249; assert_equal(:ref, worksheet.intermediate_output_h249); end
@@ -3656,22 +3656,22 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_j253; assert_in_delta(0.0, (worksheet.intermediate_output_j253||0), 0.002); end
   def test_intermediate_output_k253; assert_in_delta(0.0, (worksheet.intermediate_output_k253||0), 0.002); end
   def test_intermediate_output_l253; assert_in_delta(0.0, (worksheet.intermediate_output_l253||0), 0.002); end
-  def test_intermediate_output_m253; assert_in_delta(0.0, (worksheet.intermediate_output_m253||0), 0.002); end
-  def test_intermediate_output_n253; assert_in_delta(0.0, (worksheet.intermediate_output_n253||0), 0.002); end
-  def test_intermediate_output_o253; assert_in_delta(0.0, (worksheet.intermediate_output_o253||0), 0.002); end
+  def test_intermediate_output_m253; assert_equal(:div0, worksheet.intermediate_output_m253); end
+  def test_intermediate_output_n253; assert_equal(:div0, worksheet.intermediate_output_n253); end
+  def test_intermediate_output_o253; assert_equal(:div0, worksheet.intermediate_output_o253); end
   def test_intermediate_output_p253; assert_in_delta(0.0, (worksheet.intermediate_output_p253||0), 0.002); end
   def test_intermediate_output_q253; assert_in_delta(0.0, (worksheet.intermediate_output_q253||0), 0.002); end
   def test_intermediate_output_d254; assert_equal("Liquid", worksheet.intermediate_output_d254); end
   def test_intermediate_output_h254; assert_equal(:ref, worksheet.intermediate_output_h254); end
   def test_intermediate_output_i254; assert_equal(:ref, worksheet.intermediate_output_i254); end
-  def test_intermediate_output_j254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_j254, 0.002); end
-  def test_intermediate_output_k254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_k254, 0.002); end
-  def test_intermediate_output_l254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_l254, 0.002); end
-  def test_intermediate_output_m254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_m254, 0.002); end
-  def test_intermediate_output_n254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_n254, 0.002); end
-  def test_intermediate_output_o254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_o254, 0.002); end
-  def test_intermediate_output_p254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_p254, 0.002); end
-  def test_intermediate_output_q254; assert_in_delta(-0.003668157215234361, worksheet.intermediate_output_q254, 0.002); end
+  def test_intermediate_output_j254; assert_in_delta(-0.011572087613524325, worksheet.intermediate_output_j254, 0.002); end
+  def test_intermediate_output_k254; assert_in_delta(-0.007638709379675823, worksheet.intermediate_output_k254, 0.002); end
+  def test_intermediate_output_l254; assert_in_delta(-0.007416256378280423, worksheet.intermediate_output_l254, 0.002); end
+  def test_intermediate_output_m254; assert_in_delta(-0.006529451922818465, worksheet.intermediate_output_m254, 0.002); end
+  def test_intermediate_output_n254; assert_in_delta(-0.005853904001230088, worksheet.intermediate_output_n254, 0.002); end
+  def test_intermediate_output_o254; assert_in_delta(-0.004692473900476979, worksheet.intermediate_output_o254, 0.002); end
+  def test_intermediate_output_p254; assert_in_delta(-0.003589561621843608, worksheet.intermediate_output_p254, 0.002); end
+  def test_intermediate_output_q254; assert_in_delta(-0.002515522229212137, worksheet.intermediate_output_q254, 0.002); end
   def test_intermediate_output_d255; assert_equal("Gas", worksheet.intermediate_output_d255); end
   def test_intermediate_output_h255; assert_equal(:ref, worksheet.intermediate_output_h255); end
   def test_intermediate_output_i255; assert_equal(:ref, worksheet.intermediate_output_i255); end
@@ -3734,9 +3734,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_j264; assert_in_delta(0.0, (worksheet.intermediate_output_j264||0), 0.002); end
   def test_intermediate_output_k264; assert_in_delta(0.0, (worksheet.intermediate_output_k264||0), 0.002); end
   def test_intermediate_output_l264; assert_in_delta(0.0, (worksheet.intermediate_output_l264||0), 0.002); end
-  def test_intermediate_output_m264; assert_in_delta(0.0, (worksheet.intermediate_output_m264||0), 0.002); end
-  def test_intermediate_output_n264; assert_in_delta(0.0, (worksheet.intermediate_output_n264||0), 0.002); end
-  def test_intermediate_output_o264; assert_in_delta(0.0, (worksheet.intermediate_output_o264||0), 0.002); end
+  def test_intermediate_output_m264; assert_equal(:div0, worksheet.intermediate_output_m264); end
+  def test_intermediate_output_n264; assert_equal(:div0, worksheet.intermediate_output_n264); end
+  def test_intermediate_output_o264; assert_equal(:div0, worksheet.intermediate_output_o264); end
   def test_intermediate_output_p264; assert_in_delta(0.0, (worksheet.intermediate_output_p264||0), 0.002); end
   def test_intermediate_output_q264; assert_in_delta(0.0, (worksheet.intermediate_output_q264||0), 0.002); end
   def test_intermediate_output_c265; assert_equal("Bioenergy in Solid HC CCS Power", worksheet.intermediate_output_c265); end
@@ -3745,9 +3745,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_j265; assert_in_delta(0.0, (worksheet.intermediate_output_j265||0), 0.002); end
   def test_intermediate_output_k265; assert_in_delta(0.0, (worksheet.intermediate_output_k265||0), 0.002); end
   def test_intermediate_output_l265; assert_in_delta(0.0, (worksheet.intermediate_output_l265||0), 0.002); end
-  def test_intermediate_output_m265; assert_in_delta(0.0, (worksheet.intermediate_output_m265||0), 0.002); end
-  def test_intermediate_output_n265; assert_in_delta(0.0, (worksheet.intermediate_output_n265||0), 0.002); end
-  def test_intermediate_output_o265; assert_in_delta(0.0, (worksheet.intermediate_output_o265||0), 0.002); end
+  def test_intermediate_output_m265; assert_equal(:div0, worksheet.intermediate_output_m265); end
+  def test_intermediate_output_n265; assert_equal(:div0, worksheet.intermediate_output_n265); end
+  def test_intermediate_output_o265; assert_equal(:div0, worksheet.intermediate_output_o265); end
   def test_intermediate_output_p265; assert_in_delta(0.0, (worksheet.intermediate_output_p265||0), 0.002); end
   def test_intermediate_output_q265; assert_in_delta(0.0, (worksheet.intermediate_output_q265||0), 0.002); end
   def test_intermediate_output_c266; assert_equal("Bioenergy in Gas CCS Power", worksheet.intermediate_output_c266); end
@@ -3802,9 +3802,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_j271; assert_in_delta(0.0, (worksheet.intermediate_output_j271||0), 0.002); end
   def test_intermediate_output_k271; assert_in_delta(0.0, (worksheet.intermediate_output_k271||0), 0.002); end
   def test_intermediate_output_l271; assert_in_delta(0.0, (worksheet.intermediate_output_l271||0), 0.002); end
-  def test_intermediate_output_m271; assert_in_delta(0.0, (worksheet.intermediate_output_m271||0), 0.002); end
-  def test_intermediate_output_n271; assert_in_delta(0.0, (worksheet.intermediate_output_n271||0), 0.002); end
-  def test_intermediate_output_o271; assert_in_delta(0.0, (worksheet.intermediate_output_o271||0), 0.002); end
+  def test_intermediate_output_m271; assert_equal(:div0, worksheet.intermediate_output_m271); end
+  def test_intermediate_output_n271; assert_equal(:div0, worksheet.intermediate_output_n271); end
+  def test_intermediate_output_o271; assert_equal(:div0, worksheet.intermediate_output_o271); end
   def test_intermediate_output_p271; assert_in_delta(0.0, (worksheet.intermediate_output_p271||0), 0.002); end
   def test_intermediate_output_q271; assert_in_delta(0.0, (worksheet.intermediate_output_q271||0), 0.002); end
   def test_intermediate_output_c272; assert_equal("X3", worksheet.intermediate_output_c272); end
@@ -3863,13 +3863,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h283; assert_equal(:ref, worksheet.intermediate_output_h283); end
   def test_intermediate_output_i283; assert_equal(:ref, worksheet.intermediate_output_i283); end
   def test_intermediate_output_j283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_j283, 0.002); end
-  def test_intermediate_output_k283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_k283, 0.002); end
-  def test_intermediate_output_l283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_l283, 0.002); end
-  def test_intermediate_output_m283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_m283, 0.002); end
-  def test_intermediate_output_n283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_n283, 0.002); end
-  def test_intermediate_output_o283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_o283, 0.002); end
-  def test_intermediate_output_p283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_p283, 0.002); end
-  def test_intermediate_output_q283; assert_in_epsilon(46.27054206000001, worksheet.intermediate_output_q283, 0.002); end
+  def test_intermediate_output_k283; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_k283, 0.002); end
+  def test_intermediate_output_l283; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_l283, 0.002); end
+  def test_intermediate_output_m283; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_m283, 0.002); end
+  def test_intermediate_output_n283; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_n283, 0.002); end
+  def test_intermediate_output_o283; assert_in_epsilon(79.35386436000002, worksheet.intermediate_output_o283, 0.002); end
+  def test_intermediate_output_p283; assert_in_epsilon(64.20700530000002, worksheet.intermediate_output_p283, 0.002); end
+  def test_intermediate_output_q283; assert_in_epsilon(64.20700530000002, worksheet.intermediate_output_q283, 0.002); end
   def test_intermediate_output_c284; assert_equal("R.01", worksheet.intermediate_output_c284); end
   def test_intermediate_output_d284; assert_equal(:na, worksheet.intermediate_output_d284); end
   def test_intermediate_output_e284; assert_in_delta(0.0, (worksheet.intermediate_output_e284||0), 0.002); end
@@ -3967,14 +3967,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_g290; assert_in_delta(0.0, (worksheet.intermediate_output_g290||0), 0.002); end
   def test_intermediate_output_h290; assert_equal(:ref, worksheet.intermediate_output_h290); end
   def test_intermediate_output_i290; assert_equal(:ref, worksheet.intermediate_output_i290); end
-  def test_intermediate_output_j290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_j290, 0.002); end
-  def test_intermediate_output_k290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_k290, 0.002); end
-  def test_intermediate_output_l290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_l290, 0.002); end
-  def test_intermediate_output_m290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_m290, 0.002); end
-  def test_intermediate_output_n290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_n290, 0.002); end
-  def test_intermediate_output_o290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_o290, 0.002); end
-  def test_intermediate_output_p290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_p290, 0.002); end
-  def test_intermediate_output_q290; assert_in_epsilon(25023.385877770055, worksheet.intermediate_output_q290, 0.002); end
+  def test_intermediate_output_j290; assert_in_epsilon(4880.760562892715, worksheet.intermediate_output_j290, 0.002); end
+  def test_intermediate_output_k290; assert_in_epsilon(7647.02966436062, worksheet.intermediate_output_k290, 0.002); end
+  def test_intermediate_output_l290; assert_in_epsilon(7922.694891114956, worksheet.intermediate_output_l290, 0.002); end
+  def test_intermediate_output_m290; assert_in_epsilon(7485.990829304501, worksheet.intermediate_output_m290, 0.002); end
+  def test_intermediate_output_n290; assert_in_epsilon(7344.559930019617, worksheet.intermediate_output_n290, 0.002); end
+  def test_intermediate_output_o290; assert_in_epsilon(6790.4296779802235, worksheet.intermediate_output_o290, 0.002); end
+  def test_intermediate_output_p290; assert_in_epsilon(6112.44826876868, worksheet.intermediate_output_p290, 0.002); end
+  def test_intermediate_output_q290; assert_in_epsilon(5270.3165668316415, worksheet.intermediate_output_q290, 0.002); end
   def test_intermediate_output_c291; assert_equal("R.07", worksheet.intermediate_output_c291); end
   def test_intermediate_output_d291; assert_equal(:na, worksheet.intermediate_output_d291); end
   def test_intermediate_output_e291; assert_in_delta(0.0, (worksheet.intermediate_output_e291||0), 0.002); end
@@ -4010,14 +4010,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_g293; assert_in_delta(0.0, (worksheet.intermediate_output_g293||0), 0.002); end
   def test_intermediate_output_h293; assert_equal(:ref, worksheet.intermediate_output_h293); end
   def test_intermediate_output_i293; assert_equal(:ref, worksheet.intermediate_output_i293); end
-  def test_intermediate_output_j293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_j293, 0.002); end
-  def test_intermediate_output_k293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_k293, 0.002); end
-  def test_intermediate_output_l293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_l293, 0.002); end
-  def test_intermediate_output_m293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_m293, 0.002); end
-  def test_intermediate_output_n293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_n293, 0.002); end
-  def test_intermediate_output_o293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_o293, 0.002); end
-  def test_intermediate_output_p293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_p293, 0.002); end
-  def test_intermediate_output_q293; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_q293, 0.002); end
+  def test_intermediate_output_j293; assert_in_epsilon(155724.69047479163, worksheet.intermediate_output_j293, 0.002); end
+  def test_intermediate_output_k293; assert_in_epsilon(137132.0342276676, worksheet.intermediate_output_k293, 0.002); end
+  def test_intermediate_output_l293; assert_in_epsilon(131805.5525174163, worksheet.intermediate_output_l293, 0.002); end
+  def test_intermediate_output_m293; assert_in_epsilon(77702.08224001856, worksheet.intermediate_output_m293, 0.002); end
+  def test_intermediate_output_n293; assert_in_epsilon(66827.80441002837, worksheet.intermediate_output_n293, 0.002); end
+  def test_intermediate_output_o293; assert_in_epsilon(59113.91831486807, worksheet.intermediate_output_o293, 0.002); end
+  def test_intermediate_output_p293; assert_in_epsilon(53490.92938859744, worksheet.intermediate_output_p293, 0.002); end
+  def test_intermediate_output_q293; assert_in_epsilon(49277.2581751833, worksheet.intermediate_output_q293, 0.002); end
   def test_intermediate_output_d294; assert_equal("Oil", worksheet.intermediate_output_d294); end
   def test_intermediate_output_e294; assert_in_delta(0.0, (worksheet.intermediate_output_e294||0), 0.002); end
   def test_intermediate_output_f294; assert_in_epsilon(906.622998738918, worksheet.intermediate_output_f294, 0.002); end
@@ -4025,13 +4025,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h294; assert_equal(:ref, worksheet.intermediate_output_h294); end
   def test_intermediate_output_i294; assert_equal(:ref, worksheet.intermediate_output_i294); end
   def test_intermediate_output_j294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_j294, 0.002); end
-  def test_intermediate_output_k294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_k294, 0.002); end
-  def test_intermediate_output_l294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_l294, 0.002); end
-  def test_intermediate_output_m294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_m294, 0.002); end
-  def test_intermediate_output_n294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_n294, 0.002); end
-  def test_intermediate_output_o294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_o294, 0.002); end
-  def test_intermediate_output_p294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_p294, 0.002); end
-  def test_intermediate_output_q294; assert_in_epsilon(2338.7459545844686, worksheet.intermediate_output_q294, 0.002); end
+  def test_intermediate_output_k294; assert_in_epsilon(1967.1772348539132, worksheet.intermediate_output_k294, 0.002); end
+  def test_intermediate_output_l294; assert_in_epsilon(2088.8614452770853, worksheet.intermediate_output_l294, 0.002); end
+  def test_intermediate_output_m294; assert_in_epsilon(2946.8014250373303, worksheet.intermediate_output_m294, 0.002); end
+  def test_intermediate_output_n294; assert_in_epsilon(3588.452956289704, worksheet.intermediate_output_n294, 0.002); end
+  def test_intermediate_output_o294; assert_in_epsilon(4916.276302984942, worksheet.intermediate_output_o294, 0.002); end
+  def test_intermediate_output_p294; assert_in_epsilon(6244.168148338176, worksheet.intermediate_output_p294, 0.002); end
+  def test_intermediate_output_q294; assert_in_epsilon(7699.216700423975, worksheet.intermediate_output_q294, 0.002); end
   def test_intermediate_output_d295; assert_equal("Natural gas", worksheet.intermediate_output_d295); end
   def test_intermediate_output_e295; assert_in_delta(0.0, (worksheet.intermediate_output_e295||0), 0.002); end
   def test_intermediate_output_f295; assert_in_epsilon(1048.9298032969484, worksheet.intermediate_output_f295, 0.002); end
@@ -4039,13 +4039,13 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h295; assert_equal(:ref, worksheet.intermediate_output_h295); end
   def test_intermediate_output_i295; assert_equal(:ref, worksheet.intermediate_output_i295); end
   def test_intermediate_output_j295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_j295, 0.002); end
-  def test_intermediate_output_k295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_k295, 0.002); end
-  def test_intermediate_output_l295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_l295, 0.002); end
-  def test_intermediate_output_m295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_m295, 0.002); end
-  def test_intermediate_output_n295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_n295, 0.002); end
-  def test_intermediate_output_o295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_o295, 0.002); end
-  def test_intermediate_output_p295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_p295, 0.002); end
-  def test_intermediate_output_q295; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_q295, 0.002); end
+  def test_intermediate_output_k295; assert_in_epsilon(154.77160721937366, worksheet.intermediate_output_k295, 0.002); end
+  def test_intermediate_output_l295; assert_in_epsilon(180.56687508926927, worksheet.intermediate_output_l295, 0.002); end
+  def test_intermediate_output_m295; assert_in_epsilon(495.2995231470762, worksheet.intermediate_output_m295, 0.002); end
+  def test_intermediate_output_n295; assert_in_epsilon(678.4577908465552, worksheet.intermediate_output_n295, 0.002); end
+  def test_intermediate_output_o295; assert_in_epsilon(1055.4343312438957, worksheet.intermediate_output_o295, 0.002); end
+  def test_intermediate_output_p295; assert_in_epsilon(1432.4108716412359, worksheet.intermediate_output_p295, 0.002); end
+  def test_intermediate_output_q295; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_q295, 0.002); end
   def test_intermediate_output_d296; assert_equal("Total Primary Supply", worksheet.intermediate_output_d296); end
   def test_intermediate_output_e296; assert_in_delta(0.0, (worksheet.intermediate_output_e296||0), 0.002); end
   def test_intermediate_output_f296; assert_in_epsilon(2710.526095457397, worksheet.intermediate_output_f296, 0.002); end
@@ -4065,14 +4065,14 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_g297; assert_in_delta(0.0, (worksheet.intermediate_output_g297||0), 0.002); end
   def test_intermediate_output_h297; assert_equal(:ref, worksheet.intermediate_output_h297); end
   def test_intermediate_output_i297; assert_equal(:ref, worksheet.intermediate_output_i297); end
-  def test_intermediate_output_j297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_j297, 0.002); end
-  def test_intermediate_output_k297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_k297, 0.002); end
-  def test_intermediate_output_l297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_l297, 0.002); end
-  def test_intermediate_output_m297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_m297, 0.002); end
-  def test_intermediate_output_n297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_n297, 0.002); end
-  def test_intermediate_output_o297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_o297, 0.002); end
-  def test_intermediate_output_p297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_p297, 0.002); end
-  def test_intermediate_output_q297; assert_in_epsilon(25108.928099830056, worksheet.intermediate_output_q297, 0.002); end
+  def test_intermediate_output_j297; assert_in_epsilon(4966.302784952714, worksheet.intermediate_output_j297, 0.002); end
+  def test_intermediate_output_k297; assert_in_epsilon(7761.197071577763, worksheet.intermediate_output_k297, 0.002); end
+  def test_intermediate_output_l297; assert_in_epsilon(8037.335036189242, worksheet.intermediate_output_l297, 0.002); end
+  def test_intermediate_output_m297; assert_in_epsilon(7595.67974973593, worksheet.intermediate_output_m297, 0.002); end
+  def test_intermediate_output_n297; assert_in_epsilon(7451.598700808189, worksheet.intermediate_output_n297, 0.002); end
+  def test_intermediate_output_o297; assert_in_epsilon(6892.287116625938, worksheet.intermediate_output_o297, 0.002); end
+  def test_intermediate_output_p297; assert_in_epsilon(6193.977516211537, worksheet.intermediate_output_p297, 0.002); end
+  def test_intermediate_output_q297; assert_in_epsilon(5346.664482131641, worksheet.intermediate_output_q297, 0.002); end
   def test_intermediate_output_p298; assert_equal("% imported", worksheet.intermediate_output_p298); end
   def test_intermediate_output_q298; assert_equal(:na, worksheet.intermediate_output_q298); end
   def test_intermediate_output_d299; assert_equal("Primary demand", worksheet.intermediate_output_d299); end
@@ -4190,25 +4190,25 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_h313; assert_equal(:ref, worksheet.intermediate_output_h313); end
   def test_intermediate_output_i313; assert_equal(:ref, worksheet.intermediate_output_i313); end
   def test_intermediate_output_j313; assert_in_epsilon(964.5003243243243, worksheet.intermediate_output_j313, 0.002); end
-  def test_intermediate_output_k313; assert_in_epsilon(986.4311351351353, worksheet.intermediate_output_k313, 0.002); end
-  def test_intermediate_output_l313; assert_in_epsilon(1008.361945945946, worksheet.intermediate_output_l313, 0.002); end
-  def test_intermediate_output_m313; assert_in_epsilon(1030.292756756757, worksheet.intermediate_output_m313, 0.002); end
-  def test_intermediate_output_n313; assert_in_epsilon(1052.2235675675674, worksheet.intermediate_output_n313, 0.002); end
-  def test_intermediate_output_o313; assert_in_epsilon(1051.8655135135136, worksheet.intermediate_output_o313, 0.002); end
-  def test_intermediate_output_p313; assert_in_epsilon(1050.6123243243244, worksheet.intermediate_output_p313, 0.002); end
-  def test_intermediate_output_q313; assert_in_epsilon(1048.4640000000002, worksheet.intermediate_output_q313, 0.002); end
+  def test_intermediate_output_k313; assert_in_epsilon(983.4311351351353, worksheet.intermediate_output_k313, 0.002); end
+  def test_intermediate_output_l313; assert_in_epsilon(1002.361945945946, worksheet.intermediate_output_l313, 0.002); end
+  def test_intermediate_output_m313; assert_in_epsilon(1021.292756756757, worksheet.intermediate_output_m313, 0.002); end
+  def test_intermediate_output_n313; assert_in_epsilon(1040.2235675675674, worksheet.intermediate_output_n313, 0.002); end
+  def test_intermediate_output_o313; assert_in_epsilon(1036.8655135135136, worksheet.intermediate_output_o313, 0.002); end
+  def test_intermediate_output_p313; assert_in_epsilon(1032.6123243243244, worksheet.intermediate_output_p313, 0.002); end
+  def test_intermediate_output_q313; assert_in_epsilon(1027.4640000000002, worksheet.intermediate_output_q313, 0.002); end
   def test_intermediate_output_c314; assert_equal("XII.a", worksheet.intermediate_output_c314); end
   def test_intermediate_output_d314; assert_equal("Setor energético", worksheet.intermediate_output_d314); end
   def test_intermediate_output_h314; assert_equal(:ref, worksheet.intermediate_output_h314); end
   def test_intermediate_output_i314; assert_equal(:ref, worksheet.intermediate_output_i314); end
-  def test_intermediate_output_j314; assert_in_epsilon(16727.7469363186, worksheet.intermediate_output_j314, 0.002); end
-  def test_intermediate_output_k314; assert_in_epsilon(31543.51152020478, worksheet.intermediate_output_k314, 0.002); end
-  def test_intermediate_output_l314; assert_in_epsilon(35479.62975159372, worksheet.intermediate_output_l314, 0.002); end
-  def test_intermediate_output_m314; assert_in_epsilon(36952.01222823837, worksheet.intermediate_output_m314, 0.002); end
-  def test_intermediate_output_n314; assert_in_epsilon(37370.42300873049, worksheet.intermediate_output_n314, 0.002); end
-  def test_intermediate_output_o314; assert_in_epsilon(36028.02320222578, worksheet.intermediate_output_o314, 0.002); end
-  def test_intermediate_output_p314; assert_in_epsilon(32232.587818166525, worksheet.intermediate_output_p314, 0.002); end
-  def test_intermediate_output_q314; assert_in_epsilon(26221.082572558982, worksheet.intermediate_output_q314, 0.002); end
+  def test_intermediate_output_j314; assert_in_epsilon(2210.3375285551438, worksheet.intermediate_output_j314, 0.002); end
+  def test_intermediate_output_k314; assert_in_epsilon(2202.133604050759, worksheet.intermediate_output_k314, 0.002); end
+  def test_intermediate_output_l314; assert_in_epsilon(2203.9136398619416, worksheet.intermediate_output_l314, 0.002); end
+  def test_intermediate_output_m314; assert_in_epsilon(1615.822621053255, worksheet.intermediate_output_m314, 0.002); end
+  def test_intermediate_output_n314; assert_in_epsilon(1498.0712140060818, worksheet.intermediate_output_n314, 0.002); end
+  def test_intermediate_output_o314; assert_in_epsilon(1388.6109527407912, worksheet.intermediate_output_o314, 0.002); end
+  def test_intermediate_output_p314; assert_in_epsilon(1264.5892687331375, worksheet.intermediate_output_p314, 0.002); end
+  def test_intermediate_output_q314; assert_in_epsilon(1121.4244885097187, worksheet.intermediate_output_q314, 0.002); end
   def test_intermediate_output_c315; assert_equal("XII.b", worksheet.intermediate_output_c315); end
   def test_intermediate_output_d315; assert_equal(:na, worksheet.intermediate_output_d315); end
   def test_intermediate_output_h315; assert_equal(:ref, worksheet.intermediate_output_h315); end
@@ -4346,7 +4346,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_q369; assert_equal("Delta", worksheet.intermediate_output_q369); end
   def test_intermediate_output_r369; assert_equal("Problem", worksheet.intermediate_output_r369); end
   def test_intermediate_output_h370; assert_equal("Coal reserves", worksheet.intermediate_output_h370); end
-  def test_intermediate_output_i370; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_i370, 0.002); end
+  def test_intermediate_output_i370; assert_in_epsilon(49265.1172651833, worksheet.intermediate_output_i370, 0.002); end
   def test_intermediate_output_j370; assert_equal("Coal", worksheet.intermediate_output_j370); end
   def test_intermediate_output_n370; assert_equal("Agricultural 'waste'", worksheet.intermediate_output_n370); end
   def test_intermediate_output_o370; assert_equal(:ref, worksheet.intermediate_output_o370); end
@@ -4357,7 +4357,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_t370; assert_in_delta(0.0, (worksheet.intermediate_output_t370||0), 0.002); end
   def test_intermediate_output_u370; assert_in_epsilon(129.49638743214874, worksheet.intermediate_output_u370, 0.002); end
   def test_intermediate_output_h371; assert_equal("Coal imports", worksheet.intermediate_output_h371); end
-  def test_intermediate_output_i371; assert_in_epsilon(39.27168, worksheet.intermediate_output_i371, 0.002); end
+  def test_intermediate_output_i371; assert_in_epsilon(12.140910000000002, worksheet.intermediate_output_i371, 0.002); end
   def test_intermediate_output_j371; assert_equal("Coal", worksheet.intermediate_output_j371); end
   def test_intermediate_output_n371; assert_equal("Agriculture", worksheet.intermediate_output_n371); end
   def test_intermediate_output_o371; assert_in_delta(0.0, (worksheet.intermediate_output_o371||0), 0.002); end
@@ -4368,7 +4368,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_t371; assert_in_epsilon(11.394396627131044, worksheet.intermediate_output_t371, 0.002); end
   def test_intermediate_output_u371; assert_in_epsilon(-11.394396627131044, worksheet.intermediate_output_u371, 0.002); end
   def test_intermediate_output_h372; assert_equal("Oil reserves", worksheet.intermediate_output_h372); end
-  def test_intermediate_output_i372; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_i372, 0.002); end
+  def test_intermediate_output_i372; assert_in_epsilon(911.0054978564398, worksheet.intermediate_output_i372, 0.002); end
   def test_intermediate_output_j372; assert_equal("Oil", worksheet.intermediate_output_j372); end
   def test_intermediate_output_n372; assert_equal("Bio-conversion", worksheet.intermediate_output_n372); end
   def test_intermediate_output_o372; assert_equal(:ref, worksheet.intermediate_output_o372); end
@@ -4390,7 +4390,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_t373; assert_in_delta(0.0, (worksheet.intermediate_output_t373||0), 0.002); end
   def test_intermediate_output_u373; assert_in_epsilon(70.0, worksheet.intermediate_output_u373, 0.002); end
   def test_intermediate_output_h374; assert_equal("Gas reserves", worksheet.intermediate_output_h374); end
-  def test_intermediate_output_i374; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_i374, 0.002); end
+  def test_intermediate_output_i374; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_i374, 0.002); end
   def test_intermediate_output_j374; assert_equal("Ngas", worksheet.intermediate_output_j374); end
   def test_intermediate_output_n374; assert_equal("Biomass imports", worksheet.intermediate_output_n374); end
   def test_intermediate_output_o374; assert_equal(:ref, worksheet.intermediate_output_o374); end
@@ -4415,8 +4415,8 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_i376; assert_equal(:ref, worksheet.intermediate_output_i376); end
   def test_intermediate_output_j376; assert_equal("Bio-conversion", worksheet.intermediate_output_j376); end
   def test_intermediate_output_n376; assert_equal("Coal", worksheet.intermediate_output_n376); end
-  def test_intermediate_output_o376; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_o376, 0.002); end
-  def test_intermediate_output_p376; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_p376, 0.002); end
+  def test_intermediate_output_o376; assert_in_epsilon(49277.2581751833, worksheet.intermediate_output_o376, 0.002); end
+  def test_intermediate_output_p376; assert_in_epsilon(49277.2581751833, worksheet.intermediate_output_p376, 0.002); end
   def test_intermediate_output_q376; assert_in_delta(0.0, (worksheet.intermediate_output_q376||0), 0.002); end
   def test_intermediate_output_r376; assert_equal("ok", worksheet.intermediate_output_r376); end
   def test_intermediate_output_s376; assert_in_epsilon(86.55506943339304, worksheet.intermediate_output_s376, 0.002); end
@@ -4426,9 +4426,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_i377; assert_equal(:ref, worksheet.intermediate_output_i377); end
   def test_intermediate_output_j377; assert_equal("Bio-conversion", worksheet.intermediate_output_j377); end
   def test_intermediate_output_n377; assert_equal("Coal imports", worksheet.intermediate_output_n377); end
-  def test_intermediate_output_o377; assert_in_epsilon(39.27168, worksheet.intermediate_output_o377, 0.002); end
+  def test_intermediate_output_o377; assert_in_epsilon(12.140910000000002, worksheet.intermediate_output_o377, 0.002); end
   def test_intermediate_output_p377; assert_in_delta(0.0, (worksheet.intermediate_output_p377||0), 0.002); end
-  def test_intermediate_output_q377; assert_in_epsilon(39.27168, worksheet.intermediate_output_q377, 0.002); end
+  def test_intermediate_output_q377; assert_in_epsilon(12.140910000000002, worksheet.intermediate_output_q377, 0.002); end
   def test_intermediate_output_r377; assert_equal("ok", worksheet.intermediate_output_r377); end
   def test_intermediate_output_s377; assert_in_epsilon(22.59006943339304, worksheet.intermediate_output_s377, 0.002); end
   def test_intermediate_output_t377; assert_in_delta(0.0, (worksheet.intermediate_output_t377||0), 0.002); end
@@ -4437,9 +4437,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_i378; assert_equal(:ref, worksheet.intermediate_output_i378); end
   def test_intermediate_output_j378; assert_equal("Bio-conversion", worksheet.intermediate_output_j378); end
   def test_intermediate_output_n378; assert_equal("Coal reserves", worksheet.intermediate_output_n378); end
-  def test_intermediate_output_o378; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_o378, 0.002); end
+  def test_intermediate_output_o378; assert_in_epsilon(49265.1172651833, worksheet.intermediate_output_o378, 0.002); end
   def test_intermediate_output_p378; assert_in_delta(0.0, (worksheet.intermediate_output_p378||0), 0.002); end
-  def test_intermediate_output_q378; assert_in_epsilon(1488671.2822916666, worksheet.intermediate_output_q378, 0.002); end
+  def test_intermediate_output_q378; assert_in_epsilon(49265.1172651833, worksheet.intermediate_output_q378, 0.002); end
   def test_intermediate_output_r378; assert_equal("ok", worksheet.intermediate_output_r378); end
   def test_intermediate_output_s378; assert_in_epsilon(63.965, worksheet.intermediate_output_s378, 0.002); end
   def test_intermediate_output_t378; assert_in_delta(0.0, (worksheet.intermediate_output_t378||0), 0.002); end
@@ -4489,7 +4489,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_t382; assert_in_delta(0.0, (worksheet.intermediate_output_t382||0), 0.002); end
   def test_intermediate_output_u382; assert_in_epsilon(15.0, worksheet.intermediate_output_u382, 0.002); end
   def test_intermediate_output_h383; assert_equal("Coal", worksheet.intermediate_output_h383); end
-  def test_intermediate_output_i383; assert_in_epsilon(1488710.5539716666, worksheet.intermediate_output_i383, 0.002); end
+  def test_intermediate_output_i383; assert_in_epsilon(49277.2581751833, worksheet.intermediate_output_i383, 0.002); end
   def test_intermediate_output_j383; assert_equal("Solid", worksheet.intermediate_output_j383); end
   def test_intermediate_output_n383; assert_equal("Gas", worksheet.intermediate_output_n383); end
   def test_intermediate_output_o383; assert_equal(:ref, worksheet.intermediate_output_o383); end
@@ -4500,7 +4500,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_t383; assert_in_epsilon(350.63937028917024, worksheet.intermediate_output_t383, 0.002); end
   def test_intermediate_output_u383; assert_in_delta(0.0, (worksheet.intermediate_output_u383||0), 0.002); end
   def test_intermediate_output_h384; assert_equal("Oil", worksheet.intermediate_output_h384); end
-  def test_intermediate_output_i384; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_i384, 0.002); end
+  def test_intermediate_output_i384; assert_in_epsilon(911.0054978564398, worksheet.intermediate_output_i384, 0.002); end
   def test_intermediate_output_j384; assert_equal("Liquid", worksheet.intermediate_output_j384); end
   def test_intermediate_output_n384; assert_equal("Gas imports", worksheet.intermediate_output_n384); end
   def test_intermediate_output_o384; assert_in_delta(0.0, (worksheet.intermediate_output_o384||0), 0.002); end
@@ -4511,12 +4511,12 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_t384; assert_in_delta(0.0, (worksheet.intermediate_output_t384||0), 0.002); end
   def test_intermediate_output_u384; assert_in_epsilon(214.91648830119163, worksheet.intermediate_output_u384, 0.002); end
   def test_intermediate_output_h385; assert_equal("Ngas", worksheet.intermediate_output_h385); end
-  def test_intermediate_output_i385; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_i385, 0.002); end
+  def test_intermediate_output_i385; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_i385, 0.002); end
   def test_intermediate_output_j385; assert_equal("Gas", worksheet.intermediate_output_j385); end
   def test_intermediate_output_n385; assert_equal("Gas reserves", worksheet.intermediate_output_n385); end
-  def test_intermediate_output_o385; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_o385, 0.002); end
+  def test_intermediate_output_o385; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_o385, 0.002); end
   def test_intermediate_output_p385; assert_in_delta(0.0, (worksheet.intermediate_output_p385||0), 0.002); end
-  def test_intermediate_output_q385; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_q385, 0.002); end
+  def test_intermediate_output_q385; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_q385, 0.002); end
   def test_intermediate_output_r385; assert_equal("ok", worksheet.intermediate_output_r385); end
   def test_intermediate_output_s385; assert_in_epsilon(82.2325418852722, worksheet.intermediate_output_s385, 0.002); end
   def test_intermediate_output_t385; assert_in_delta(0.0, (worksheet.intermediate_output_t385||0), 0.002); end
@@ -4698,8 +4698,8 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_i402; assert_equal(:ref, worksheet.intermediate_output_i402); end
   def test_intermediate_output_j402; assert_equal("Electricity grid", worksheet.intermediate_output_j402); end
   def test_intermediate_output_n402; assert_equal("Ngas", worksheet.intermediate_output_n402); end
-  def test_intermediate_output_o402; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_o402, 0.002); end
-  def test_intermediate_output_p402; assert_in_epsilon(219.65117571617765, worksheet.intermediate_output_p402, 0.002); end
+  def test_intermediate_output_o402; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_o402, 0.002); end
+  def test_intermediate_output_p402; assert_in_epsilon(1858.8110715765308, worksheet.intermediate_output_p402, 0.002); end
   def test_intermediate_output_q402; assert_in_delta(0.0, (worksheet.intermediate_output_q402||0), 0.002); end
   def test_intermediate_output_r402; assert_equal("ok", worksheet.intermediate_output_r402); end
   def test_intermediate_output_s402; assert_in_epsilon(297.14903018646385, worksheet.intermediate_output_s402, 0.002); end
@@ -4720,8 +4720,8 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_i404; assert_equal(:ref, worksheet.intermediate_output_i404); end
   def test_intermediate_output_j404; assert_equal("CHP", worksheet.intermediate_output_j404); end
   def test_intermediate_output_n404; assert_equal("Oil", worksheet.intermediate_output_n404); end
-  def test_intermediate_output_o404; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_o404, 0.002); end
-  def test_intermediate_output_p404; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_p404, 0.002); end
+  def test_intermediate_output_o404; assert_in_epsilon(911.0054978564398, worksheet.intermediate_output_o404, 0.002); end
+  def test_intermediate_output_p404; assert_in_epsilon(911.0054978564398, worksheet.intermediate_output_p404, 0.002); end
   def test_intermediate_output_q404; assert_in_delta(0.0, (worksheet.intermediate_output_q404||0), 0.002); end
   def test_intermediate_output_r404; assert_equal("ok", worksheet.intermediate_output_r404); end
   def test_intermediate_output_s404; assert_in_epsilon(481.5771354262274, worksheet.intermediate_output_s404, 0.002); end
@@ -4742,9 +4742,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_intermediate_output_i406; assert_equal(:ref, worksheet.intermediate_output_i406); end
   def test_intermediate_output_j406; assert_equal("CHP", worksheet.intermediate_output_j406); end
   def test_intermediate_output_n406; assert_equal("Oil reserves", worksheet.intermediate_output_n406); end
-  def test_intermediate_output_o406; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_o406, 0.002); end
+  def test_intermediate_output_o406; assert_in_epsilon(911.0054978564398, worksheet.intermediate_output_o406, 0.002); end
   def test_intermediate_output_p406; assert_in_delta(0.0, (worksheet.intermediate_output_p406||0), 0.002); end
-  def test_intermediate_output_q406; assert_in_epsilon(1536.5995748617145, worksheet.intermediate_output_q406, 0.002); end
+  def test_intermediate_output_q406; assert_in_epsilon(911.0054978564398, worksheet.intermediate_output_q406, 0.002); end
   def test_intermediate_output_r406; assert_equal("ok", worksheet.intermediate_output_r406); end
   def test_intermediate_output_s406; assert_in_epsilon(107.70336000383915, worksheet.intermediate_output_s406, 0.002); end
   def test_intermediate_output_t406; assert_in_delta(0.0, (worksheet.intermediate_output_t406||0), 0.002); end

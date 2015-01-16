@@ -5305,6 +5305,7 @@ class Model
     attach_function 'intermediate_output_h551', [], ExcelValue.by_value
     # end of Intermediate output
     # end of Flows
+    # end of Flows_velho
     attach_function 'energy_d16', [], ExcelValue.by_value
     attach_function 'energy_e16', [], ExcelValue.by_value
     attach_function 'energy_f16', [], ExcelValue.by_value
@@ -6460,8 +6461,8 @@ class Model
     # end of XIII.e
     # end of 2007 (Actual, frozen)
     # end of 2007 (Consistent)
-    # end of 2015
     # end of 2013
+    # end of 2015
     # end of 2020
     # end of 2025
     # end of 2030
@@ -6479,8 +6480,6 @@ class Model
     # end of DUKES 09 (A.1)
     # end of DECC Energy Cons. (1.14)
     # end of DECC Energy Cons. (4.1)
-    # end of Plan4
-    # end of Plan5
     # Start of named references
     attach_function 'input_choices', [], ExcelValue.by_value
     attach_function 'input_descriptions', [], ExcelValue.by_value
