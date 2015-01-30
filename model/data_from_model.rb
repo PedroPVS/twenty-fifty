@@ -38,7 +38,7 @@ class DataFromModel
     { 
       '_id' => code, 
       'choices' => choices,
-      #'sankey' => excel.output_flows, # output.flows in the Excel
+      'sankey' => excel.output_flows, # output.flows in the Excel
       'ghg' => excel.output_ghg_by_ipcc_sector, # output.ghg.by.ipcc.sector in Excel
       #'ghg_reduction_from_1990' => excel.output_ghg_percentage_reduction, # output.ghg.percentage.reduction in Excel
       'final_energy_demand' => excel.output_finalenergydemand, # output.finalenergydemand
@@ -51,7 +51,7 @@ class DataFromModel
       },
       #'heating' => excel.output_heating_mix, # output.heating.mix
       #'costs' => excel.output_costpercapita_detail,
-      #'map' => excel.output_areas, # output.areas
+      'map' => excel.output_areas, # output.areas
       'imports' => {
         'proportion' => excel.output_imports_proportion, # output.imports.proportion
         'quantity' => excel.output_imports_quantity # output.imports.quantity
