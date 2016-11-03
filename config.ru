@@ -13,14 +13,7 @@ require './src/compile_template'
 # the mode is set in the RACK_ENV or RAILS_ENV environment variables
 ENV['RACK_ENV'] = ENV['RAILS_ENV'] if ENV['RAILS_ENV']
 
-# When in production mode, we precompile the templates and javascripts
-# but only if we can actually write to the folder
-if ENV['RACK_ENV'] == 'production'
-  CompileTemplate.new.compile!
-else
-  # When in development mode, we generate templates and javascripts on demand
-  CompileTemplate.new.remove!
-end
+CompileTemplate.new.compile!
 
 # This sets up the bits of the server
 

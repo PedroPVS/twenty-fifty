@@ -1,11 +1,14 @@
-#tooltip {
-  display: none;
-  background-color: #FFFF00;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 15px 15px 0px 15px;
-  box-shadow: 0 0 5px #888;
-  font-size: 12px;
-  width: 14em;
-  padding: 10px;
-  z-index: 10000; }
+#tooltip
+{
+    display: none;
+    font-family:Tahoma;
+    background-color: #FFFF00;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px 10px 0px 10px;
+    box-shadow: 0 0 5px #888;
+    font-size: 12px;
+    width: 20em;
+    padding: 10px;
+    z-index: 10000;
+}

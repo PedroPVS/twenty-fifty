@@ -1,26 +1,23 @@
-window.twentyfifty.views.sankey = function ()
-{
-    //name_conversions = {
-    //    "UK land based bioenergy": "Forests & biocrops",
-    //    "Bio-conversion": "Biomass processing",
-    //    "H2 conversion": "Hydrogen production",
-    //    "H2": "Hydrogen",
-    //    "Useful district heat": "Delivered heat",
-    //    "Heating and cooling - homes": "Home heating & cooling",
-    //    "Heating and cooling - commercial": "Office heating & cooling",
-    //    "Lighting & appliances - homes": "Home lighting & appliances",
-    //    "Lighting & appliances - commercial": "Office lighting & appliances"
-    //};
+window.twentyfifty.views.sankey = function () {
+    name_conversions = {
+        //    "UK land based bioenergy": "Forests & biocrops",
+        //    "Bio-conversion": "Biomass processing",
+        //    "H2 conversion": "Hydrogen production",
+        //    "H2": "Hydrogen",
+        //    "Useful district heat": "Delivered heat",
+        //    "Heating and cooling - homes": "Home heating & cooling",
+        //    "Heating and cooling - commercial": "Office heating & cooling",
+        //    "Lighting & appliances - homes": "Home lighting & appliances",
+        //    "Lighting & appliances - commercial": "Office lighting & appliances"
+    };
 
-    name_conversions = {};
+    // name_conversions = {};
 
-    convert_name = function ( name )
-    {
+    convert_name = function (name) {
         return name_conversions[name] || name;
     };
 
-    this.updateResults = function ( pathway )
-    {
+    this.updateResults = function (pathway) {
 
         // Expects the flow table to be in the form of
         // [
@@ -31,127 +28,119 @@ window.twentyfifty.views.sankey = function ()
 
         // Look for the indices of the columns we want:
         header = pathway.sankey[0];
-        from_column = header.indexOf( "From" );
-        to_column = header.indexOf( "To" );
-        flow_column = header.indexOf( "2050" ); // We only care about 2050 data at the moment
+        from_column = header.indexOf("From");
+        to_column = header.indexOf("To");
+        flow_column = header.indexOf("2050"); // We only care about 2050 data at the moment
 
         // Check the table is ok
-        if ( from_column == -1 || to_column == -1 || flow_column == -1 )
-        {
-            console.log( "Energy flow table in unexpected format" );
+        if (from_column == -1 || to_column == -1 || flow_column == -1) {
+            console.log("Tabela de fluxo de energia em formato inválido");
         }
 
         // Turn it into the form that the sankey library requires:
         // [[from, flow, to]]
-        data = pathway.sankey.slice( 1 ).map( function ( row )
-        { // slice(1) to skip header row
+        data = pathway.sankey.slice(1).map(function (row) { // slice(1) to skip header row
             return [row[from_column], row[flow_column], row[to_column]]
-        } );
+        });
 
-        this.s.updateData( data );
+        this.s.updateData(data);
         this.s.redraw();
-        max_y = s.boxes['Perdas'].b();
-        if ( $( '#sankey' ).height() < max_y )
-        {
-            $( '#sankey' ).height( max_y );
-            this.s.r.setSize( $( '#sankey' ).width(), max_y );
+        max_y = s.boxes['Transportes'].b() + 50;
+        if ($('#sankey').height() < max_y) {
+            $('#sankey').height(max_y);
+            this.s.r.setSize($('#sankey').width(), max_y);
         }
     };
 
-    this.teardown = function ()
-    {
-        $( '#results' ).empty();
+    this.teardown = function () {
+        $('#results').empty();
         s = null;
     };
 
-    this.setup = function ()
-    {
-        $( '#results' ).append( "<div id='sankey'></div>" );
-        this.s = s = new Sankey();
-        s.stack( 0, ["Hidráulica","Eólicas","Outras renováveis","Urânio e derivados","Produtos da cana","Bioenergia","Gás natural úmido","Importação de gás","Carvão mineral e derivados","Petróleo"] );
+    this.setup = function () {
+        $('#results').append("<div id='sankey'></div>");
+        this.s = s = new Sankey();        
 
-        //          To                            From
-        s.stack( 1, ["Centros de transformação"], "Produtos da cana");
-        s.stack( 1, ["Centros de transformação"], "Gás natural úmido");
-        s.stack( 1, ["Centros de transformação"], "Petróleo");
+        s.stack(0, ["Hidráulica", "Eólicas", "Produtos da cana", "Bioenergia", "Outras renováveis", "Carvão mineral e derivados", "Urânio e derivados", "Outras não renováveis", "Importação de gás", "Gás natural úmido", "Petróleo", "Importação de nafta"]);
+        s.stack(1, ["Centros de transformação"]);
+        s.stack(2, ["Gás", "Etanol", "Derivados de petróleo", "Outros não energéticos e nafta"]);
+        s.stack(3, ["Centrais elétricas"]);
+        s.stack(4, ["Eletricidade"]);
+        s.stack(5, ["Excesso de oferta","Exportação de gás","Perdas","Consumo final não energético","Setor energético","Residencial","Comercial/público","Agropecuário","Industrial","Transportes"]);
 
-        s.stack( 2, ["Gás natural", "Etanol", "Derivados de petróleo"], "Centros de transformação");
+        s.nudge_boxes_callback = function () {
+            this.boxes["Centros de transformação"].y = this.boxes["Importação de gás"].y;
+            this.boxes["Eletricidade"].y = 350;
 
-        s.stack( 3, ["Centrais elétricas"], "Gás natural");
-        s.stack( 3, ["Centrais elétricas"] , "Derivados de petróleo");
+            this.boxes["Centrais elétricas"].y = 180;
+            this.boxes["Gás"].y = this.boxes["Centros de transformação"].y - 150;           
 
-        s.stack( 4, ["Eletricidade"],"Centrais Elétricas");
-
-        s.stack( 5, ["Transportes"], "Eletricidade" );
-        s.stack( 5, ["Residencial"], "Eletricidade" );
-        s.stack( 5, ["Comercial/público"],"Eletricidade" );
-        s.stack( 5, ["Industrial"], "Eletricidade" );
-        s.stack( 5, ["Agropecuário"], "Eletricidade" );
-        s.stack( 5, ["Setor energético"], "Eletricidade" );
-        s.stack( 5, ["Perdas"], "Eletricidade" );
-        
-        s.nudge_boxes_callback = function ()
-        {
-            this.boxes["Perdas"].y = this.boxes["Petróleo"].b() - this.boxes["Perdas"].size();
+            this.boxes["Etanol"].y = this.boxes["Centros de transformação"].y + 50;
+            this.boxes["Derivados de petróleo"].y = this.boxes["Centros de transformação"].y + 100;
+            this.boxes["Outros não energéticos e nafta"].y = this.boxes["Centros de transformação"].y + 300;
         };
 
-        s.setColors( {
-            "Hidráulica": "#8F6F38",
-            "Eólicas": "#8F6F38",
-            "Outras renováveis": "#8F6F38",
-            "Urânio e derivados": "#8F6F38",
-            "Produtos da cana": "#8F6F38",
-            "Bioenergia": "#A99268",
-            "Gás natural úmido": "#DDD4C4",
-            "Importação de gás": "#DDD4C4",
-            "Carvão mineral e derivados": "#DDD4C4",
-            "Centros de transformação": "#F6FF00",
-            "Petróleo": "#F6FF00",
-            "Etanol": "#F6FF00",
-            "Gás natural": "#30FF00",
-            "Derivados de petróleo": "#FF0000",
-            "Centros de transformação": "#30FF00",
-            "Centrais elétricas": "#30FF00",
-            "Eletricidade": "#30FF00",
-            "Transportes": "#30FF00",
+        s.setColors({
+            "Importação de gás": "rgb(166,166,166)",
+            "Gás natural úmido": "rgb(166,166,166)",
+            "Petróleo": "rgb(102,102,51)",
+            "Importação de nafta": "rgb(102,102,51)",
+            "Carvão mineral e derivados": "rgb(102,51,0)",
+            "Urânio e derivados": "rgb(255,153,0)",
+            "Outras não renováveis": "rgb(153,102,51)",
+            "Hidráulica": "rgb(0,112,192)",
+            "Eólicas": "rgb(0,176,240)",
+            "Produtos da cana": "rgb(51,204,51)",
+            "Bioenergia": "rgb(146,208,80)",
+            "Outras renováveis": "rgb(203, 233, 55)",
+
+            "Centros de transformação": "rgb(166,166,166)",
+
+            "Gás": "rgb(166,166,166)",
+            "Etanol": "rgb(51,204,51)",
+            "Derivados de petróleo": "rgb(102,102,51)",
+            "Outros não energéticos": "rgb(102,102,51)",
+
+            "Centrais elétricas": "rgb(9,4,110)", //"rbg(22,54,92)",
+
+            "Eletricidade": "yellow", //"rbg(22,54,92)",
+
+            "Excesso de oferta": "#FF0000",
+            "Exportação de gás": "rgb(166,166,166)",
+            "Perdas": "yellow", //"rgb(217,217,217)",
+            "Consumo final não energético": "rgb(166,166,166)",
+            "Setor energético" : "#ffaa0C",
             "Residencial": "#30FF00",
             "Comercial/público": "#557731",
-            "Industrial": "#7D9763",
-            "Agropecuário": "#BCC2AD",
-            "Setor energético": "#0000FF",
-            "Perdas": "#FF0000",
-        } );
+            "Agropecuário": "#BCC2AD",           
+            "Industrial": "#7D9763",            
+            "Transportes": "#30FF00"
+            
+        });
 
-        s.nudge_colours_callback = function ()
-        {
-            this.recolour( this.boxes["Perdas"].left_lines, "#ddd" );
-            this.recolour( this.boxes["Centrais elétricas"].left_lines, "#FF0000" );
-            this.recolour( this.boxes["Eletricidade"].left_lines, "#0000FF" );
+        s.nudge_colours_callback = function () {
+           // this.recolour( this.boxes["Perdas"].left_lines, "#00f" );
         };
 
-        pixels_per_TWh = $( '#sankey' ).height() / 40000;
+        pixels_per_TWh = $('#sankey').height() / 13000;
 
-        s.y_space = Math.round( 100 * pixels_per_TWh );
+        s.y_space = Math.round(220 * pixels_per_TWh);
         s.right_margin = 250;
         s.left_margin = 150;
 
-        s.convert_flow_values_callback = function ( flow )
-        {
+        s.convert_flow_values_callback = function (flow) {
             return flow * pixels_per_TWh;
         };
 
-        s.convert_flow_labels_callback = function ( flow )
-        {
-            return Math.round( flow );
+        s.convert_flow_labels_callback = function (flow) {
+            return Math.round(flow);
         };
 
-        s.convert_box_value_labels_callback = function ( flow )
-        {
-            return "" + Math.round( flow ) + " TWh/y";
+        s.convert_box_value_labels_callback = function (flow) {
+            return "" + Math.round(flow) + " TWh/ano";
         };
     };
 
     return this;
-}.call( {} );
-
+}.call({});
 
