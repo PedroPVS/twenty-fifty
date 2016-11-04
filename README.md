@@ -1,4 +1,4 @@
-# DECC 2050 CALCULATOR TOOL
+# Brazilian 2050 CALCULATOR TOOL
 
 A web interface to the Brazilian 2050 energy and climate change calculator
 
