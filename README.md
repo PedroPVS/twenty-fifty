@@ -1,12 +1,12 @@
 # DECC 2050 CALCULATOR TOOL
 
-A web interface to the www.decc.gov.uk 2050 energy and climate change calculator
+A web interface to the Brazilian 2050 energy and climate change calculator
 
-Further detail on the project:
+Further detail on the original project:
 http://www.decc.gov.uk/2050
 
 Canonical source:
-http://github.com/decc/twenty-fifty
+http://github.com/he2formiga/twenty-fifty
 
 ## FOR AN OLDER VERSION
 
@@ -47,12 +47,14 @@ Should return something starting 'ruby 2.1'. If it does not, try going through t
 
 ### Use the build script
 
-If you have a Ubuntu Linux 12.04 server, try:
+In Brazil, current source code is being used in Ubuntu Server 14. If you intend use this "as-is" we would like suggest using recommended version of Ubuntu Server 12.04 as startup. After initial steps you can upgrade it as you wish.
+
+The steps below must be followed if you have a Ubuntu Linux 12.04 server :
 
     wget https://raw.githubusercontent.com/decc/twenty-fifty/master/util/setup-ubuntu-12.04.sh 
     bash setup-ubuntu-12.04.sh
 
-Otherwise, take a look at that file for the depdencies, and steps.
+Otherwise, take a look at that file for the dependencies, and steps.
 
 ## Installing on OS X
 
